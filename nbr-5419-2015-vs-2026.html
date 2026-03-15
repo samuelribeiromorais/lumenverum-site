@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBR 5419: Análise Comparativa Edição 2015 vs 2026 | Lumen Verum</title>
+<meta name="description" content="Análise comparativa completa da ABNT NBR 5419 — edição 2015 versus 2026. Todas as mudanças nas Partes 1, 2, 3 e 4: frequência de danos F, dados de NG por município, ensaios de continuidade e mais.">
+<meta name="keywords" content="NBR 5419, SPDA, análise de risco, proteção contra descargas atmosféricas, edição 2026, frequência de danos, NG por município">
+<link rel="canonical" href="https://lumenverum.com.br/nbr-5419-2015-vs-2026.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-back {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    padding: 120px 5% 64px;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,177,16,0.08) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(232,177,16,0.12);
+    border: 1px solid rgba(232,177,16,0.25);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .hero-meta-item svg {
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--gray-light);
+    border-bottom: 1px solid #e8e8e4;
+    padding: 40px 5%;
+  }
+  .toc-inner {
+    max-width: 800px; margin: 0 auto;
+  }
+  .toc h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .toc li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0dc;
+  }
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc a:hover { color: var(--gold); }
+  .toc-num {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE ── */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 5% 64px;
+  }
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 56px 0 20px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .article h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  .article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 36px 0 12px;
+  }
+  .article p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .article strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .article ul, .article ol {
+    margin: 12px 0 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .article li {
+    margin-bottom: 6px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(232,177,16,0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+  .highlight-box strong {
+    color: var(--navy);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0dc;
+  }
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .article thead {
+    background: var(--navy);
+    color: #fff;
+  }
+  .article th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e4;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .article tbody tr:nth-child(even) {
+    background: var(--gray-light);
+  }
+  .article tbody tr:hover {
+    background: rgba(232,177,16,0.06);
+  }
+
+  /* ── INLINE CTA ── */
+  .inline-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    margin: 48px 0;
+    text-align: center;
+  }
+  .inline-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+  .inline-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.3);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 32px 5%;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+  }
+  footer a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+  .whatsapp-float svg {
+    width: 28px; height: 28px;
+    fill: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 5% 48px; }
+    .hero h1 { font-size: 2rem; }
+    .toc ol { columns: 1; }
+    .article h2 { font-size: 1.5rem; }
+    .article { padding: 40px 5% 48px; }
+    .inline-cta { padding: 32px 24px; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero .subtitle { font-size: 0.9rem; }
+    .article table { font-size: 0.75rem; }
+    .article th, .article td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>Engenharia</span></a>
+  <a href="spda-risk-analyzer.html" class="nav-back">&larr; SPDA Risk Analyzer</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">Artigo Técnico — Março 2026</div>
+    <h1>ABNT NBR 5419: <em>Análise Comparativa</em><br>Edição 2015 &rarr; Edição 2026</h1>
+    <p class="subtitle">
+      Todas as mudanças nas Partes 1, 2, 3 e 4 da norma de proteção contra descargas atmosféricas.
+      Frequência de danos, dados de NG por município, ensaios de continuidade e implicações para perícias.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+        Por Samuel Ribeiro Morais
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Março 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conforme NBR 5419:2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc">
+  <div class="toc-inner">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#visao-geral"><span class="toc-num">1.</span> Visão geral da revisão</a></li>
+      <li><a href="#parte1"><span class="toc-num">2.</span> Parte 1 — Princípios gerais</a></li>
+      <li><a href="#parte2"><span class="toc-num">3.</span> Parte 2 — Análise de risco</a></li>
+      <li><a href="#parte3"><span class="toc-num">4.</span> Parte 3 — Danos físicos</a></li>
+      <li><a href="#parte4"><span class="toc-num">5.</span> Parte 4 — Sistemas internos</a></li>
+      <li><a href="#pericias"><span class="toc-num">6.</span> Implicações para perícias judiciais</a></li>
+      <li><a href="#transicao"><span class="toc-num">7.</span> Quadro de transição</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- 1. VISÃO GERAL -->
+  <h2 id="visao-geral">1. Visão geral da revisão</h2>
+
+  <p>A segunda edição da ABNT NBR 5419, publicada em 10 de março de 2026, cancela e substitui integralmente a primeira edição de 2015. Todas as quatro Partes foram revisadas tecnicamente de forma simultânea, com base na IEC 62305 (Ed. 3, 2024), mas com adaptações e inovações próprias da normalização brasileira. A Consulta Nacional ocorreu entre 21 de julho e 18 de setembro de 2025, conduzida pela CE-003:064.010 do ABNT/CB-003.</p>
+
+  <p>As mudanças mais estruturantes são:</p>
+  <ul>
+    <li>Introdução do conceito de <strong>frequência de danos (F)</strong> como critério autônomo de proteção</li>
+    <li>Consolidação do <strong>Anexo F da Parte 2</strong> com mapas coropléticos por município e dados de NG obrigatórios</li>
+    <li>Ampliação substancial do <strong>glossário técnico</strong> (de ~80 para ~137 termos)</li>
+    <li>Mudança terminológica de <strong>"classe de SPDA" para "nível de proteção do SPDA"</strong></li>
+    <li>Criação do <strong>Anexo F normativo na Parte 3</strong> com procedimentos detalhados de ensaio de continuidade elétrica</li>
+  </ul>
+
+  <h3>1.1. Quadro-síntese por Parte</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Parte</th>
+          <th>Pág. 2015</th>
+          <th>Pág. 2026</th>
+          <th>Principais alterações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Parte 1</strong></td>
+          <td>67</td>
+          <td>75</td>
+          <td>Glossário de ~80 para ~137 termos; nova Seção 6.3 (frequência de dano F); inclusão de FV, carregamento de veículos e telefonia móvel na Tabela 1; Anexo D ampliado; R2 substituído por F</td>
+        </tr>
+        <tr>
+          <td><strong>Parte 2</strong></td>
+          <td>~145</td>
+          <td>258</td>
+          <td>Nova Seção 7 (frequência de danos F e FT); Anexo E "vago"; Anexo F normativo com mapas coropléticos e tabela NG por município; NG exclusivamente do Anexo F; NDJ consolidado</td>
+        </tr>
+        <tr>
+          <td><strong>Parte 3</strong></td>
+          <td>~55</td>
+          <td>87</td>
+          <td>Terminologia "nível de proteção do SPDA"; Tabela 5 mantém 10 m para NP I e II; Anexo F normativo com 7 procedimentos de ensaio; Seção 7 ampliada; normas de materiais atualizadas</td>
+        </tr>
+        <tr>
+          <td><strong>Parte 4</strong></td>
+          <td>~75</td>
+          <td>95</td>
+          <td>Referência a NBR IEC 61643-31 (DPS para FV em CC); Anexo B ampliado (B.11 a B.15) com equipamentos externos e estruturas interligadas; Anexo D revisado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2. PARTE 1 -->
+  <h2 id="parte1">2. Parte 1 — Princípios gerais</h2>
+
+  <h3>2.1. Escopo</h3>
+  <p>O escopo foi ampliado para cobrir expressamente três situações: <strong>novos projetos e execuções</strong>, <strong>reformas em instalações existentes</strong>, e <strong>alterações de uso ou características construtivas</strong> que afetem a PDA instalada. A edição 2026 inclui uma NOTA explicativa esclarecendo que inspeções, ensaios e substituição de componentes não caracterizam reforma.</p>
+
+  <h3>2.2. Terminologia</h3>
+  <p>A Seção 3 passou de aproximadamente 80 definições para <strong>137 termos</strong>, reordenados alfabeticamente. Novos termos relevantes incluem: "elemento-vítima" (3.56), "frequência de danos" (3.70), "instalador de PDA" (3.73), "projetista de PDA" (3.102), "líder ascendente conectante" (3.77), "líder ascendente não conectado" (3.78), "malha de equipotencialização do solo" (3.83), entre outros.</p>
+
+  <div class="highlight-box">
+    <p><strong>Destaque:</strong> A introdução formal das figuras de "instalador de PDA" e "projetista de PDA" é significativa para a regulamentação profissional e para definição de responsabilidade técnica perante o CREA.</p>
+  </div>
+
+  <p>O termo "impulso" foi sistematicamente substituído por "componente" na descrição das formas de onda: o que era "primeiro impulso positivo" passa a ser "primeira componente positiva", alinhando a nomenclatura ao padrão IEC 62305.</p>
+
+  <h3>2.3. Conceito de frequência de danos (F)</h3>
+  <p>A mudança conceitual mais relevante da Parte 1 é a introdução, na Seção 6, do <strong>duplo critério de avaliação</strong>: além do risco R (que já existia), a norma agora exige a avaliação da frequência de danos F para sistemas internos. O antigo risco R2 (perda de serviço ao público) foi formalmente substituído pela frequência de danos F.</p>
+
+  <div class="highlight-box">
+    <p><strong>Impacto prático:</strong> A simples análise de risco R &le; RT já não é suficiente para todos os cenários. É preciso também verificar <strong>F &le; FT</strong>.</p>
+  </div>
+
+  <h3>2.4. Tabela 1 — Efeitos das descargas</h3>
+  <p>A Tabela 1 foi ampliada com a inclusão explícita de <strong>"sistemas fotovoltaicos, sistemas de carregamento de veículos e instalações de telefonia móvel"</strong> entre as características estruturais relevantes. Na versão 2015, esses elementos não eram mencionados.</p>
+
+  <h3>2.5. Parâmetros de corrente e Tabelas 3/4</h3>
+  <p>Os valores numéricos das Tabelas 3 e 4 (parâmetros máximos e mínimos das correntes por NP) permanecem idênticos à edição 2015. A estrutura da Tabela 3 foi reorganizada para apresentar explicitamente a "primeira componente positiva", "primeira componente negativa" e "componente subsequente" como subseções separadas.</p>
+
+  <h3>2.6. Anexos</h3>
+  <p>O Anexo D (parâmetros de ensaio) foi ampliado com novas subseções sobre ionização do solo (D.4.5), efeitos eletro-hidráulicos (D.4.2.6), modelo de queda de tensão ânodo-cátodo (D.4.1.4) e forças eletrodinâmicas (D.4.2.3 e D.4.2.4). O Anexo E ajustou sua nomenclatura de "surtos" para "correntes de surto".</p>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="inline-cta">
+    <h3>Calcule a frequência de danos F automaticamente</h3>
+    <p>O SPDA Risk Analyzer já está atualizado para a edição 2026, incluindo o cálculo de F, dados de NG por município e memorial descritivo automático.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 3. PARTE 2 -->
+  <h2 id="parte2">3. Parte 2 — Análise de risco</h2>
+
+  <h3>3.1. Frequência de danos (Seção 7 — nova)</h3>
+  <p>A principal inovação da Parte 2 é a <strong>Seção 7, inteiramente nova</strong>. Ela institui o conceito de frequência de danos F como métrica paralela ao risco R. A frequência de danos F é definida como o número anual de eventos prejudiciais causados pelas fontes de dano nos sistemas a proteger.</p>
+
+  <p>A equação básica é <strong>F<sub>X</sub> = N<sub>X</sub> &times; P<sub>X</sub></strong>, e a frequência total é:</p>
+
+  <div class="highlight-box">
+    <p><strong>F = F<sub>B</sub> + F<sub>C</sub> + F<sub>M</sub> + F<sub>V</sub> + F<sub>W</sub> + F<sub>Z</sub></strong></p>
+    <p>Sistemas críticos: <strong>F<sub>T</sub> máximo = 0,1/ano</strong> (impositivo)<br>
+    Sistemas não críticos: <strong>F<sub>T</sub> = 1/ano</strong> (referencial)</p>
+  </div>
+
+  <p>O conceito de "sistema crítico" foi formalizado: sistemas cuja falha pode afetar uma comunidade, causar perdas econômicas significativas ou levar a danos físicos ou ameaça à vida.</p>
+
+  <p><strong>Impacto prático:</strong> Para peritos, em casos envolvendo falha de sistemas eletroeletrônicos (TI, automação, telecomunicações), a análise de risco R isoladamente já não é suficiente. A ausência de avaliação de F configura não conformidade normativa.</p>
+
+  <h3>3.2. Dados de NG — Anexo F normativo</h3>
+  <p>O Anexo F, que na edição 2015 era informativo, <strong>passou a normativo</strong> e foi substancialmente ampliado. A principal mudança é a exigência de que os valores de NG utilizados nos cálculos sejam <strong>exclusivamente os do Anexo F</strong>.</p>
+
+  <div class="highlight-box">
+    <p><strong>A Seção A.1.3 é taxativa:</strong> "Dados obtidos de outras fontes não podem ser utilizados, pois podem comprometer a integridade e a precisão das avaliações." Isso elimina a prática de utilizar dados do INPE, do ELAT ou de outras fontes acadêmicas.</p>
+  </div>
+
+  <p>O Anexo F agora inclui mapas coropléticos detalhados (Brasil e cada região) e uma <strong>tabela com valores de NG por município</strong>, eliminando a necessidade de interpolação visual nos mapas isoceraúnicos da versão anterior.</p>
+
+  <h3>3.3. Supressão do Estudo de Caso (Anexo E)</h3>
+  <p>O Anexo E, que na versão 2015 continha um estudo de caso informativo com exemplo numérico completo, foi declarado <strong>"Vago"</strong> na edição 2026. A ausência de exemplo numérico dificultará a aplicação prática por profissionais menos experientes.</p>
+
+  <h3>3.4. Reorganização estrutural</h3>
+  <p>A Seção 5 foi renomeada de "Gerenciamento de risco" para <strong>"Análise do risco"</strong>. Uma Figura 2 (procedimento para frequência de danos) foi adicionada. A Seção 5.5 (avaliação econômica) passou ao Anexo D como conteúdo informativo.</p>
+
+  <!-- 4. PARTE 3 -->
+  <h2 id="parte3">4. Parte 3 — Danos físicos a estruturas e perigos à vida</h2>
+
+  <h3>4.1. Terminologia: classe &rarr; nível de proteção</h3>
+  <p>Toda a Parte 3 substituiu sistematicamente <strong>"classe do SPDA" por "nível de proteção do SPDA"</strong>. A correspondência é direta: Classe I = NP I, Classe II = NP II, Classe III = NP III, Classe IV = NP IV. Os valores numéricos são mantidos.</p>
+
+  <h3>4.2. Subsistema de captação</h3>
+  <p>A Seção 5.3.2 foi substancialmente detalhada. O item 5.3.2.16.6 é uma adição importante: <strong>estruturas compostas por armaduras protendidas não podem ser utilizadas como elemento natural do SPDA</strong>, devendo-se evitar impacto direto e centelhamentos perigosos nos elementos protendidos. Restrição relevante para estruturas industriais e pontes.</p>
+
+  <h3>4.3. Subsistema de descida</h3>
+  <p>A Tabela 5 mantém as distâncias de <strong>10 m (NP I e II), 15 m (NP III) e 20 m (NP IV)</strong>. A tolerância de 20% foi mantida. O item 5.4.1.2 detalha a função do anel intermediário como elemento de distribuição de corrente.</p>
+
+  <p>O item 5.4.4.3 acrescenta que <strong>não convém que condutores de descida sejam instalados em calhas ou tubulações pluviais</strong>, mesmo com isolamento — indicação que na edição 2015 não existia com esta clareza.</p>
+
+  <h3>4.4. Materiais e normas de referência</h3>
+  <p>A Tabela 7 foi atualizada com referências a normas ABNT específicas por material: NBR 16462 (cobre), NBR ISO 209 (alumínio), NBR 8120/8121 (aço cobreado), NBR 16219/16362 (alumínio cobreado), NBR 16730 (aço galvanizado encordoado) e NBR 5601 (aço inoxidável).</p>
+
+  <h3>4.5. Ensaios de continuidade (Anexo F — novo/ampliado)</h3>
+  <p>O Anexo F agora contém <strong>sete procedimentos distintos de ensaio</strong> de continuidade elétrica:</p>
+  <ul>
+    <li><strong>F.1</strong> — Armaduras como descida + aterramento natural (primeira verificação)</li>
+    <li><strong>F.2</strong> — Armaduras como descida natural apenas</li>
+    <li><strong>F.3</strong> — Armaduras de fundação como aterramento natural</li>
+    <li><strong>F.4</strong> — Verificação comprobatória de elementos naturais</li>
+    <li><strong>F.5</strong> — Condutores de descida não naturais</li>
+    <li><strong>F.6</strong> — Eletrodo de aterramento não natural</li>
+    <li><strong>F.7</strong> — Ligação equipotencial</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Impacto prático:</strong> Para perícias que avaliam a eficácia de SPDAs, o Anexo F fornece critérios objetivos de ensaio como referência normativa. A existência de procedimentos específicos para estruturas em construção versus construídas é particularmente útil para casos de sinistros em obras.</p>
+  </div>
+
+  <h3>4.6. Inspeção, manutenção e documentação (Seção 7)</h3>
+  <p>O item 7.1.4 declara expressamente: <strong>"Não é necessária a realização de medição de resistência de aterramento para a verificação da eficácia do SPDA."</strong> Esta formalização normativa é importante para perícias.</p>
+
+  <p>A Seção 7.5 detalha a <strong>documentação mínima obrigatória</strong>:</p>
+  <ul>
+    <li>Identificação de responsáveis técnicos com número de registro no conselho de classe e documento de responsabilidade técnica</li>
+    <li>Premissas da base do estudo de proteção</li>
+    <li>Documentação de validação de elementos naturais</li>
+    <li>Dados de resistividade do solo com estratificação conforme NBR 7117-1</li>
+    <li>Definição do tipo de SPDA (isolado ou não isolado)</li>
+  </ul>
+
+  <!-- 5. PARTE 4 -->
+  <h2 id="parte4">5. Parte 4 — Sistemas elétricos e eletrônicos internos</h2>
+
+  <h3>5.1. DPS para instalações fotovoltaicas</h3>
+  <p>Referência explícita à <strong>ABNT NBR IEC 61643-31</strong> (DPS para instalações fotovoltaicas em CC) nos requisitos de ensaio e à NBR IEC 61643-32 para seleção e instalação. Na edição 2015, a proteção contra surtos em sistemas FV não tinha referência normativa específica dentro da 5419.</p>
+
+  <h3>5.2. Equipamentos instalados externamente (Anexo B.11)</h3>
+  <p>O Anexo B foi significativamente ampliado com as Seções B.11 a B.15:</p>
+  <ul>
+    <li><strong>B.11</strong> — Medidas de proteção para equipamentos externos (antenas, sensores meteorológicos, câmeras de segurança, sensores de processo industrial)</li>
+    <li><strong>B.12</strong> — Melhoria de conexões entre estruturas (linhas elétricas isoladas e não isoladas)</li>
+    <li><strong>B.13</strong> — Integração de novos sistemas internos em estruturas existentes</li>
+  </ul>
+
+  <h3>5.3. Inspeção das MPS (Seção 9)</h3>
+  <p>A Seção 9 foi reestruturada com procedimento, periodicidade e requisitos de medição específicos para as MPS, complementando a inspeção do SPDA da Parte 3.</p>
+
+  <!-- SECOND CTA -->
+  <div class="inline-cta">
+    <h3>Automatize sua análise de risco conforme a NBR 5419:2026</h3>
+    <p>Cálculos de R1, R3, R4 e F com dados de NG automáticos por município. Relatório profissional em PDF/DOCX com memorial descritivo.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Experimentar o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 6. PERÍCIAS -->
+  <h2 id="pericias">6. Implicações para perícias judiciais</h2>
+
+  <h3>6.1. Norma de referência aplicável</h3>
+  <p>A norma de referência para avaliação pericial é a <strong>vigente à época do projeto ou execução</strong> sob exame. A Seção 7.3.1 da Parte 3:2026 reconhece isso ao mencionar que a inspeção deve verificar conformidade com "sua norma de origem (edição vigente na sua elaboração)". Para novos projetos a partir de março de 2026, a edição 2026 é mandatoriamente aplicável.</p>
+
+  <h3>6.2. Avaliação de danos a equipamentos eletroeletrônicos</h3>
+  <p>A exigência de avaliação da frequência de danos F amplia significativamente o escopo da análise pericial. <strong>Não basta mais verificar se o risco R era tolerável; é preciso demonstrar se F era inferior a FT.</strong> Para sistemas críticos (energia, água, telecomunicações), FT = 0,1/ano é impositivo.</p>
+
+  <h3>6.3. Valor de NG</h3>
+  <p>A obrigatoriedade de uso exclusivo dos dados de NG do Anexo F resolve uma ambiguidade que existia na prática: profissionais utilizavam fontes diversas (INPE, ELAT, mapas da própria 5419) com resultados diferentes. A <strong>tabela por município elimina a subjetividade</strong> da leitura de mapas isoceraúnicos.</p>
+
+  <h3>6.4. Documentação técnica</h3>
+  <p>A exigência de documentação mínima detalhada na Seção 7.5 da Parte 3 fornece uma <strong>lista de verificação objetiva</strong> para avaliação pericial. A ausência de itens como dados de resistividade do solo com estratificação, identificação de responsáveis técnicos ou validação de elementos naturais configurará não conformidade documentável.</p>
+
+  <h3>6.5. Ensaios de continuidade</h3>
+  <p>O Anexo F da Parte 3 fornece, pela primeira vez, <strong>procedimentos normativos específicos</strong> para ensaios de continuidade elétrica em diferentes configurações de SPDA. Particularmente relevante para perícias sobre eficácia de descidas e aterramentos naturais em estruturas de concreto armado.</p>
+
+  <h3>6.6. Medição de resistência de aterramento</h3>
+  <p>A declaração formal de que a medição de resistência de aterramento não é necessária para verificação da eficácia do SPDA <strong>pacifica uma controvérsia recorrente</strong> em laudos e perícias. O valor de resistência não é critério de aceitação ou rejeição de SPDA.</p>
+
+  <!-- 7. QUADRO DE TRANSIÇÃO -->
+  <h2 id="transicao">7. Quadro de transição</h2>
+
+  <p>Para fins de planejamento de adequação de projetos e instalações existentes:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Situação</th>
+          <th>Norma aplicável</th>
+          <th>Ação requerida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Projetos novos a partir de março/2026</td>
+          <td>NBR 5419:2026</td>
+          <td>Aplicar integralmente a edição 2026, incluindo avaliação de F</td>
+        </tr>
+        <tr>
+          <td>Reformas de SPDA existente</td>
+          <td>NBR 5419:2026</td>
+          <td>Reavaliar conforme 2026; verificar F para sistemas internos</td>
+        </tr>
+        <tr>
+          <td>Inspeção de SPDA projetado na vigência da 2015</td>
+          <td>NBR 5419:2015 (norma de origem)</td>
+          <td>Verificar conformidade com a edição de projeto; reportar diferenças em relação à 2026</td>
+        </tr>
+        <tr>
+          <td>Perícia judicial sobre SPDA executado antes de 2026</td>
+          <td>NBR 5419:2015</td>
+          <td>Avaliar pela norma vigente à época; mencionar alterações da 2026 como referência complementar</td>
+        </tr>
+        <tr>
+          <td>Alteração de uso da estrutura (sem reforma do SPDA)</td>
+          <td>NBR 5419:2026</td>
+          <td>Nova análise de risco R e frequência F conforme 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:0.82rem; color:var(--gray-mid); margin-top:32px; font-style:italic;">
+    Este artigo constitui análise técnica comparativa com finalidade informativa e de planejamento profissional. Não substitui a leitura integral da ABNT NBR 5419:2026 em suas quatro Partes.
+  </p>
+
+  <!-- FINAL CTA -->
+  <div class="inline-cta" style="margin-bottom: 0;">
+    <h3>Precisa calcular conforme a norma atualizada?</h3>
+    <p>O SPDA Risk Analyzer já contempla todas as exigências da edição 2026: cálculos de R1, R3, R4 e F, NG automático por município para os 5.565 municípios brasileiros, e memorial descritivo completo.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Lumen Verum Engenharia. Todos os direitos reservados.
+  &nbsp;|&nbsp; <a href="index.html">Página Inicial</a>
+  &nbsp;|&nbsp; <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20a%20NBR%205419%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20SPDA%20Risk%20Analyzer." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

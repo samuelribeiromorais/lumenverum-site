@@ -31,6 +31,43 @@
     overflow-x: hidden;
   }
 
+  /* ── LIGHTBOX ── */
+  .lightbox-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  .lightbox-overlay.active img {
+    transform: scale(1);
+  }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 30px;
+    color: white; font-size: 2.5rem; font-weight: 300;
+    cursor: pointer; line-height: 1;
+    transition: transform 0.2s;
+  }
+  .lightbox-close:hover { transform: scale(1.2); }
+  img.zoomable { cursor: zoom-in; transition: transform 0.2s ease; }
+  img.zoomable:hover { transform: scale(1.03); }
+
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
@@ -83,6 +120,31 @@
 
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
   .hamburger span { width: 24px; height: 2px; background: white; transition: all 0.3s; display: block; }
+
+  /* ── MENU EXTRA (3 barras) ── */
+  .extra-menu-wrap { position: relative; margin-left: 1.5rem; }
+  .extra-menu-btn {
+    display: flex; flex-direction: column; gap: 4px; cursor: pointer;
+    background: var(--navy); border: none; padding: 8px 10px; border-radius: 4px;
+  }
+  .extra-menu-btn span { width: 20px; height: 2.5px; background: var(--gold); display: block; border-radius: 1px; }
+  .extra-menu-btn:hover { background: var(--navy-mid); }
+  .extra-menu-dropdown {
+    display: none; position: absolute; top: 100%; right: 0; margin-top: 8px;
+    background: var(--navy); border: 1px solid rgba(232,177,16,0.2); border-radius: 6px;
+    min-width: 260px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); z-index: 200;
+    padding: 0.5rem 0;
+  }
+  .extra-menu-dropdown.open { display: block; }
+  .extra-menu-dropdown a {
+    display: block; padding: 0.75rem 1.2rem; color: var(--white);
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .extra-menu-dropdown a:hover { background: rgba(232,177,16,0.15); }
+  .extra-menu-dropdown a small {
+    display: block; font-size: 0.7rem; color: var(--gray-mid); font-weight: 400; margin-top: 2px;
+  }
 
   /* ── HERO ── */
   #hero {
@@ -880,6 +942,15 @@
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
+  <div class="extra-menu-wrap">
+    <button class="extra-menu-btn" onclick="toggleExtraMenu(event)" aria-label="Mais páginas">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="extra-menu-dropdown" id="extraMenuDropdown">
+      <a href="spda-risk-analyzer.html">SPDA Risk Analyzer<small>Análise de Risco NBR 5419 online</small></a>
+      <a href="nbr-5419-2015-vs-2026.html">NBR 5419: 2015 vs 2026<small>Análise comparativa da norma</small></a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1130,11 +1201,11 @@
             <div class="channel-value">samuel@lumenverum.com.br</div>
           </div>
         </a>
-        <a href="#" class="channel">
+        <a href="https://maps.app.goo.gl/de963uXy3SE89ez47" target="_blank" class="channel">
           <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div class="channel-info">
             <div class="channel-label">Localização</div>
-            <div class="channel-value">Goiânia, Goiás — Brasil</div>
+            <div class="channel-value">Av. PL-3, 205 - Park Lozandes, Goiânia - GO, 74884-115</div>
           </div>
         </a>
         <a href="#" class="channel">
@@ -1224,6 +1295,17 @@
   function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('open');
   }
+  function toggleExtraMenu(ev) {
+    ev.stopPropagation();
+    document.getElementById('extraMenuDropdown').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var dd = document.getElementById('extraMenuDropdown');
+    var wrap = document.querySelector('.extra-menu-wrap');
+    if (dd && wrap && !wrap.contains(e.target)) {
+      dd.classList.remove('open');
+    }
+  });
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => {
       document.getElementById('navLinks').classList.remove('open');
@@ -1253,6 +1335,39 @@
     );
     window.open(`https://wa.me/5562999631091?text=${text}`, '_blank');
   }
+  // Lightbox
+  (function() {
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
+    document.body.appendChild(overlay);
+    var lbImg = overlay.querySelector('img');
+    var lbClose = overlay.querySelector('.lightbox-close');
+
+    // Mark content images as zoomable (exclude nav logo and footer logo)
+    document.querySelectorAll('img').forEach(function(img) {
+      var parent = img.closest('nav, footer, .nav-logo, .footer-logo');
+      if (!parent) {
+        img.classList.add('zoomable');
+      }
+    });
+
+    document.querySelectorAll('img.zoomable').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', function() {
+      overlay.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.classList.remove('active');
+    });
+  })();
 </script>
 </body>
 </html>
