@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Níveis de Proteção SPDA (I, II, III e IV): Como Escolher o Correto | Lumen Verum</title>
+<meta name="description" content="Entenda os níveis de proteção SPDA I, II, III e IV conforme a NBR 5419. Critérios de escolha, tabela comparativa, relação com a análise de risco e exemplos práticos para cada nível.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lumenverum.com.br/niveis-de-protecao-spda-i-ii-iii-iv.html">
+<meta property="og:title" content="Níveis de Proteção SPDA (I, II, III e IV): Como Escolher o Correto">
+<meta property="og:description" content="Entenda os níveis de proteção SPDA I, II, III e IV conforme a NBR 5419. Critérios, tabela comparativa e exemplos práticos.">
+<meta property="og:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta property="og:image:width" content="2500">
+<meta property="og:image:height" content="2500">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Níveis de Proteção SPDA (I, II, III e IV): Como Escolher o Correto">
+<meta name="twitter:description" content="Critérios de escolha dos níveis de proteção SPDA conforme NBR 5419. Tabela comparativa e exemplos.">
+<meta name="twitter:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta name="keywords" content="nível de proteção SPDA, NP I, NP II, NP III, NP IV, classe SPDA, NBR 5419, proteção contra raios, como escolher nível de proteção, SPDA nível I II III IV">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://lumenverum.com.br/niveis-de-protecao-spda-i-ii-iii-iv.html">
+<link rel="icon" type="image/png" href="logo-lumen-verum menor.png">
+<link rel="apple-touch-icon" href="logo-lumen-verum menor.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-back {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    padding: 120px 5% 64px;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,177,16,0.08) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(232,177,16,0.12);
+    border: 1px solid rgba(232,177,16,0.25);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .hero-meta-item svg {
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--gray-light);
+    border-bottom: 1px solid #e8e8e4;
+    padding: 40px 5%;
+  }
+  .toc-inner {
+    max-width: 800px; margin: 0 auto;
+  }
+  .toc h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .toc li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0dc;
+  }
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc a:hover { color: var(--gold); }
+  .toc-num {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE ── */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 5% 64px;
+  }
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 56px 0 20px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .article h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  .article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 36px 0 12px;
+  }
+  .article p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .article strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .article ul, .article ol {
+    margin: 12px 0 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .article li {
+    margin-bottom: 6px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(232,177,16,0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+  .highlight-box strong {
+    color: var(--navy);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0dc;
+  }
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .article thead {
+    background: var(--navy);
+    color: #fff;
+  }
+  .article th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e4;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .article tbody tr:nth-child(even) {
+    background: var(--gray-light);
+  }
+  .article tbody tr:hover {
+    background: rgba(232,177,16,0.06);
+  }
+
+  /* ── INLINE CTA ── */
+  .inline-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    margin: 48px 0;
+    text-align: center;
+  }
+  .inline-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+  .inline-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.3);
+  }
+
+  /* ── RELATED ARTICLES ── */
+  .related-articles {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5% 64px;
+  }
+  .related-articles h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .related-card {
+    background: var(--gray-light);
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .related-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,12,82,0.08);
+  }
+  .related-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .related-card p {
+    font-size: 0.8rem;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 32px 5%;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+  }
+  footer a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+  .whatsapp-float svg {
+    width: 28px; height: 28px;
+    fill: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 5% 48px; }
+    .hero h1 { font-size: 2rem; }
+    .toc ol { columns: 1; }
+    .article h2 { font-size: 1.5rem; }
+    .article { padding: 40px 5% 48px; }
+    .inline-cta { padding: 32px 24px; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero .subtitle { font-size: 0.9rem; }
+    .article table { font-size: 0.75rem; }
+    .article th, .article td { padding: 8px 10px; }
+  }
+</style>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Níveis de Proteção SPDA (I, II, III e IV): Como Escolher o Correto",
+  "description": "Entenda os níveis de proteção SPDA I, II, III e IV conforme a NBR 5419. Critérios de escolha, tabela comparativa, relação com a análise de risco e exemplos práticos.",
+  "url": "https://lumenverum.com.br/niveis-de-protecao-spda-i-ii-iii-iv.html",
+  "image": "https://lumenverum.com.br/og-thumb.png",
+  "author": {
+    "@type": "Person",
+    "name": "Samuel Ribeiro Morais",
+    "jobTitle": "Engenheiro Eletricista e Perito Judicial"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lumen Verum",
+    "url": "https://lumenverum.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lumenverum.com.br/logo-lumen-verum.png"
+    }
+  },
+  "datePublished": "2026-03-15",
+  "dateModified": "2026-03-15",
+  "mainEntityOfPage": "https://lumenverum.com.br/niveis-de-protecao-spda-i-ii-iii-iv.html",
+  "keywords": ["nível de proteção SPDA", "NP I", "NP II", "NP III", "NP IV", "classe SPDA", "NBR 5419", "como escolher nível de proteção"]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>Engenharia</span></a>
+  <a href="spda-risk-analyzer.html" class="nav-back">&larr; SPDA Risk Analyzer</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">Artigo Técnico — Março 2026</div>
+    <h1>Níveis de Proteção SPDA<br><em>(I, II, III e IV)</em>: Como Escolher</h1>
+    <p class="subtitle">
+      Entenda os critérios técnicos para cada nível de proteção conforme a NBR 5419.
+      Tabela comparativa, relação com a análise de risco e exemplos práticos de aplicação.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+        Por Samuel Ribeiro Morais
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Março 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conforme NBR 5419:2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc">
+  <div class="toc-inner">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#o-que-sao"><span class="toc-num">1.</span> O que são os níveis de proteção</a></li>
+      <li><a href="#mudanca-terminologica"><span class="toc-num">2.</span> De "classe" para "nível de proteção"</a></li>
+      <li><a href="#criterios"><span class="toc-num">3.</span> Critérios para cada nível (I a IV)</a></li>
+      <li><a href="#tabela-comparativa"><span class="toc-num">4.</span> Tabela comparativa dos níveis</a></li>
+      <li><a href="#relacao-risco"><span class="toc-num">5.</span> Relação com a análise de risco</a></li>
+      <li><a href="#exemplos"><span class="toc-num">6.</span> Exemplos práticos de aplicação</a></li>
+      <li><a href="#erros-escolha"><span class="toc-num">7.</span> Erros comuns na escolha do nível</a></li>
+      <li><a href="#perguntas"><span class="toc-num">8.</span> Perguntas frequentes</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- 1. O QUE SÃO -->
+  <h2 id="o-que-sao">1. O que são os níveis de proteção</h2>
+
+  <p>Os níveis de proteção do SPDA (Sistema de Proteção contra Descargas Atmosféricas) representam a <strong>eficiência de captação</strong> do sistema e determinam os parâmetros construtivos do projeto — desde o espaçamento da malha captora até a distância entre condutores de descida e a seção mínima dos condutores. São quatro níveis, designados por algarismos romanos: <strong>NP I, NP II, NP III e NP IV</strong>.</p>
+
+  <p>O nível I é o mais rigoroso, com a maior eficiência de captação (98%), enquanto o nível IV é o menos restritivo (80%). A escolha do nível adequado não é arbitrária: ela resulta diretamente da <strong>análise de risco</strong> conforme a Parte 2 da ABNT NBR 5419, que quantifica os riscos associados às descargas atmosféricas na estrutura e determina o grau de proteção necessário para reduzi-los a patamares toleráveis.</p>
+
+  <div class="highlight-box">
+    <p><strong>Conceito fundamental:</strong> O nível de proteção define <strong>contra quais parâmetros de corrente de descarga</strong> o SPDA é dimensionado. Quanto mais alto o nível (I sendo o mais alto), menores são as correntes de pico consideradas no dimensionamento, o que significa que o sistema captura descargas de menor intensidade — e, portanto, protege contra uma faixa mais ampla de eventos.</p>
+  </div>
+
+  <p>A eficiência de captação de cada nível representa a probabilidade de que uma descarga atmosférica que atinja a proximidade da estrutura seja interceptada pelo sistema de captação:</p>
+  <ul>
+    <li><strong>NP I:</strong> 98% de eficiência de captação</li>
+    <li><strong>NP II:</strong> 95% de eficiência de captação</li>
+    <li><strong>NP III:</strong> 90% de eficiência de captação</li>
+    <li><strong>NP IV:</strong> 80% de eficiência de captação</li>
+  </ul>
+
+  <!-- 2. MUDANÇA TERMINOLÓGICA -->
+  <h2 id="mudanca-terminologica">2. De "classe" para "nível de proteção"</h2>
+
+  <p>Uma mudança importante introduzida pela edição 2026 da NBR 5419 é a substituição terminológica de <strong>"classe do SPDA" por "nível de proteção do SPDA"</strong>. A correspondência é direta: Classe I = NP I, Classe II = NP II, Classe III = NP III, Classe IV = NP IV. Todos os valores numéricos e requisitos técnicos foram mantidos.</p>
+
+  <p>A mudança visa alinhar a terminologia brasileira com a IEC 62305 (Ed. 3, 2024) e evitar confusão com o termo "classe" utilizado em outros contextos normativos (como classe de isolamento, classe de tensão, etc.). Em documentos técnicos e laudos, a partir de março de 2026, deve-se utilizar a terminologia atualizada.</p>
+
+  <p>Para detalhes completos sobre todas as mudanças da edição 2026, consulte a <a href="nbr-5419-2015-vs-2026.html">análise comparativa NBR 5419:2015 vs 2026</a>.</p>
+
+  <!-- 3. CRITÉRIOS -->
+  <h2 id="criterios">3. Critérios para cada nível (I a IV)</h2>
+
+  <h3>3.1. Nível de Proteção I (NP I) — Proteção máxima</h3>
+  <p>O NP I é o nível mais rigoroso, indicado para estruturas onde as consequências de uma falha de proteção são extremamente graves. Ele considera os parâmetros de corrente mais severos e oferece a maior eficiência de captação.</p>
+
+  <p><strong>Características construtivas do NP I:</strong></p>
+  <ul>
+    <li>Raio da esfera rolante: <strong>20 m</strong></li>
+    <li>Malha captora: <strong>5 m &times; 5 m</strong></li>
+    <li>Ângulo de proteção: conforme Tabela 2 da Parte 3 (variável com a altura)</li>
+    <li>Distância entre descidas: <strong>10 m</strong></li>
+    <li>Corrente de pico da primeira componente positiva: <strong>200 kA</strong></li>
+    <li>Carga total da primeira componente positiva: <strong>300 C</strong></li>
+    <li>Energia específica (W/R): <strong>10 MJ/&Omega;</strong></li>
+  </ul>
+
+  <p><strong>Aplicações típicas:</strong> Hospitais, centros cirúrgicos, UTIs, indústrias com materiais explosivos (classe II), postos de combustíveis, depósitos de munições, centrais de energia nuclear, instalações militares.</p>
+
+  <h3>3.2. Nível de Proteção II (NP II) — Proteção elevada</h3>
+  <p>O NP II oferece um nível elevado de proteção, adequado para estruturas com risco significativo, mas sem a criticidade extrema do NP I.</p>
+
+  <p><strong>Características construtivas do NP II:</strong></p>
+  <ul>
+    <li>Raio da esfera rolante: <strong>30 m</strong></li>
+    <li>Malha captora: <strong>10 m &times; 10 m</strong></li>
+    <li>Distância entre descidas: <strong>10 m</strong></li>
+    <li>Corrente de pico da primeira componente positiva: <strong>150 kA</strong></li>
+    <li>Carga total da primeira componente positiva: <strong>225 C</strong></li>
+    <li>Energia específica (W/R): <strong>5,6 MJ/&Omega;</strong></li>
+  </ul>
+
+  <p><strong>Aplicações típicas:</strong> Escolas, universidades, shopping centers, centros de convenções, data centers, estações de telecomunicações, indústrias de médio porte, edifícios comerciais de grande porte.</p>
+
+  <h3>3.3. Nível de Proteção III (NP III) — Proteção padrão</h3>
+  <p>O NP III é o nível mais frequentemente adotado em edificações urbanas de uso comum, representando um equilíbrio entre custo de instalação e nível de proteção.</p>
+
+  <p><strong>Características construtivas do NP III:</strong></p>
+  <ul>
+    <li>Raio da esfera rolante: <strong>45 m</strong></li>
+    <li>Malha captora: <strong>15 m &times; 15 m</strong></li>
+    <li>Distância entre descidas: <strong>15 m</strong></li>
+    <li>Corrente de pico da primeira componente positiva: <strong>100 kA</strong></li>
+    <li>Carga total da primeira componente positiva: <strong>150 C</strong></li>
+    <li>Energia específica (W/R): <strong>2,5 MJ/&Omega;</strong></li>
+  </ul>
+
+  <p><strong>Aplicações típicas:</strong> Edifícios residenciais multifamiliares, edifícios comerciais de médio porte, igrejas, supermercados, galpões industriais sem materiais perigosos, escritórios corporativos.</p>
+
+  <h3>3.4. Nível de Proteção IV (NP IV) — Proteção básica</h3>
+  <p>O NP IV é o nível menos restritivo, utilizado quando a análise de risco indica necessidade de proteção, mas os riscos são relativamente baixos.</p>
+
+  <p><strong>Características construtivas do NP IV:</strong></p>
+  <ul>
+    <li>Raio da esfera rolante: <strong>60 m</strong></li>
+    <li>Malha captora: <strong>20 m &times; 20 m</strong></li>
+    <li>Distância entre descidas: <strong>20 m</strong></li>
+    <li>Corrente de pico da primeira componente positiva: <strong>100 kA</strong> (mesmo do NP III)</li>
+    <li>Carga total da primeira componente positiva: <strong>150 C</strong></li>
+    <li>Energia específica (W/R): <strong>2,5 MJ/&Omega;</strong></li>
+  </ul>
+
+  <p><strong>Aplicações típicas:</strong> Residências unifamiliares (quando análise de risco indica necessidade), galpões de armazenagem de baixo risco, edificações agrícolas, pequenos estabelecimentos comerciais, estruturas isoladas de baixa ocupação.</p>
+
+  <div class="highlight-box">
+    <p><strong>Nota técnica:</strong> NP III e NP IV possuem os mesmos parâmetros de corrente de descarga (100 kA, 150 C, 2,5 MJ/&Omega;). A diferença entre eles reside nos parâmetros geométricos do subsistema de captação (raio da esfera, malha, distância de descidas) e, consequentemente, na eficiência de captação: 90% para NP III versus 80% para NP IV.</p>
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="inline-cta">
+    <h3>Determine o nível de proteção automaticamente</h3>
+    <p>O SPDA Risk Analyzer calcula a análise de risco e determina o nível de proteção necessário conforme a NBR 5419:2026, com memorial descritivo completo.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 4. TABELA COMPARATIVA -->
+  <h2 id="tabela-comparativa">4. Tabela comparativa dos níveis de proteção</h2>
+
+  <p>A tabela a seguir consolida os principais parâmetros de cada nível de proteção, facilitando a comparação direta entre eles:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Parâmetro</th>
+          <th>NP I</th>
+          <th>NP II</th>
+          <th>NP III</th>
+          <th>NP IV</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Eficiência de captação</strong></td>
+          <td>98%</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>80%</td>
+        </tr>
+        <tr>
+          <td><strong>Raio da esfera rolante</strong></td>
+          <td>20 m</td>
+          <td>30 m</td>
+          <td>45 m</td>
+          <td>60 m</td>
+        </tr>
+        <tr>
+          <td><strong>Malha captora</strong></td>
+          <td>5 &times; 5 m</td>
+          <td>10 &times; 10 m</td>
+          <td>15 &times; 15 m</td>
+          <td>20 &times; 20 m</td>
+        </tr>
+        <tr>
+          <td><strong>Distância entre descidas</strong></td>
+          <td>10 m</td>
+          <td>10 m</td>
+          <td>15 m</td>
+          <td>20 m</td>
+        </tr>
+        <tr>
+          <td><strong>Corrente de pico (1a comp. positiva)</strong></td>
+          <td>200 kA</td>
+          <td>150 kA</td>
+          <td>100 kA</td>
+          <td>100 kA</td>
+        </tr>
+        <tr>
+          <td><strong>Carga total (1a comp. positiva)</strong></td>
+          <td>300 C</td>
+          <td>225 C</td>
+          <td>150 C</td>
+          <td>150 C</td>
+        </tr>
+        <tr>
+          <td><strong>Energia específica (W/R)</strong></td>
+          <td>10 MJ/&Omega;</td>
+          <td>5,6 MJ/&Omega;</td>
+          <td>2,5 MJ/&Omega;</td>
+          <td>2,5 MJ/&Omega;</td>
+        </tr>
+        <tr>
+          <td><strong>Corrente de pico (comp. subsequente)</strong></td>
+          <td>50 kA</td>
+          <td>37,5 kA</td>
+          <td>25 kA</td>
+          <td>25 kA</td>
+        </tr>
+        <tr>
+          <td><strong>Comprimento mínimo do eletrodo de aterramento (horizontal)</strong></td>
+          <td>5 m (cada)</td>
+          <td>5 m (cada)</td>
+          <td>5 m (cada)</td>
+          <td>5 m (cada)</td>
+        </tr>
+        <tr>
+          <td><strong>Inspeção periódica recomendada</strong></td>
+          <td>Anual</td>
+          <td>Anual</td>
+          <td>A cada 3 anos</td>
+          <td>A cada 3 anos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Note que a distância entre descidas para NP I e NP II é a mesma (10 m), conforme a Tabela 5 da Parte 3 da NBR 5419:2026. A tolerância de 20% é mantida para todos os níveis.</p>
+
+  <!-- 5. RELAÇÃO COM ANÁLISE DE RISCO -->
+  <h2 id="relacao-risco">5. Relação com a análise de risco</h2>
+
+  <p>O nível de proteção do SPDA não é escolhido de forma isolada — ele resulta diretamente da <strong>análise de risco</strong> realizada conforme a Parte 2 da NBR 5419. O processo de determinação segue uma lógica iterativa:</p>
+
+  <ol>
+    <li><strong>Calcular os riscos</strong> R1, R3 e R4 sem nenhuma medida de proteção.</li>
+    <li><strong>Comparar com os riscos toleráveis</strong> R<sub>T1</sub> = 10<sup>-5</sup>, R<sub>T3</sub> = 10<sup>-4</sup>.</li>
+    <li>Se algum risco excede o tolerável, <strong>selecionar NP IV</strong> como primeira tentativa e recalcular.</li>
+    <li>Se NP IV não é suficiente, <strong>elevar para NP III</strong> e recalcular.</li>
+    <li>Repetir até que todos os riscos sejam toleráveis, elevando o nível progressivamente (NP II, NP I).</li>
+    <li>Na edição 2026, verificar também <strong>F &le; F<sub>T</sub></strong> para sistemas internos.</li>
+  </ol>
+
+  <div class="highlight-box">
+    <p><strong>Regra fundamental:</strong> O nível de proteção final é determinado pelo <strong>cenário mais crítico</strong> entre todos os tipos de perda. Se R1 requer NP III mas a proteção de equipamentos internos requer NP II, o SPDA deve ser projetado como NP II.</p>
+  </div>
+
+  <p>A seleção do nível de proteção afeta diretamente os fatores de probabilidade utilizados nos cálculos. Por exemplo, o fator P<sub>B</sub> (probabilidade de dano físico) varia conforme o NP adotado, o que retroalimenta o cálculo de risco. Por isso, o processo é iterativo.</p>
+
+  <p>Para um guia passo a passo completo de como realizar a análise de risco, consulte nosso artigo sobre <a href="como-fazer-analise-de-risco-spda.html">como fazer análise de risco de SPDA</a>.</p>
+
+  <!-- 6. EXEMPLOS PRÁTICOS -->
+  <h2 id="exemplos">6. Exemplos práticos de aplicação</h2>
+
+  <p>A seguir, apresentamos cenários reais que ilustram como o nível de proteção é determinado na prática. Os exemplos consideram os parâmetros típicos de cada tipo de edificação e os resultados esperados da análise de risco.</p>
+
+  <h3>6.1. Hospital de grande porte — NP I</h3>
+  <p>Um hospital com 200 leitos, centro cirúrgico, UTI e pronto-socorro localizado em município com NG = 8 raios/km²/ano. A análise de risco considera:</p>
+  <ul>
+    <li><strong>Risco à vida (L1):</strong> Pacientes em equipamentos de suporte vital (ventiladores, monitores cardíacos) são extremamente vulneráveis a interrupções elétricas. A perda L<sub>A</sub> e L<sub>B</sub> recebem valores elevados.</li>
+    <li><strong>Perda de serviço público (L2/F):</strong> Hospital é serviço essencial. A frequência de danos F deve atender F<sub>T</sub> = 0,1/ano (sistema crítico).</li>
+    <li><strong>Equipamentos sensíveis:</strong> Tomógrafos, ressonâncias magnéticas e equipamentos de hemodinâmica representam investimentos milionários e são vulneráveis a surtos.</li>
+  </ul>
+  <p><strong>Resultado:</strong> A combinação de risco à vida elevado, serviço público essencial e equipamentos sensíveis invariavelmente resulta em <strong>NP I</strong>. Além do SPDA, medidas de proteção contra surtos (MPS) com DPS coordenados em múltiplos estágios são obrigatórias.</p>
+
+  <h3>6.2. Escola estadual de dois pavimentos — NP II ou III</h3>
+  <p>Uma escola com 500 alunos, dois pavimentos, estrutura de concreto armado, localizada em área urbana com NG = 6 raios/km²/ano. A análise considera:</p>
+  <ul>
+    <li><strong>Risco à vida:</strong> Grande concentração de menores de idade durante o período letivo. O fator de perda por pânico é relevante.</li>
+    <li><strong>Tipo de estrutura:</strong> Concreto armado com cobertura de laje oferece certo grau de blindagem natural.</li>
+    <li><strong>Equipamentos:</strong> Laboratórios de informática e sistemas de comunicação com valor moderado.</li>
+  </ul>
+  <p><strong>Resultado típico:</strong> <strong>NP II ou NP III</strong>, dependendo do NG local, da área de exposição e dos materiais construtivos. Escolas em regiões de alta incidência ceraúnica tendem a NP II.</p>
+
+  <h3>6.3. Edifício residencial de 20 andares — NP III</h3>
+  <p>Um edifício residencial multifamiliar com 20 pavimentos, 80 unidades, estrutura de concreto armado, localizado em centro urbano com NG = 5 raios/km²/ano e prédios vizinhos de altura similar.</p>
+  <ul>
+    <li><strong>Risco à vida:</strong> Moderado. Ocupantes geralmente no interior, com blindagem da estrutura.</li>
+    <li><strong>Efeito de vizinhança:</strong> Prédios adjacentes de altura similar reduzem a área de exposição equivalente.</li>
+    <li><strong>Equipamentos:</strong> Sistemas de elevador, bombeamento e interfone. Valor econômico moderado.</li>
+  </ul>
+  <p><strong>Resultado típico:</strong> <strong>NP III</strong>. A maioria dos edifícios residenciais em centros urbanos resulta em NP III. Em regiões de NG elevado ou com estruturas isoladas (sem vizinhos), pode ser necessário NP II.</p>
+
+  <h3>6.4. Galpão industrial com materiais inflamáveis — NP I</h3>
+  <p>Um galpão industrial de 5.000 m² que armazena solventes e produtos químicos inflamáveis, estrutura metálica com cobertura metálica, em zona industrial com NG = 10 raios/km²/ano.</p>
+  <ul>
+    <li><strong>Risco de incêndio e explosão:</strong> Extremamente elevado. O fator r<sub>f</sub> (fator de redução de incêndio) é crítico.</li>
+    <li><strong>Risco à vida:</strong> Trabalhadores expostos em ambiente com potencial explosivo.</li>
+    <li><strong>Área de exposição:</strong> Grande área horizontal com altura baixa, mas em região de alta incidência.</li>
+  </ul>
+  <p><strong>Resultado:</strong> <strong>NP I</strong> é mandatório. A presença de materiais inflamáveis ou explosivos quase invariavelmente exige o nível máximo de proteção. Além do SPDA, equipotencialização rigorosa e proteção contra faíscas são indispensáveis.</p>
+
+  <h3>6.5. Residência unifamiliar — NP IV (quando necessário)</h3>
+  <p>Uma residência de dois pavimentos em área rural, sem vizinhos próximos, localizada em topo de morro em região com NG = 12 raios/km²/ano.</p>
+  <ul>
+    <li><strong>Localização:</strong> Fator C<sub>d</sub> elevado (topo de morro, sem blindagem de vizinhança).</li>
+    <li><strong>Risco à vida:</strong> Baixo número de ocupantes, mas exposição elevada pela localização.</li>
+    <li><strong>Equipamentos:</strong> Valor econômico relativamente baixo.</li>
+  </ul>
+  <p><strong>Resultado típico:</strong> A análise pode indicar R1 &gt; R<sub>T1</sub> pela combinação de NG elevado e localização desfavorável. Neste caso, <strong>NP IV</strong> é geralmente suficiente para reduzir R1 a valores toleráveis. Em regiões de NG muito baixo e terreno plano, a análise pode dispensar o SPDA.</p>
+
+  <!-- SECOND CTA -->
+  <div class="inline-cta">
+    <h3>Descubra o nível de proteção ideal para sua estrutura</h3>
+    <p>O SPDA Risk Analyzer realiza a análise de risco completa e indica o nível de proteção necessário, com dados de NG automáticos por município e memorial descritivo profissional.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Experimentar o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 7. ERROS COMUNS -->
+  <h2 id="erros-escolha">7. Erros comuns na escolha do nível de proteção</h2>
+
+  <p>A prática profissional revela erros recorrentes na determinação do nível de proteção que comprometem tanto a segurança quanto a conformidade normativa.</p>
+
+  <h3>7.1. Escolher o nível sem análise de risco</h3>
+  <p>O erro mais grave e mais comum é a escolha arbitrária do nível de proteção sem realizar a análise de risco da Parte 2. Afirmações como "toda indústria é NP II" ou "residencial é sempre NP IV" não possuem fundamento normativo. O nível de proteção deve resultar <strong>exclusivamente da análise de risco</strong>, considerando todos os parâmetros específicos da estrutura.</p>
+
+  <h3>7.2. Subdimensionar por economia</h3>
+  <p>Escolher um nível inferior ao indicado pela análise de risco para reduzir custos de instalação é uma prática perigosa. Além de configurar não conformidade normativa, transfere a responsabilidade por eventuais danos ao profissional que assinou o projeto. A diferença de custo entre NP III e NP II, por exemplo, é geralmente pequena em relação ao custo total da obra.</p>
+
+  <h3>7.3. Superdimensionar desnecessariamente</h3>
+  <p>O oposto também é problemático: adotar NP I para todas as estruturas, "por segurança". Além do custo adicional injustificado, essa prática demonstra desconhecimento da metodologia normativa e pode ser questionada em auditorias técnicas. A análise de risco existe justamente para dimensionar o nível adequado.</p>
+
+  <h3>7.4. Ignorar a frequência de danos (F) na edição 2026</h3>
+  <p>Com a edição 2026 da NBR 5419, a análise de risco R pode indicar NP III, mas a frequência de danos F para sistemas internos pode exigir medidas adicionais que impliquem NP II. Profissionais que não consideram o critério de F na análise podem subdimensionar a proteção. Para detalhes sobre a frequência de danos e as demais mudanças da edição 2026, consulte nosso artigo sobre <a href="nbr-5419-2015-vs-2026.html">as diferenças entre as edições 2015 e 2026</a>.</p>
+
+  <h3>7.5. Não considerar alterações futuras de uso</h3>
+  <p>Um edifício projetado como escritórios (NP III) pode ser convertido em clínica médica (potencialmente NP II) ou depósito de materiais inflamáveis (NP I). Quando há possibilidade de alteração de uso, é prudente considerar essa eventualidade no dimensionamento inicial ou, no mínimo, documentar as premissas adotadas.</p>
+
+  <!-- 8. PERGUNTAS FREQUENTES -->
+  <h2 id="perguntas">8. Perguntas frequentes</h2>
+
+  <h3>8.1. Posso usar NP III para um hospital?</h3>
+  <p>Na imensa maioria dos casos, <strong>não</strong>. Hospitais combinam risco à vida elevado (pacientes em equipamentos de suporte vital), serviço público essencial e equipamentos de alto valor. A análise de risco quase invariavelmente resultará em NP I ou, no mínimo, NP II. Adotar NP III sem que a análise de risco respalde essa decisão configura não conformidade.</p>
+
+  <h3>8.2. NP III e NP IV têm os mesmos parâmetros de corrente. Qual a diferença prática?</h3>
+  <p>A diferença está nos <strong>parâmetros geométricos</strong>: malha captora (15 m vs 20 m), raio da esfera rolante (45 m vs 60 m) e distância entre descidas (15 m vs 20 m). Isso resulta em eficiência de captação diferente (90% vs 80%), ou seja, o NP III intercepta uma proporção maior de descargas. Na prática, a diferença construtiva se traduz em mais condutores de captação e mais descidas para o NP III.</p>
+
+  <h3>8.3. É possível combinar diferentes níveis em uma mesma estrutura?</h3>
+  <p>A norma não prevê explicitamente a combinação de níveis dentro de um mesmo SPDA. Na prática, o nível adotado deve ser o <strong>mais restritivo</strong> exigido por qualquer tipo de perda. No entanto, as medidas de proteção contra surtos (MPS) internas podem ser dimensionadas de forma diferenciada por zona, conforme os requisitos de cada sistema interno.</p>
+
+  <h3>8.4. Se a análise de risco indica que SPDA não é necessário, qual nível usar?</h3>
+  <p>Se todos os riscos calculados são inferiores aos toleráveis e a frequência de danos atende ao critério F<sub>T</sub>, o SPDA <strong>não é obrigatório pela norma</strong>. No entanto, a legislação municipal ou o Corpo de Bombeiros podem exigi-lo independentemente do resultado da análise. Quando exigido por lei sem especificação de nível, adota-se tipicamente NP IV. Para saber mais sobre a obrigatoriedade, consulte nosso artigo sobre <a href="quando-e-obrigatorio-spda.html">quando é obrigatório instalar SPDA</a>.</p>
+
+  <h3>8.5. A edição 2026 alterou os parâmetros dos níveis de proteção?</h3>
+  <p>Não. Os valores numéricos dos parâmetros de corrente (Tabelas 3 e 4 da Parte 1), dos parâmetros geométricos (Tabelas da Parte 3) e das eficiências de captação foram <strong>mantidos idênticos</strong> à edição 2015. A mudança foi exclusivamente terminológica (de "classe" para "nível de proteção") e estrutural (reorganização de tabelas).</p>
+
+  <!-- FINAL CTA -->
+  <div class="inline-cta" style="margin-bottom: 0;">
+    <h3>Análise de risco completa com nível de proteção automático</h3>
+    <p>O SPDA Risk Analyzer contempla todas as exigências da NBR 5419:2026: cálculos de R1, R3, R4 e F, determinação automática do nível de proteção, NG por município e memorial descritivo profissional.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <p style="font-size:0.82rem; color:var(--gray-mid); margin-top:32px; font-style:italic;">
+    Este artigo constitui análise técnica com finalidade informativa e educacional. Não substitui a leitura integral da ABNT NBR 5419:2026 em suas quatro Partes, nem dispensa a responsabilidade de profissional habilitado na determinação do nível de proteção.
+  </p>
+
+</article>
+
+<!-- RELATED ARTICLES -->
+<section class="related-articles">
+  <h2>Artigos Relacionados</h2>
+  <div class="related-grid">
+    <a href="como-fazer-analise-de-risco-spda.html" class="related-card">
+      <h3>Como Fazer Análise de Risco de SPDA</h3>
+      <p>Guia completo passo a passo para realizar a análise de risco conforme a NBR 5419, da coleta de dados à classificação do nível de proteção.</p>
+    </a>
+    <a href="quando-e-obrigatorio-spda.html" class="related-card">
+      <h3>Quando é Obrigatório Instalar SPDA?</h3>
+      <p>Entenda a legislação, as responsabilidades e as consequências da ausência de proteção contra descargas atmosféricas.</p>
+    </a>
+    <a href="nbr-5419-2015-vs-2026.html" class="related-card">
+      <h3>NBR 5419: Edição 2015 vs 2026</h3>
+      <p>Análise comparativa completa de todas as mudanças nas Partes 1, 2, 3 e 4 da norma de proteção contra descargas atmosféricas.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Lumen Verum Engenharia. Todos os direitos reservados.
+  &nbsp;|&nbsp; <a href="index.html">Página Inicial</a>
+  &nbsp;|&nbsp; <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20n%C3%ADveis%20de%20prote%C3%A7%C3%A3o%20SPDA%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20SPDA%20Risk%20Analyzer." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Fazer Análise de Risco de SPDA: Guia Completo Passo a Passo | Lumen Verum</title>
+<meta name="description" content="Guia completo e passo a passo para realizar a análise de risco de SPDA conforme a NBR 5419. Coleta de dados, zonas de proteção, cálculo de componentes de risco e classificação do nível de proteção.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lumenverum.com.br/como-fazer-analise-de-risco-spda.html">
+<meta property="og:title" content="Como Fazer Análise de Risco de SPDA: Guia Completo Passo a Passo">
+<meta property="og:description" content="Guia completo e passo a passo para realizar a análise de risco de SPDA conforme a NBR 5419. Coleta de dados, zonas de proteção, cálculo dos componentes de risco.">
+<meta property="og:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta property="og:image:width" content="2500">
+<meta property="og:image:height" content="2500">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como Fazer Análise de Risco de SPDA: Guia Completo Passo a Passo">
+<meta name="twitter:description" content="Guia completo para análise de risco de SPDA conforme NBR 5419. Passo a passo detalhado.">
+<meta name="twitter:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta name="keywords" content="análise de risco SPDA, como fazer análise de risco, NBR 5419, proteção contra descargas atmosféricas, nível de proteção, cálculo de risco SPDA, componentes de risco">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://lumenverum.com.br/como-fazer-analise-de-risco-spda.html">
+<link rel="icon" type="image/png" href="logo-lumen-verum menor.png">
+<link rel="apple-touch-icon" href="logo-lumen-verum menor.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-back {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    padding: 120px 5% 64px;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,177,16,0.08) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(232,177,16,0.12);
+    border: 1px solid rgba(232,177,16,0.25);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .hero-meta-item svg {
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--gray-light);
+    border-bottom: 1px solid #e8e8e4;
+    padding: 40px 5%;
+  }
+  .toc-inner {
+    max-width: 800px; margin: 0 auto;
+  }
+  .toc h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .toc li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0dc;
+  }
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc a:hover { color: var(--gold); }
+  .toc-num {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE ── */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 5% 64px;
+  }
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 56px 0 20px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .article h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  .article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 36px 0 12px;
+  }
+  .article p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .article strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .article ul, .article ol {
+    margin: 12px 0 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .article li {
+    margin-bottom: 6px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(232,177,16,0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+  .highlight-box strong {
+    color: var(--navy);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0dc;
+  }
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .article thead {
+    background: var(--navy);
+    color: #fff;
+  }
+  .article th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e4;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .article tbody tr:nth-child(even) {
+    background: var(--gray-light);
+  }
+  .article tbody tr:hover {
+    background: rgba(232,177,16,0.06);
+  }
+
+  /* ── INLINE CTA ── */
+  .inline-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    margin: 48px 0;
+    text-align: center;
+  }
+  .inline-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+  .inline-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.3);
+  }
+
+  /* ── RELATED ARTICLES ── */
+  .related-articles {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5% 64px;
+  }
+  .related-articles h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .related-card {
+    background: var(--gray-light);
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .related-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,12,82,0.08);
+  }
+  .related-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .related-card p {
+    font-size: 0.8rem;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 32px 5%;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+  }
+  footer a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+  .whatsapp-float svg {
+    width: 28px; height: 28px;
+    fill: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 5% 48px; }
+    .hero h1 { font-size: 2rem; }
+    .toc ol { columns: 1; }
+    .article h2 { font-size: 1.5rem; }
+    .article { padding: 40px 5% 48px; }
+    .inline-cta { padding: 32px 24px; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero .subtitle { font-size: 0.9rem; }
+    .article table { font-size: 0.75rem; }
+    .article th, .article td { padding: 8px 10px; }
+  }
+</style>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como Fazer Análise de Risco de SPDA: Guia Completo Passo a Passo",
+  "description": "Guia completo e passo a passo para realizar a análise de risco de SPDA conforme a NBR 5419. Coleta de dados, zonas de proteção, cálculo dos componentes de risco e classificação do nível de proteção.",
+  "url": "https://lumenverum.com.br/como-fazer-analise-de-risco-spda.html",
+  "image": "https://lumenverum.com.br/og-thumb.png",
+  "author": {
+    "@type": "Person",
+    "name": "Samuel Ribeiro Morais",
+    "jobTitle": "Engenheiro Eletricista e Perito Judicial"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lumen Verum",
+    "url": "https://lumenverum.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lumenverum.com.br/logo-lumen-verum.png"
+    }
+  },
+  "datePublished": "2026-03-15",
+  "dateModified": "2026-03-15",
+  "mainEntityOfPage": "https://lumenverum.com.br/como-fazer-analise-de-risco-spda.html",
+  "keywords": ["análise de risco SPDA", "NBR 5419", "como fazer análise de risco", "proteção contra descargas atmosféricas", "nível de proteção", "cálculo de risco"]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>Engenharia</span></a>
+  <a href="spda-risk-analyzer.html" class="nav-back">&larr; SPDA Risk Analyzer</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">Guia Técnico — Março 2026</div>
+    <h1>Como Fazer <em>Análise de Risco</em><br>de SPDA: Guia Completo</h1>
+    <p class="subtitle">
+      Passo a passo detalhado para realizar a análise de risco de proteção contra descargas atmosféricas conforme a ABNT NBR 5419.
+      Da coleta de dados à classificação do nível de proteção.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+        Por Samuel Ribeiro Morais
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Março 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conforme NBR 5419:2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc">
+  <div class="toc-inner">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#o-que-e"><span class="toc-num">1.</span> O que é análise de risco de SPDA</a></li>
+      <li><a href="#quando-obrigatoria"><span class="toc-num">2.</span> Quando é obrigatória</a></li>
+      <li><a href="#passo1"><span class="toc-num">3.</span> Passo 1: Coleta de dados da estrutura</a></li>
+      <li><a href="#passo2"><span class="toc-num">4.</span> Passo 2: Definição das zonas de proteção</a></li>
+      <li><a href="#passo3"><span class="toc-num">5.</span> Passo 3: Cálculo dos componentes de risco</a></li>
+      <li><a href="#passo4"><span class="toc-num">6.</span> Passo 4: Classificação do nível de proteção</a></li>
+      <li><a href="#frequencia-danos"><span class="toc-num">7.</span> Frequência de danos (F) — novidade 2026</a></li>
+      <li><a href="#erros-comuns"><span class="toc-num">8.</span> Erros comuns na análise de risco</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- 1. O QUE É -->
+  <h2 id="o-que-e">1. O que é análise de risco de SPDA</h2>
+
+  <p>A análise de risco de SPDA (Sistema de Proteção contra Descargas Atmosféricas) é o procedimento técnico-normativo que determina se uma estrutura necessita de proteção contra raios e, em caso afirmativo, qual o <strong>nível de proteção</strong> adequado. Trata-se de uma exigência da ABNT NBR 5419, Parte 2, e constitui o documento fundamental para qualquer projeto de proteção contra descargas atmosféricas.</p>
+
+  <p>Na prática, a análise de risco quantifica a probabilidade de que descargas atmosféricas causem perdas inaceitáveis — seja de vidas humanas, de serviços ao público, de patrimônio cultural ou de valor econômico. O resultado dessa análise define se medidas de proteção são necessárias e quais são suficientes para reduzir o risco a um patamar tolerável.</p>
+
+  <p>O conceito central é simples: compara-se o <strong>risco calculado (R)</strong> com o <strong>risco tolerável (R<sub>T</sub>)</strong> definido pela norma. Se R &gt; R<sub>T</sub>, medidas de proteção são obrigatórias. A partir da edição 2026 da NBR 5419, deve-se avaliar também a <strong>frequência de danos (F)</strong> para sistemas internos, conforme detalhado na <a href="nbr-5419-2015-vs-2026.html">análise comparativa das edições 2015 e 2026</a>.</p>
+
+  <div class="highlight-box">
+    <p><strong>Importante:</strong> A análise de risco não é opcional. Toda estrutura deve passar por essa avaliação para determinar a necessidade ou não de SPDA. Mesmo que o resultado indique que a proteção não é necessária, o estudo deve ser documentado e assinado por profissional habilitado.</p>
+  </div>
+
+  <!-- 2. QUANDO OBRIGATÓRIA -->
+  <h2 id="quando-obrigatoria">2. Quando a análise de risco é obrigatória</h2>
+
+  <p>A análise de risco de SPDA é obrigatória em <strong>todas as situações</strong> reguladas pela NBR 5419. A norma não define exceções baseadas em tipo ou porte de edificação — toda estrutura precisa de uma avaliação formal. As situações que disparam a obrigatoriedade incluem:</p>
+
+  <ul>
+    <li><strong>Novas construções:</strong> O projeto de PDA (Proteção contra Descargas Atmosféricas) deve ser elaborado antes ou durante a fase de projeto da edificação, com base na análise de risco.</li>
+    <li><strong>Reformas ou ampliações:</strong> Qualquer alteração significativa na estrutura, no uso ou nas características construtivas exige nova análise de risco.</li>
+    <li><strong>Alteração de uso:</strong> A mudança de destinação de um imóvel (por exemplo, de residencial para comercial) altera os parâmetros de risco e demanda reavaliação.</li>
+    <li><strong>Renovação do laudo de inspeção:</strong> A cada inspeção periódica do SPDA, recomenda-se verificar se os parâmetros da análise de risco original ainda são válidos.</li>
+    <li><strong>Exigência de órgãos públicos:</strong> Corpo de Bombeiros, prefeituras e órgãos reguladores frequentemente exigem a análise de risco como requisito para alvará, habite-se ou licenciamento.</li>
+  </ul>
+
+  <p>Para entender em detalhes quais edificações são obrigadas a instalar SPDA e as consequências legais da omissão, consulte nosso artigo sobre <a href="quando-e-obrigatorio-spda.html">quando é obrigatório instalar SPDA</a>.</p>
+
+  <!-- 3. PASSO 1 -->
+  <h2 id="passo1">3. Passo 1: Coleta de dados da estrutura</h2>
+
+  <p>A primeira etapa da análise de risco consiste em levantar todas as informações necessárias sobre a estrutura e seu entorno. A qualidade da análise depende diretamente da precisão desses dados. Os principais parâmetros a coletar são:</p>
+
+  <h3>3.1. Características geométricas</h3>
+  <ul>
+    <li><strong>Comprimento (L), largura (W) e altura (H)</strong> da estrutura em metros</li>
+    <li>Presença de saliências, torres, antenas ou elementos elevados que aumentem a área de exposição</li>
+    <li>Formato da cobertura (plana, inclinada, abóbada)</li>
+  </ul>
+
+  <h3>3.2. Localização e entorno</h3>
+  <ul>
+    <li><strong>Município:</strong> Define o valor de NG (densidade de descargas atmosféricas para a terra). Na edição 2026, o NG deve ser obtido exclusivamente do Anexo F da Parte 2, que fornece valores tabelados por município.</li>
+    <li><strong>Topografia:</strong> Estruturas em topos de morros, encostas ou regiões elevadas possuem fator de localização (Cd) maior.</li>
+    <li><strong>Estruturas adjacentes:</strong> Edificações vizinhas com alturas semelhantes ou superiores podem fornecer efeito de blindagem.</li>
+  </ul>
+
+  <h3>3.3. Características construtivas</h3>
+  <ul>
+    <li><strong>Material da estrutura:</strong> Concreto armado, alvenaria, estrutura metálica, madeira — cada material influencia diferentes fatores de risco.</li>
+    <li><strong>Material da cobertura:</strong> Metálica, cerâmica, fibrocimento, laje impermeabilizada.</li>
+    <li><strong>Tipo de piso:</strong> Define o risco de tensão de passo e toque.</li>
+    <li><strong>Blindagem interna:</strong> Presença de armaduras de aço interligadas que funcionam como gaiola de Faraday.</li>
+  </ul>
+
+  <h3>3.4. Uso e ocupação</h3>
+  <ul>
+    <li><strong>Tipo de ocupação:</strong> Residencial, comercial, industrial, hospitalar, escolar, entre outros.</li>
+    <li><strong>Número de ocupantes e tempo de permanência:</strong> Influenciam o cálculo de perdas de vidas humanas.</li>
+    <li><strong>Presença de materiais inflamáveis ou explosivos:</strong> Aumenta significativamente o risco de incêndio e explosão.</li>
+    <li><strong>Presença de pânico potencial:</strong> Locais de grande concentração de público (cinemas, estádios, hospitais).</li>
+  </ul>
+
+  <h3>3.5. Linhas de energia e sinal</h3>
+  <ul>
+    <li><strong>Linhas de energia elétrica:</strong> Aéreas ou subterrâneas, com ou sem transformador próprio, comprimento estimado.</li>
+    <li><strong>Linhas de telecomunicações:</strong> Telefonia, dados, fibra óptica — tipo de instalação e blindagem.</li>
+    <li><strong>Sistemas fotovoltaicos, carregamento de veículos e telefonia móvel:</strong> Novos elementos incluídos na edição 2026.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Dica prática:</strong> Organize os dados em um formulário padronizado antes de iniciar os cálculos. O <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a> fornece campos estruturados para preenchimento de todos os parâmetros, evitando omissões.</p>
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="inline-cta">
+    <h3>Automatize a coleta e o cálculo de risco</h3>
+    <p>O SPDA Risk Analyzer guia você por cada etapa da análise, com dados de NG automáticos por município e cálculos conforme a NBR 5419:2026.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 4. PASSO 2 -->
+  <h2 id="passo2">4. Passo 2: Definição das zonas de proteção</h2>
+
+  <p>Após coletar os dados da estrutura, é necessário definir as <strong>zonas de proteção contra raios (ZPR)</strong>. O conceito de zoneamento é fundamental para a correta aplicação das medidas de proteção, tanto externas quanto internas.</p>
+
+  <h3>4.1. Conceito de ZPR</h3>
+  <p>As zonas de proteção contra raios representam regiões do espaço com diferentes níveis de severidade de ameaça eletromagnética. A norma define as zonas como:</p>
+  <ul>
+    <li><strong>ZPR 0A:</strong> Zona externa à estrutura, sujeita a impacto direto de raio e ao campo eletromagnético total da descarga.</li>
+    <li><strong>ZPR 0B:</strong> Zona externa protegida contra impacto direto, mas ainda exposta ao campo eletromagnético completo.</li>
+    <li><strong>ZPR 1:</strong> Zona interna onde a corrente de surto é limitada por medidas de blindagem e pela equipotencialização na fronteira.</li>
+    <li><strong>ZPR 2 e superiores:</strong> Zonas internas com atenuação progressiva do campo eletromagnético e da corrente de surto.</li>
+  </ul>
+
+  <h3>4.2. Fontes de dano e tipos de perda</h3>
+  <p>Para cada zona, identificam-se as <strong>fontes de dano</strong> aplicáveis:</p>
+  <ul>
+    <li><strong>S1:</strong> Descarga na estrutura</li>
+    <li><strong>S2:</strong> Descarga nas proximidades da estrutura</li>
+    <li><strong>S3:</strong> Descarga na linha conectada à estrutura</li>
+    <li><strong>S4:</strong> Descarga nas proximidades da linha conectada</li>
+  </ul>
+
+  <p>E os <strong>tipos de perda</strong>:</p>
+  <ul>
+    <li><strong>L1:</strong> Perda de vida humana (ou ferimentos permanentes)</li>
+    <li><strong>L2:</strong> Perda de serviço ao público</li>
+    <li><strong>L3:</strong> Perda de patrimônio cultural</li>
+    <li><strong>L4:</strong> Perda de valor econômico</li>
+  </ul>
+
+  <p>A combinação de fontes de dano e tipos de perda resulta nos <strong>componentes de risco</strong> que serão calculados no próximo passo.</p>
+
+  <!-- 5. PASSO 3 -->
+  <h2 id="passo3">5. Passo 3: Cálculo dos componentes de risco</h2>
+
+  <p>O cálculo dos componentes de risco é o núcleo da análise. Cada componente é determinado pela multiplicação do <strong>número anual de eventos perigosos (N)</strong> pela <strong>probabilidade de dano (P)</strong> e pela <strong>perda consequente (L)</strong>.</p>
+
+  <h3>5.1. Cálculo de N — Número de eventos perigosos</h3>
+  <p>O número de eventos perigosos depende da densidade de descargas atmosféricas (NG) e da <strong>área de exposição equivalente (A<sub>e</sub>)</strong> da estrutura:</p>
+
+  <div class="highlight-box">
+    <p><strong>N<sub>D</sub> = N<sub>G</sub> &times; A<sub>D</sub> &times; C<sub>d</sub> &times; 10<sup>-6</sup></strong></p>
+    <p>Onde N<sub>D</sub> é o número anual de descargas na estrutura, A<sub>D</sub> é a área de exposição equivalente em m², C<sub>d</sub> é o fator de localização e N<sub>G</sub> é a densidade de descargas para a terra (raios/km²/ano).</p>
+  </div>
+
+  <p>A área de exposição equivalente (A<sub>D</sub>) é calculada com base nas dimensões da estrutura (L, W, H), considerando uma distância de 3H ao redor para captura lateral.</p>
+
+  <h3>5.2. Componentes de risco para cada tipo de perda</h3>
+  <p>Para cada tipo de perda (L1, L2, L3, L4), os componentes de risco são calculados:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Fonte de dano</th>
+          <th>Tipo de dano</th>
+          <th>Fórmula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>R<sub>A</sub></strong></td>
+          <td>S1</td>
+          <td>Choque elétrico (tensão de toque e passo)</td>
+          <td>N<sub>D</sub> &times; P<sub>A</sub> &times; L<sub>A</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>B</sub></strong></td>
+          <td>S1</td>
+          <td>Dano físico (incêndio, explosão)</td>
+          <td>N<sub>D</sub> &times; P<sub>B</sub> &times; L<sub>B</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>C</sub></strong></td>
+          <td>S1</td>
+          <td>Falha de sistemas internos</td>
+          <td>N<sub>D</sub> &times; P<sub>C</sub> &times; L<sub>C</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>M</sub></strong></td>
+          <td>S2</td>
+          <td>Falha de sistemas internos</td>
+          <td>N<sub>M</sub> &times; P<sub>M</sub> &times; L<sub>M</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>U</sub></strong></td>
+          <td>S3</td>
+          <td>Choque elétrico via linha</td>
+          <td>N<sub>L</sub> &times; P<sub>U</sub> &times; L<sub>U</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>V</sub></strong></td>
+          <td>S3</td>
+          <td>Dano físico via linha</td>
+          <td>N<sub>L</sub> &times; P<sub>V</sub> &times; L<sub>V</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>W</sub></strong></td>
+          <td>S3</td>
+          <td>Falha de sistemas via linha</td>
+          <td>N<sub>L</sub> &times; P<sub>W</sub> &times; L<sub>W</sub></td>
+        </tr>
+        <tr>
+          <td><strong>R<sub>Z</sub></strong></td>
+          <td>S4</td>
+          <td>Falha de sistemas via linha (proximidade)</td>
+          <td>N<sub>I</sub> &times; P<sub>Z</sub> &times; L<sub>Z</sub></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.3. Riscos totais R1, R2, R3 e R4</h3>
+  <p>Os componentes são somados para cada tipo de perda:</p>
+  <ul>
+    <li><strong>R1 (perda de vida):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub></li>
+    <li><strong>R2 (perda de serviço):</strong> R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub> (substituído por F na edição 2026)</li>
+    <li><strong>R3 (patrimônio cultural):</strong> R<sub>B</sub> + R<sub>V</sub></li>
+    <li><strong>R4 (valor econômico):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub></li>
+  </ul>
+
+  <p>Cada risco total é comparado com o respectivo <strong>risco tolerável (R<sub>T</sub>)</strong>: R<sub>T1</sub> = 10<sup>-5</sup>, R<sub>T2</sub> = 10<sup>-3</sup> (na edição 2015), R<sub>T3</sub> = 10<sup>-4</sup>. Para R4, a decisão é econômica (comparação custo-benefício).</p>
+
+  <!-- 6. PASSO 4 -->
+  <h2 id="passo4">6. Passo 4: Classificação do nível de proteção</h2>
+
+  <p>Com os riscos calculados, o próximo passo é determinar o <strong>nível de proteção (NP)</strong> do SPDA necessário para reduzir cada risco a valores toleráveis. Os níveis de proteção vão de I (mais rigoroso) a IV (menos rigoroso).</p>
+
+  <p>O procedimento consiste em:</p>
+  <ol>
+    <li>Comparar R calculado com R<sub>T</sub> para cada tipo de perda.</li>
+    <li>Se R &le; R<sub>T</sub>, proteção não é necessária para aquele tipo de perda.</li>
+    <li>Se R &gt; R<sub>T</sub>, selecionar medidas de proteção que reduzam R até R &le; R<sub>T</sub>.</li>
+    <li>O nível de proteção do SPDA é determinado pelo cenário mais crítico entre todos os tipos de perda avaliados.</li>
+  </ol>
+
+  <p>Para uma explicação detalhada de cada nível e critérios de escolha, consulte nosso artigo sobre <a href="niveis-de-protecao-spda-i-ii-iii-iv.html">níveis de proteção SPDA (I, II, III e IV)</a>.</p>
+
+  <div class="highlight-box">
+    <p><strong>Regra prática:</strong> Se a análise indica que um SPDA NP III é suficiente para perda de vida (L1), mas NP II é necessário para proteção de equipamentos internos, o SPDA deve ser projetado como <strong>NP II</strong> — o nível mais restritivo prevalece.</p>
+  </div>
+
+  <!-- 7. FREQUÊNCIA DE DANOS -->
+  <h2 id="frequencia-danos">7. Frequência de danos (F) — novidade da edição 2026</h2>
+
+  <p>A edição 2026 da NBR 5419 introduziu um novo critério de avaliação: a <strong>frequência de danos (F)</strong>. Além de verificar R &le; R<sub>T</sub>, agora é obrigatório verificar <strong>F &le; F<sub>T</sub></strong> para sistemas internos (elétricos e eletrônicos).</p>
+
+  <p>A frequência de danos F representa o número anual de eventos prejudiciais que afetam os sistemas internos da estrutura. A equação é:</p>
+
+  <div class="highlight-box">
+    <p><strong>F = F<sub>B</sub> + F<sub>C</sub> + F<sub>M</sub> + F<sub>V</sub> + F<sub>W</sub> + F<sub>Z</sub></strong></p>
+    <p>Onde cada componente F<sub>X</sub> = N<sub>X</sub> &times; P<sub>X</sub></p>
+    <p>Frequência tolerável: <strong>F<sub>T</sub> = 0,1/ano</strong> para sistemas críticos (impositivo) e <strong>F<sub>T</sub> = 1/ano</strong> para não críticos.</p>
+  </div>
+
+  <p>Sistemas críticos incluem aqueles cuja falha afeta comunidades inteiras, como hospitais, centros de dados, estações de tratamento de água e sistemas de telecomunicações. O não atendimento ao critério de F pode exigir medidas adicionais de proteção interna (MPS), como DPS coordenados, blindagem eletromagnética e cabeamento blindado.</p>
+
+  <p>Para mais detalhes sobre todas as mudanças da edição 2026, incluindo o novo Anexo F com dados de NG por município, leia a <a href="nbr-5419-2015-vs-2026.html">análise comparativa NBR 5419:2015 vs 2026</a>.</p>
+
+  <!-- SECOND CTA -->
+  <div class="inline-cta">
+    <h3>Cálculo automático de R e F conforme a NBR 5419:2026</h3>
+    <p>O SPDA Risk Analyzer calcula R1, R3, R4 e F com dados de NG automáticos por município. Relatório profissional em PDF/DOCX com memorial descritivo completo.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Experimentar o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <!-- 8. ERROS COMUNS -->
+  <h2 id="erros-comuns">8. Erros comuns na análise de risco</h2>
+
+  <p>Ao longo de anos de prática em perícia judicial e consultoria, identificamos erros recorrentes que comprometem a validade de análises de risco. Conhecê-los é fundamental para produzir um trabalho tecnicamente defensável.</p>
+
+  <h3>8.1. Uso de NG de fontes não autorizadas</h3>
+  <p>A edição 2026 da NBR 5419 é taxativa: os valores de NG devem ser obtidos <strong>exclusivamente do Anexo F da Parte 2</strong>. Utilizar dados do INPE, do ELAT ou de mapas isoceraúnicos antigos configura não conformidade normativa. Mesmo na vigência da edição 2015, o uso de fontes externas sem justificativa técnica era questionável.</p>
+
+  <h3>8.2. Omissão de linhas conectadas</h3>
+  <p>Muitos profissionais consideram apenas as descargas diretas na estrutura (S1 e S2), ignorando as descargas nas linhas conectadas (S3 e S4). As componentes R<sub>U</sub>, R<sub>V</sub>, R<sub>W</sub> e R<sub>Z</sub> frequentemente representam parcela significativa do risco total, especialmente em estruturas com linhas aéreas longas em regiões rurais.</p>
+
+  <h3>8.3. Classificação incorreta de ocupação</h3>
+  <p>O tipo de ocupação e os fatores de perda associados devem refletir a realidade da edificação. Classificar um galpão industrial com materiais inflamáveis como "uso comercial genérico" subestima gravemente o risco. Da mesma forma, ignorar áreas de concentração de público (restaurantes, auditórios) distorce o cálculo de L1.</p>
+
+  <h3>8.4. Não considerar a frequência de danos (F)</h3>
+  <p>A partir da edição 2026, realizar apenas a análise de risco R sem avaliar a frequência de danos F para sistemas internos é <strong>insuficiente</strong>. Sistemas críticos exigem F &le; 0,1/ano, e essa avaliação deve constar no memorial descritivo.</p>
+
+  <h3>8.5. Ausência de memorial descritivo</h3>
+  <p>A análise de risco não se resume a preencher uma planilha. A NBR 5419 exige documentação completa, incluindo: identificação do responsável técnico com registro no conselho de classe, premissas adotadas, dados de entrada com fontes, resultados intermediários e conclusão fundamentada. A ausência desses elementos compromete a rastreabilidade e a credibilidade do trabalho.</p>
+
+  <h3>8.6. Cálculo de área de exposição sem considerar elementos elevados</h3>
+  <p>Antenas, torres de telecomunicações, para-raios existentes e caixas d'água elevadas alteram significativamente a área de exposição equivalente. Omitir esses elementos do cálculo de A<sub>D</sub> leva a uma subestimativa do número de eventos perigosos N<sub>D</sub>.</p>
+
+  <div class="highlight-box">
+    <p><strong>Recomendação:</strong> Utilize ferramentas validadas para garantir que todos os parâmetros sejam considerados e que os cálculos sigam rigorosamente a metodologia da norma. O <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a> automatiza esses cálculos e gera memorial descritivo completo, eliminando riscos de omissão.</p>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="inline-cta" style="margin-bottom: 0;">
+    <h3>Faça sua análise de risco com confiança</h3>
+    <p>O SPDA Risk Analyzer contempla todas as exigências da NBR 5419:2026: cálculos de R1, R3, R4 e F, NG automático por município para os 5.565 municípios brasileiros, e memorial descritivo profissional.</p>
+    <a href="spda-risk-analyzer.html" class="btn-gold">Conhecer o SPDA Risk Analyzer &rarr;</a>
+  </div>
+
+  <p style="font-size:0.82rem; color:var(--gray-mid); margin-top:32px; font-style:italic;">
+    Este artigo constitui guia técnico com finalidade informativa e educacional. Não substitui a leitura integral da ABNT NBR 5419:2026 em suas quatro Partes, nem dispensa a responsabilidade de profissional habilitado na elaboração da análise de risco.
+  </p>
+
+</article>
+
+<!-- RELATED ARTICLES -->
+<section class="related-articles">
+  <h2>Artigos Relacionados</h2>
+  <div class="related-grid">
+    <a href="quando-e-obrigatorio-spda.html" class="related-card">
+      <h3>Quando é Obrigatório Instalar SPDA?</h3>
+      <p>Entenda a legislação, as responsabilidades e as consequências da ausência de proteção contra descargas atmosféricas.</p>
+    </a>
+    <a href="niveis-de-protecao-spda-i-ii-iii-iv.html" class="related-card">
+      <h3>Níveis de Proteção SPDA (I, II, III e IV)</h3>
+      <p>Como escolher o nível correto de proteção com base na análise de risco e nos requisitos da NBR 5419.</p>
+    </a>
+    <a href="nbr-5419-2015-vs-2026.html" class="related-card">
+      <h3>NBR 5419: Edição 2015 vs 2026</h3>
+      <p>Análise comparativa completa de todas as mudanças nas Partes 1, 2, 3 e 4 da norma de proteção contra descargas atmosféricas.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Lumen Verum Engenharia. Todos os direitos reservados.
+  &nbsp;|&nbsp; <a href="index.html">Página Inicial</a>
+  &nbsp;|&nbsp; <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20an%C3%A1lise%20de%20risco%20de%20SPDA%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20SPDA%20Risk%20Analyzer." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

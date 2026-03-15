@@ -752,7 +752,7 @@
     transition: max-height 0.4s ease, padding 0.3s;
   }
   .faq-item.active .faq-answer {
-    max-height: 300px;
+    max-height: 500px;
     padding-bottom: 1.5rem;
   }
   .faq-answer p {
@@ -941,6 +941,62 @@
     "Tooltips explicativos com referência direta à norma",
     "Frequência de Danos F",
     "Análise de Risco R1 a R4"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é análise de risco de SPDA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A análise de risco de SPDA é um estudo técnico obrigatório conforme a NBR 5419-2 que avalia a necessidade e o nível de proteção contra descargas atmosféricas (raios) para uma edificação. Ela calcula os riscos R1 (perda de vida humana), R2 (perda de serviço público), R3 (perda de patrimônio cultural) e R4 (perda econômica)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A análise de risco de SPDA é obrigatória?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Segundo a ABNT NBR 5419-2, toda estrutura deve passar por uma análise de risco para determinar se necessita de SPDA e qual o nível de proteção adequado (I, II, III ou IV). A não realização pode gerar responsabilidade civil e criminal em caso de acidentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que mudou na NBR 5419 edição 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As principais mudanças incluem: substituição da densidade de descargas atmosféricas Ng pela frequência de danos F com dados por município, novos critérios de ensaio de continuidade elétrica, atualização dos fatores de perda, e revisão dos métodos de cálculo das áreas de exposição equivalentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O SPDA Risk Analyzer funciona com a NBR 5419:2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O SPDA Risk Analyzer já está 100% atualizado conforme a NBR 5419-2:2026, incluindo os novos dados de frequência de danos F para todos os 5.565 municípios brasileiros, os novos fatores de perda e todos os cálculos atualizados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o relatório gerado pelo sistema?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O sistema gera automaticamente um relatório técnico profissional completo em PDF e DOCX contendo: memorial descritivo do SPDA, todos os cálculos de risco detalhados, classificação do nível de proteção, e referências normativas. Basta preencher os dados e clicar em gerar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso instalar algum software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O SPDA Risk Analyzer é 100% online (web). Funciona em qualquer navegador, computador ou celular. Basta acessar, preencher os dados da estrutura e gerar sua análise de risco completa."
+      }
+    }
   ]
 }
 </script>
@@ -1254,6 +1310,30 @@
   <div class="section-label" style="justify-content: center;">Perguntas Frequentes</div>
   <h2 class="section-title" style="text-align: center;">Tire suas dúvidas</h2>
   <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">O que é análise de risco de SPDA?</button>
+      <div class="faq-answer"><p>A análise de risco de SPDA é um estudo técnico obrigatório conforme a NBR 5419-2 que avalia a necessidade e o nível de proteção contra descargas atmosféricas (raios) para uma edificação. Ela calcula os riscos R1 (perda de vida humana), R2 (perda de serviço público), R3 (perda de patrimônio cultural) e R4 (perda econômica).</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">A análise de risco de SPDA é obrigatória?</button>
+      <div class="faq-answer"><p>Sim. Segundo a ABNT NBR 5419-2, toda estrutura deve passar por uma análise de risco para determinar se necessita de SPDA e qual o nível de proteção adequado (I, II, III ou IV). A não realização pode gerar responsabilidade civil e criminal em caso de acidentes.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">O que mudou na NBR 5419 edição 2026?</button>
+      <div class="faq-answer"><p>As principais mudanças incluem: substituição da densidade de descargas atmosféricas Ng pela frequência de danos F com dados por município, novos critérios de ensaio de continuidade elétrica, atualização dos fatores de perda, e revisão dos métodos de cálculo das áreas de exposição equivalentes.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">O SPDA Risk Analyzer funciona com a NBR 5419:2026?</button>
+      <div class="faq-answer"><p>Sim. O SPDA Risk Analyzer já está 100% atualizado conforme a NBR 5419-2:2026, incluindo os novos dados de frequência de danos F para todos os 5.565 municípios brasileiros, os novos fatores de perda e todos os cálculos atualizados.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Como funciona o relatório gerado pelo sistema?</button>
+      <div class="faq-answer"><p>O sistema gera automaticamente um relatório técnico profissional completo em PDF e DOCX contendo: memorial descritivo do SPDA, todos os cálculos de risco detalhados, classificação do nível de proteção, e referências normativas. Basta preencher os dados e clicar em gerar.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Preciso instalar algum software?</button>
+      <div class="faq-answer"><p>Não. O SPDA Risk Analyzer é 100% online (web). Funciona em qualquer navegador, computador ou celular. Basta acessar, preencher os dados da estrutura e gerar sua análise de risco completa.</p></div>
+    </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">O sistema está atualizado com a NBR 5419-2:2026?</button>
       <div class="faq-answer"><p>Sim, o SPDA Risk Analyzer está 100% conforme a 2ª edição da NBR 5419-2:2026, incluindo o novo cálculo de Frequência de Danos (F) e todas as tabelas atualizadas dos Anexos A, B, C e D.</p></div>
