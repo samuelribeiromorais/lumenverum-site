@@ -624,7 +624,7 @@
   <ul>
     <li><strong>ZPR 0A:</strong> Zona externa à estrutura, sujeita a impacto direto de raio e ao campo eletromagnético total da descarga.</li>
     <li><strong>ZPR 0B:</strong> Zona externa protegida contra impacto direto, mas ainda exposta ao campo eletromagnético completo.</li>
-    <li><strong>ZPR 1:</strong> Zona interna onde a corrente de surto é limitada por medidas de blindagem e pela equipotencialização na fronteira.</li>
+    <li><strong>ZPR 1:</strong> Zona interna onde a corrente de surto é limitada pela divisão da corrente e pela aplicação de interfaces isolantes, ligações equipotenciais e DPS na fronteira. Uma blindagem espacial pode atenuar o campo eletromagnético.</li>
     <li><strong>ZPR 2 e superiores:</strong> Zonas internas com atenuação progressiva do campo eletromagnético e da corrente de surto.</li>
   </ul>
 
@@ -704,19 +704,19 @@
           <td><strong>R<sub>U</sub></strong></td>
           <td>S3</td>
           <td>Choque elétrico via linha</td>
-          <td>N<sub>L</sub> &times; P<sub>U</sub> &times; L<sub>U</sub></td>
+          <td>(N<sub>L</sub> + N<sub>DJ</sub>) &times; P<sub>U</sub> &times; L<sub>U</sub></td>
         </tr>
         <tr>
           <td><strong>R<sub>V</sub></strong></td>
           <td>S3</td>
           <td>Dano físico via linha</td>
-          <td>N<sub>L</sub> &times; P<sub>V</sub> &times; L<sub>V</sub></td>
+          <td>(N<sub>L</sub> + N<sub>DJ</sub>) &times; P<sub>V</sub> &times; L<sub>V</sub></td>
         </tr>
         <tr>
           <td><strong>R<sub>W</sub></strong></td>
           <td>S3</td>
           <td>Falha de sistemas via linha</td>
-          <td>N<sub>L</sub> &times; P<sub>W</sub> &times; L<sub>W</sub></td>
+          <td>(N<sub>L</sub> + N<sub>DJ</sub>) &times; P<sub>W</sub> &times; L<sub>W</sub></td>
         </tr>
         <tr>
           <td><strong>R<sub>Z</sub></strong></td>
@@ -728,16 +728,26 @@
     </table>
   </div>
 
+  <div class="highlight-box">
+    <p><strong>Nota sobre N<sub>DJ</sub>:</strong> N<sub>DJ</sub> = número de eventos perigosos devidos a descargas em estruturas adjacentes. As fórmulas de R<sub>U</sub>, R<sub>V</sub> e R<sub>W</sub> incluem N<sub>DJ</sub> porque descargas em estruturas adjacentes conectadas por linhas podem induzir surtos que se propagam até a estrutura em análise.</p>
+  </div>
+
   <h3>5.3. Riscos totais R1, R2, R3 e R4</h3>
   <p>Os componentes são somados para cada tipo de perda:</p>
   <ul>
-    <li><strong>R1 (perda de vida):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub></li>
-    <li><strong>R2 (perda de serviço):</strong> R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub> (substituído por F na edição 2026)</li>
+    <li><strong>R1 (perda de vida):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub>* + R<sub>M</sub>* + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub>* + R<sub>Z</sub>*</li>
+    <li><strong><s>R2 (perda de serviço)</s>:</strong> <em>Não existe mais na edição 2026</em> — o antigo R2 foi substituído pela <strong>frequência de danos F</strong>. Não calcule R2 como fórmula autônoma. Veja a <a href="#frequencia-danos">seção 7</a> sobre frequência de danos.</li>
     <li><strong>R3 (patrimônio cultural):</strong> R<sub>B</sub> + R<sub>V</sub></li>
-    <li><strong>R4 (valor econômico):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub></li>
+    <li><strong>R4 (valor econômico) — informativo/opcional (Anexo D):</strong> R<sub>A</sub> + R<sub>B</sub> + R<sub>C</sub> + R<sub>M</sub> + R<sub>U</sub> + R<sub>V</sub> + R<sub>W</sub> + R<sub>Z</sub>. Na edição 2026, R4 tem caráter <strong>informativo</strong> e consta no Anexo D. Sua avaliação é opcional e baseia-se em análise custo-benefício.</li>
   </ul>
 
-  <p>Cada risco total é comparado com o respectivo <strong>risco tolerável (R<sub>T</sub>)</strong>: R<sub>T1</sub> = 10<sup>-5</sup>, R<sub>T2</sub> = 10<sup>-3</sup> (na edição 2015), R<sub>T3</sub> = 10<sup>-4</sup>. Para R4, a decisão é econômica (comparação custo-benefício).</p>
+  <div class="highlight-box">
+    <p><strong>Nota sobre R1:</strong> Os componentes R<sub>C</sub>, R<sub>M</sub>, R<sub>W</sub> e R<sub>Z</sub> aplicam-se a R1 <strong>somente</strong> para estruturas com risco de explosão ou onde falhas de sistemas internos possam colocar em perigo imediato a vida humana.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Riscos toleráveis na edição 2026:</strong> Na edição 2026, os riscos toleráveis são: <strong>R<sub>T1</sub> = 10<sup>-5</sup></strong> (perda de vida humana) e <strong>R<sub>T3</sub> = 10<sup>-4</sup></strong> (patrimônio cultural). O antigo R2 foi substituído pela frequência de danos F (com F<sub>T</sub> = 0,1/ano para sistemas críticos), e o R4 é de caráter informativo (Anexo D). O valor R<sub>T2</sub> = 10<sup>-3</sup> da edição 2015 <strong>não se aplica mais</strong>.</p>
+  </div>
 
   <!-- 6. PASSO 4 -->
   <h2 id="passo4">6. Passo 4: Classificação do nível de proteção</h2>
