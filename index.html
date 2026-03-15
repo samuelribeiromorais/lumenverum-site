@@ -892,6 +892,94 @@
   }
   .footer-links a:hover { color: var(--navy); }
 
+  /* ── ARTIGOS ── */
+  #artigos {
+    padding: 120px 10%;
+    background: var(--white);
+  }
+  .artigos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .artigo-card {
+    background: var(--gray-light);
+    border-radius: 8px;
+    padding: 2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .artigo-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 3px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .artigo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,12,82,0.10);
+  }
+  .artigo-card:hover::after { width: 100%; }
+  .artigo-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+  .artigo-card p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: rgba(26,26,46,0.7);
+    flex: 1;
+    margin-bottom: 1.2rem;
+  }
+  .artigo-card .artigo-link {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .artigo-card:hover .artigo-link { color: var(--navy); }
+  .artigos-cta {
+    text-align: center;
+  }
+  .artigos-cta a {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    padding: 0.9rem 2.4rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .artigos-cta a:hover {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .section-header .section-subtitle {
+    font-size: 0.9rem;
+    color: rgba(26,26,46,0.6);
+    margin-top: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -931,6 +1019,7 @@
     .areas-grid { grid-template-columns: 1fr 1fr; }
     .steps-container { grid-template-columns: 1fr 1fr; }
     .tribunais-grid { grid-template-columns: 1fr 1fr; }
+    .artigos-grid { grid-template-columns: 1fr 1fr; }
     .contato-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hero-stats { gap: 2rem; }
     .hero-content { padding-bottom: 60px; }
@@ -941,6 +1030,7 @@
     .areas-grid { grid-template-columns: 1fr; }
     .steps-container { grid-template-columns: 1fr; }
     .tribunais-grid { grid-template-columns: 1fr 1fr; }
+    .artigos-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .hero-stats { flex-direction: column; gap: 1.5rem; }
     .stat { text-align: left; }
@@ -982,6 +1072,7 @@
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#areas">Áreas de Atuação</a></li>
     <li><a href="#tribunais">Tribunais</a></li>
+    <li><a href="#artigos">Artigos</a></li>
     <li><a href="#contato" class="nav-cta">Fale com o Perito</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -1221,6 +1312,40 @@
   </div>
 </section>
 
+<!-- ARTIGOS TÉCNICOS -->
+<section id="artigos">
+  <div class="section-header reveal">
+    <span class="section-label">Conteúdo Técnico</span>
+    <h2>Artigos Técnicos</h2>
+    <p class="section-subtitle">Conteúdo especializado sobre proteção contra descargas atmosféricas e a NBR 5419</p>
+  </div>
+  <div class="artigos-grid reveal">
+    <a href="nbr-5419-2015-vs-2026.html" class="artigo-card">
+      <h3>NBR 5419: 2015 vs 2026</h3>
+      <p>Comparativo detalhado entre as versões da norma brasileira de proteção contra descargas atmosféricas e as principais mudanças normativas.</p>
+      <span class="artigo-link">Ler artigo →</span>
+    </a>
+    <a href="como-fazer-analise-de-risco-spda.html" class="artigo-card">
+      <h3>Como Fazer Análise de Risco de SPDA</h3>
+      <p>Guia técnico sobre o cálculo de gerenciamento de risco conforme a NBR 5419-2, incluindo metodologia e parâmetros essenciais.</p>
+      <span class="artigo-link">Ler artigo →</span>
+    </a>
+    <a href="quando-e-obrigatorio-spda.html" class="artigo-card">
+      <h3>Quando é Obrigatório Instalar SPDA?</h3>
+      <p>Critérios normativos e legais que determinam a obrigatoriedade da instalação de sistemas de proteção contra descargas atmosféricas.</p>
+      <span class="artigo-link">Ler artigo →</span>
+    </a>
+    <a href="niveis-de-protecao-spda-i-ii-iii-iv.html" class="artigo-card">
+      <h3>Níveis de Proteção SPDA (I-IV)</h3>
+      <p>Entenda as diferenças entre os quatro níveis de proteção do SPDA e como escolher o nível adequado para cada edificação.</p>
+      <span class="artigo-link">Ler artigo →</span>
+    </a>
+  </div>
+  <div class="artigos-cta reveal">
+    <a href="artigos.html">Ver todos os artigos →</a>
+  </div>
+</section>
+
 <!-- CONTATO -->
 <section id="contato">
   <div class="contato-grid">
@@ -1325,6 +1450,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#areas">Áreas</a>
     <a href="#tribunais">Tribunais</a>
+    <a href="#artigos">Artigos</a>
     <a href="#contato">Contato</a>
   </div>
 </footer>
