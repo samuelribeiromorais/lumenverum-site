@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFWCBB8LHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XFWCBB8LHL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perícia Judicial: Passo a Passo Completo Conforme o CPC | Lumen Verum</title>
+<meta name="description" content="Guia completo do procedimento da perícia judicial conforme o CPC/2015: nomeação do perito, quesitos, diligência, laudo pericial, prazos e recursos. Arts. 464 a 480 explicados.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lumenverum.com.br/pericia-judicial-passo-a-passo-cpc.html">
+<meta property="og:title" content="Perícia Judicial: Passo a Passo Completo Conforme o CPC">
+<meta property="og:description" content="Guia completo do procedimento da perícia judicial conforme o CPC/2015: nomeação do perito, quesitos, diligência, laudo pericial, prazos e recursos. Arts. 464 a 480 explicados.">
+<meta property="og:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta property="og:image:width" content="2500">
+<meta property="og:image:height" content="2500">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perícia Judicial: Passo a Passo Completo Conforme o CPC">
+<meta name="twitter:description" content="Guia completo do procedimento da perícia judicial conforme o CPC/2015: nomeação do perito, quesitos, diligência, laudo pericial, prazos e recursos.">
+<meta name="twitter:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta name="keywords" content="perícia judicial passo a passo, procedimento perícia CPC, laudo pericial, quesitos perícia, nomeação perito, art 464 CPC, art 473 CPC, prova pericial, como funciona perícia judicial">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://lumenverum.com.br/pericia-judicial-passo-a-passo-cpc.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-back {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    padding: 120px 5% 64px;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,177,16,0.08) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(232,177,16,0.12);
+    border: 1px solid rgba(232,177,16,0.25);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .hero-meta-item svg {
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--gray-light);
+    border-bottom: 1px solid #e8e8e4;
+    padding: 40px 5%;
+  }
+  .toc-inner {
+    max-width: 800px; margin: 0 auto;
+  }
+  .toc h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .toc li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0dc;
+  }
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc a:hover { color: var(--gold); }
+  .toc-num {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE ── */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 5% 64px;
+  }
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 56px 0 20px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .article h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  .article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 36px 0 12px;
+  }
+  .article p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .article strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .article ul, .article ol {
+    margin: 12px 0 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .article li {
+    margin-bottom: 6px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(232,177,16,0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+  .highlight-box strong {
+    color: var(--navy);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0dc;
+  }
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .article thead {
+    background: var(--navy);
+    color: #fff;
+  }
+  .article th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e4;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .article tbody tr:nth-child(even) {
+    background: var(--gray-light);
+  }
+  .article tbody tr:hover {
+    background: rgba(232,177,16,0.06);
+  }
+
+  /* ── INLINE CTA ── */
+  .inline-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    margin: 48px 0;
+    text-align: center;
+  }
+  .inline-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+  .inline-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.3);
+  }
+
+  /* ── RELATED ARTICLES ── */
+  .related-articles {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5% 64px;
+  }
+  .related-articles h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .related-card {
+    background: var(--gray-light);
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .related-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,12,82,0.08);
+  }
+  .related-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .related-card p {
+    font-size: 0.8rem;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 32px 5%;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+  }
+  footer a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+  .whatsapp-float svg {
+    width: 28px; height: 28px;
+    fill: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 5% 48px; }
+    .hero h1 { font-size: 2rem; }
+    .toc ol { columns: 1; }
+    .article h2 { font-size: 1.5rem; }
+    .article { padding: 40px 5% 48px; }
+    .inline-cta { padding: 32px 24px; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero .subtitle { font-size: 0.9rem; }
+    .article table { font-size: 0.75rem; }
+    .article th, .article td { padding: 8px 10px; }
+  }
+</style>
+
+<!-- Schema.org JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Perícia Judicial: Passo a Passo Completo Conforme o CPC",
+  "description": "Guia completo do procedimento da perícia judicial conforme o CPC/2015: nomeação do perito, quesitos, diligência, laudo pericial, prazos e recursos. Arts. 464 a 480 explicados.",
+  "url": "https://lumenverum.com.br/pericia-judicial-passo-a-passo-cpc.html",
+  "image": "https://lumenverum.com.br/og-thumb.png",
+  "author": {
+    "@type": "Person",
+    "name": "Samuel Ribeiro Morais",
+    "jobTitle": "Engenheiro Eletricista e Perito Judicial"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lumen Verum",
+    "url": "https://lumenverum.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lumenverum.com.br/logo-lumen-verum.png"
+    }
+  },
+  "datePublished": "2026-03-16",
+  "dateModified": "2026-03-16",
+  "mainEntityOfPage": "https://lumenverum.com.br/pericia-judicial-passo-a-passo-cpc.html",
+  "keywords": ["perícia judicial passo a passo", "procedimento perícia CPC", "laudo pericial", "quesitos perícia", "nomeação perito", "art 464 CPC", "art 473 CPC", "prova pericial", "como funciona perícia judicial"]
+}
+</script>
+
+<!-- Schema.org JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumenverum.com.br/"},
+    {"@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://lumenverum.com.br/artigos.html"},
+    {"@type": "ListItem", "position": 3, "name": "Perícia Judicial: Passo a Passo do CPC"}
+  ]
+}
+</script>
+
+<!-- Schema.org JSON-LD: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Passo a Passo da Perícia Judicial Conforme o CPC",
+  "description": "O procedimento completo da perícia judicial conforme os arts. 464 a 480 do CPC/2015, desde o deferimento da prova até a apreciação do laudo pelo juiz.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Deferimento da prova pericial",
+      "text": "O juiz defere a produção de prova pericial quando o fato a ser provado exige conhecimento técnico ou científico especializado, conforme art. 464 do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Nomeação do perito",
+      "text": "O juiz nomeia perito especializado no objeto da perícia, define o objeto, fixa prazo para entrega do laudo e permite a apresentação de quesitos, conforme art. 465 do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Formulação dos quesitos",
+      "text": "As partes apresentam quesitos (perguntas técnicas) ao perito no prazo de 15 dias. Quesitos suplementares podem ser apresentados durante a diligência, conforme arts. 465 e 469 do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Indicação de assistentes técnicos",
+      "text": "As partes podem indicar assistentes técnicos de sua confiança para acompanhar a perícia e emitir parecer, conforme art. 465 §1º do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Diligência pericial",
+      "text": "O perito realiza a diligência (vistoria, exame ou avaliação), notificando partes e assistentes com pelo menos 5 dias de antecedência, conforme art. 466 §2º do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Elaboração e entrega do laudo pericial",
+      "text": "O perito elabora o laudo com exposição do objeto, análise técnica, método utilizado e resposta conclusiva a todos os quesitos, entregando com pelo menos 20 dias de antecedência da audiência, conforme arts. 473 e 477 do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Parecer dos assistentes técnicos",
+      "text": "Os assistentes técnicos emitem parecer no prazo de 15 dias após intimação da entrega do laudo, podendo concordar, divergir ou complementar, conforme art. 477 §1º do CPC."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "Esclarecimentos e audiência",
+      "text": "O perito pode ser convocado para prestar esclarecimentos em audiência, respondendo a perguntas do juiz, advogados e Ministério Público, conforme art. 477 §3º do CPC."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>Engenharia</span></a>
+  <a href="pericia-judicial.html" class="nav-back">&larr; Perícia Judicial</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">Guia Jurídico-Técnico — Março 2026</div>
+    <h1><em>Perícia Judicial</em>: Passo a Passo<br>Completo Conforme o CPC</h1>
+    <p class="subtitle">
+      O procedimento da prova pericial detalhado artigo por artigo — do deferimento da prova até a apreciação do laudo pelo juiz. Referências ao CPC/2015, CNJ e CONFEA.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+        Por Samuel Ribeiro Morais
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Março 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conforme CPC/2015
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc">
+  <div class="toc-inner">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#visao-geral"><span class="toc-num">1.</span> Visão geral do procedimento pericial no CPC</a></li>
+      <li><a href="#deferimento"><span class="toc-num">2.</span> Passo 1 — Deferimento da prova pericial (art. 464)</a></li>
+      <li><a href="#nomeacao"><span class="toc-num">3.</span> Passo 2 — Nomeação do perito (art. 465)</a></li>
+      <li><a href="#quesitos"><span class="toc-num">4.</span> Passo 3 — Formulação dos quesitos (arts. 465, 469)</a></li>
+      <li><a href="#assistentes"><span class="toc-num">5.</span> Passo 4 — Indicação de assistentes técnicos (art. 465 §1º)</a></li>
+      <li><a href="#diligencia"><span class="toc-num">6.</span> Passo 5 — Diligência pericial</a></li>
+      <li><a href="#laudo"><span class="toc-num">7.</span> Passo 6 — Elaboração e entrega do laudo (arts. 473, 477)</a></li>
+      <li><a href="#parecer"><span class="toc-num">8.</span> Passo 7 — Parecer dos assistentes técnicos (art. 477 §1º)</a></li>
+      <li><a href="#esclarecimentos"><span class="toc-num">9.</span> Passo 8 — Esclarecimentos e audiência (art. 477 §3º)</a></li>
+      <li><a href="#segunda-pericia"><span class="toc-num">10.</span> Segunda perícia e apreciação final (arts. 479-480)</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- 1. VISÃO GERAL -->
+  <h2 id="visao-geral">1. Visão geral do procedimento pericial no CPC</h2>
+
+  <p>A perícia judicial é o meio de prova previsto no Código de Processo Civil (Lei nº 13.105/2015) destinado a esclarecer fatos que dependam de <strong>conhecimento técnico ou científico</strong>. Disciplinada nos arts. 464 a 480, a prova pericial é essencial em processos que envolvam questões de engenharia, medicina, contabilidade e outras áreas especializadas.</p>
+
+  <p>Conforme o <strong>art. 464</strong> do CPC, <em>"a prova pericial consiste em exame, vistoria ou avaliação"</em>. Essa definição abrange três modalidades distintas:</p>
+
+  <ul>
+    <li><strong>Exame:</strong> Análise técnica de coisas ou pessoas — por exemplo, a inspeção de uma instalação elétrica para verificar conformidade normativa.</li>
+    <li><strong>Vistoria:</strong> Constatação in loco de situação ou fato — como a verificação das condições de um imóvel ou de uma obra de engenharia.</li>
+    <li><strong>Avaliação:</strong> Determinação de valor — utilizada para apurar o valor de mercado de bens, custos de reparação, indenizações e afins.</li>
+  </ul>
+
+  <p>O <strong>art. 464 §1º</strong> prevê situações em que o juiz pode substituir a perícia por prova simplificada, e o <strong>art. 464 §2º</strong> estabelece a possibilidade de <strong>prova técnica simplificada</strong>, consistente na inquirição de especialista em audiência.</p>
+
+  <div class="highlight-box">
+    <p><strong>Fluxo do procedimento pericial:</strong> Deferimento da prova &rarr; Nomeação do perito &rarr; Formulação de quesitos &rarr; Indicação de assistentes técnicos &rarr; Diligência pericial &rarr; Elaboração do laudo &rarr; Parecer dos assistentes &rarr; Esclarecimentos em audiência &rarr; Apreciação pelo juiz e sentença.</p>
+  </div>
+
+  <p>Cada uma dessas etapas é regulada por dispositivos específicos do CPC, com prazos, requisitos formais e garantias processuais que asseguram a qualidade e a imparcialidade da prova pericial. Nos próximos tópicos, examinaremos cada passo em detalhe.</p>
+
+  <!-- 2. DEFERIMENTO -->
+  <h2 id="deferimento">2. Passo 1 — Deferimento da prova pericial (art. 464)</h2>
+
+  <p>O procedimento pericial tem início com o <strong>deferimento da prova</strong> pelo juiz. A perícia é necessária quando o fato controverso demanda conhecimento técnico ou científico que ultrapasse o saber comum. O juiz pode determinar a perícia <strong>de ofício</strong> ou a requerimento das partes.</p>
+
+  <p>Contudo, o <strong>art. 464 §1º</strong> estabelece que o juiz <strong>indeferirá</strong> a perícia quando:</p>
+
+  <ul>
+    <li><strong>I — A prova do fato não depender de conhecimento especial de técnico:</strong> Quando a questão pode ser compreendida sem auxílio de especialista.</li>
+    <li><strong>II — For desnecessária em vista de outras provas produzidas:</strong> Quando documentos, testemunhos ou outros meios já esclarecem suficientemente o fato.</li>
+    <li><strong>III — A verificação for impraticável:</strong> Quando o objeto da perícia não mais existe ou não pode ser acessado.</li>
+  </ul>
+
+  <p>A decisão que defere ou indefere a perícia é <strong>interlocutória</strong> e pode ser impugnada por agravo de instrumento (art. 1.015, XI, CPC). Na prática, o deferimento ocorre geralmente na fase de saneamento do processo (art. 357), quando o juiz fixa os pontos controvertidos e determina as provas a serem produzidas.</p>
+
+  <div class="highlight-box">
+    <p><strong>Importante:</strong> A perícia é o tipo mais robusto de prova técnica no CPC. Ela é deferida quando a complexidade da matéria exige análise especializada que outros meios de prova não podem fornecer. Em causas de engenharia elétrica, por exemplo, questões envolvendo conformidade normativa, causas de acidentes elétricos e avaliação de danos frequentemente demandam perícia.</p>
+  </div>
+
+  <!-- 3. NOMEAÇÃO -->
+  <h2 id="nomeacao">3. Passo 2 — Nomeação do perito (art. 465)</h2>
+
+  <p>Deferida a prova pericial, o juiz <strong>nomeará perito especializado no objeto da perícia</strong>, conforme determina o <strong>art. 465</strong> do CPC. A nomeação é ato exclusivo do juiz, que deve selecionar profissional com comprovada qualificação técnica na matéria em discussão.</p>
+
+  <p>Simultaneamente à nomeação, o juiz, nos termos do <strong>art. 465 §2º</strong>:</p>
+
+  <ul>
+    <li><strong>I — Define o objeto da perícia:</strong> Delimita com precisão os fatos e questões que o perito deve examinar.</li>
+    <li><strong>II — Fixa prazo para entrega do laudo:</strong> Estabelece o prazo dentro do qual o perito deve apresentar seu trabalho.</li>
+    <li><strong>III — Permite às partes apresentar quesitos e indicar assistente técnico:</strong> Abre prazo de 15 dias para que as partes formulem suas perguntas e indiquem seus assistentes.</li>
+  </ul>
+
+  <p>O <strong>art. 156 §1º</strong> do CPC determina que os peritos sejam nomeados preferencialmente entre profissionais inscritos no <strong>cadastro de peritos do tribunal (CPTEC)</strong>. A <strong>Resolução nº 233/2016 do CNJ</strong> regulamenta o Cadastro Eletrônico de Peritos e Órgãos Técnicos (CPTEC), estabelecendo critérios de inscrição, atualização e consulta.</p>
+
+  <p>Após a nomeação, o perito deve apresentar <strong>currículo com comprovação de especialização</strong> no prazo de 5 dias (art. 465 §2º), permitindo às partes avaliar sua qualificação.</p>
+
+  <h3>3.1. Substituição do perito (art. 468)</h3>
+
+  <p>O perito pode ser <strong>substituído</strong> quando:</p>
+
+  <ul>
+    <li><strong>I — Faltar-lhe conhecimento técnico ou científico:</strong> Se as partes demonstrarem que o perito não possui qualificação adequada para a matéria específica.</li>
+    <li><strong>II — Descumprir prazo sem motivo legítimo:</strong> Se o perito não entregar o laudo dentro do prazo fixado e não apresentar justificativa aceita pelo juiz.</li>
+  </ul>
+
+  <h3>3.2. Impedimento e suspeição (art. 467)</h3>
+
+  <p>O perito do juízo está sujeito às mesmas regras de <strong>impedimento e suspeição</strong> aplicáveis aos magistrados. As partes têm prazo de <strong>15 dias</strong> após a nomeação para alegar impedimento ou suspeição do perito, apresentando as razões e provas pertinentes.</p>
+
+  <div class="highlight-box">
+    <p><strong>Art. 465, caput:</strong> <em>"O juiz nomeará perito especializado no objeto da perícia e fixará de imediato o prazo para a entrega do laudo."</em> — A especialização do perito é requisito legal, não mera recomendação. Em engenharia elétrica, isso significa que o perito deve ser engenheiro eletricista com habilitação do CREA e experiência comprovada na matéria específica.</p>
+  </div>
+
+  <!-- 4. QUESITOS -->
+  <h2 id="quesitos">4. Passo 3 — Formulação dos quesitos (arts. 465, 469)</h2>
+
+  <p>Os <strong>quesitos</strong> são as perguntas técnicas que as partes e o juiz formulam ao perito, e que deverão ser respondidas no laudo pericial. Trata-se de instrumento fundamental para direcionar o trabalho do perito e garantir que as questões relevantes sejam examinadas.</p>
+
+  <p>Conforme o <strong>art. 465 §1º, III</strong>, as partes têm prazo de <strong>15 dias</strong> para apresentar quesitos e indicar assistente técnico, contados da intimação do despacho de nomeação do perito.</p>
+
+  <h3>4.1. Quesitos suplementares (art. 469)</h3>
+
+  <p>O <strong>art. 469</strong> permite que as partes apresentem <strong>quesitos suplementares</strong> durante a realização da diligência. Essa possibilidade é especialmente relevante quando, durante a vistoria ou exame, surgem fatos novos ou aspectos técnicos não previstos nos quesitos iniciais.</p>
+
+  <h3>4.2. Indeferimento de quesitos (art. 470)</h3>
+
+  <p>O juiz pode <strong>indeferir quesitos impertinentes</strong> ou meramente protelatórios, conforme o <strong>art. 470</strong>. Quesitos que não guardem relação com o objeto da perícia ou que busquem opiniões jurídicas (competência do juiz, não do perito) devem ser recusados.</p>
+
+  <h3>4.3. Boas práticas na formulação de quesitos</h3>
+
+  <p>A qualidade dos quesitos influencia diretamente a utilidade do laudo pericial. Algumas orientações fundamentais:</p>
+
+  <ul>
+    <li><strong>Seja objetivo e específico:</strong> Quesitos genéricos como "descreva as condições do local" produzem respostas vagas. Prefira "o sistema de aterramento atende aos requisitos da NBR 5410:2004, seção 6.4?".</li>
+    <li><strong>Referencie normas e padrões técnicos:</strong> Quesitos que mencionam as normas aplicáveis facilitam respostas fundamentadas e comparáveis.</li>
+    <li><strong>Evite quesitos jurídicos:</strong> Perguntas como "houve negligência do réu?" são de competência do juiz. O perito deve responder a questões técnicas que subsidiem a decisão judicial.</li>
+    <li><strong>Estruture logicamente:</strong> Comece pelos quesitos descritivos (constatar o fato), passe pelos analíticos (causa e conformidade) e finalize com os conclusivos (consequências e valores).</li>
+    <li><strong>Evite quesitos compostos:</strong> Cada quesito deve conter uma única pergunta para evitar respostas parciais ou ambíguas.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Dica para advogados:</strong> Quesitos bem formulados são decisivos para o sucesso processual. Um quesito tecnicamente preciso pode evidenciar uma falha que um quesito genérico jamais revelaria. Sempre que possível, consulte um assistente técnico na elaboração dos quesitos — ele conhece as normas e sabe quais perguntas produzem respostas tecnicamente relevantes.</p>
+  </div>
+
+  <!-- 5. ASSISTENTES -->
+  <h2 id="assistentes">5. Passo 4 — Indicação de assistentes técnicos (art. 465 §1º)</h2>
+
+  <p>O <strong>art. 465 §1º, II</strong> do CPC assegura às partes o direito de indicar <strong>assistente técnico</strong> de sua confiança. Diferentemente do perito do juízo, o assistente técnico é <strong>profissional de confiança da parte</strong> e não auxiliar da justiça.</p>
+
+  <p>Essa distinção é crucial e está expressa no <strong>art. 466 §1º</strong>: o assistente técnico atua no interesse da parte que o indicou, podendo:</p>
+
+  <ul>
+    <li><strong>Acompanhar a diligência pericial:</strong> Presenciar todas as etapas do trabalho do perito, formulando observações e registrando dados.</li>
+    <li><strong>Formular quesitos suplementares:</strong> Solicitar esclarecimentos adicionais durante a diligência.</li>
+    <li><strong>Emitir parecer técnico:</strong> Elaborar documento próprio concordando, divergindo ou complementando o laudo do perito do juízo.</li>
+  </ul>
+
+  <p>Conforme o <strong>art. 477</strong>, o parecer do assistente técnico deve ser apresentado no prazo de <strong>15 dias</strong> após a intimação da entrega do laudo pericial.</p>
+
+  <h3>5.1. Ausência de impedimento e suspeição</h3>
+
+  <p>Uma característica importante do assistente técnico é que ele <strong>não está sujeito às regras de impedimento e suspeição</strong> aplicáveis ao perito do juízo. Como é profissional de parte, espera-se que atue em defesa dos interesses de quem o indicou, naturalmente com fundamentação técnica.</p>
+
+  <h3>5.2. Importância estratégica</h3>
+
+  <p>A indicação de assistente técnico é frequentemente subestimada na prática forense, mas constitui ferramenta processual de grande valor. O assistente técnico permite à parte:</p>
+
+  <ul>
+    <li>Fiscalizar a metodologia e a imparcialidade do perito do juízo.</li>
+    <li>Identificar eventuais equívocos ou omissões no laudo.</li>
+    <li>Apresentar interpretação técnica alternativa fundamentada.</li>
+    <li>Orientar o advogado na formulação de quesitos suplementares e na arguição do perito em audiência.</li>
+  </ul>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="inline-cta">
+    <h3>Precisa de um perito judicial em engenharia elétrica?</h3>
+    <p>A Lumen Verum atua como perito do juízo e assistente técnico em processos envolvendo instalações elétricas, SPDA, incêndios de origem elétrica e conformidade normativa.</p>
+    <a href="pericia-judicial.html" class="btn-gold">Conheça nossos serviços de perícia &rarr;</a>
+  </div>
+
+  <!-- 6. DILIGÊNCIA -->
+  <h2 id="diligencia">6. Passo 5 — Diligência pericial</h2>
+
+  <p>A <strong>diligência pericial</strong> é a etapa central do procedimento — o momento em que o perito realiza o trabalho de campo: vistoria, exames, coleta de amostras, medições e registros fotográficos. É durante a diligência que se produz a base fática e técnica do laudo.</p>
+
+  <h3>6.1. Notificação das partes (art. 466 §2º)</h3>
+
+  <p>O <strong>art. 466 §2º</strong> determina que o perito deve <strong>notificar as partes e seus assistentes técnicos</strong> da data e local da diligência com antecedência mínima de <strong>5 dias</strong>. As partes e assistentes técnicos têm o direito de acompanhar todos os trabalhos periciais.</p>
+
+  <p>A notificação adequada é requisito essencial para a validade da perícia. A omissão desse dever pode acarretar a nulidade dos atos periciais realizados sem a ciência das partes.</p>
+
+  <h3>6.2. Conduta do perito durante a diligência</h3>
+
+  <p>O perito deve conduzir a diligência com <strong>imparcialidade, rigor técnico e documentação completa</strong>. Os principais cuidados incluem:</p>
+
+  <ul>
+    <li><strong>Documentação fotográfica:</strong> Registrar detalhadamente todas as condições encontradas, com fotos datadas e referenciadas.</li>
+    <li><strong>Medições instrumentais:</strong> Utilizar equipamentos calibrados e adequados ao objeto da perícia.</li>
+    <li><strong>Registro de presentes:</strong> Anotar todos os presentes à diligência (partes, advogados, assistentes técnicos, prepostos).</li>
+    <li><strong>Coleta de documentos:</strong> Solicitar e registrar documentação técnica relevante disponível no local (projetos, laudos anteriores, notas fiscais de equipamentos).</li>
+  </ul>
+
+  <h3>6.3. Diligência em engenharia elétrica</h3>
+
+  <p>Em perícias de engenharia elétrica, a diligência tipicamente envolve:</p>
+
+  <ul>
+    <li><strong>Medições elétricas:</strong> Resistência de aterramento, resistência de isolamento, continuidade de condutores, tensão e corrente.</li>
+    <li><strong>Termografia infravermelha:</strong> Identificação de pontos de aquecimento anômalo em conexões e componentes.</li>
+    <li><strong>Análise de qualidade de energia:</strong> Monitoramento de harmônicos, fator de potência, variações de tensão.</li>
+    <li><strong>Verificação de conformidade:</strong> Confronto das instalações com as normas técnicas aplicáveis (NBR 5410, NBR 5419, NBR 14039, NR-10).</li>
+    <li><strong>Equipamentos utilizados:</strong> Multímetros, megômetros, terrômetros, termovisores, analisadores de qualidade de energia, luxímetros, entre outros.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Fundamental:</strong> A diligência é o momento em que o perito coleta as evidências técnicas que formarão a base do laudo. Documentação adequada nesta etapa é essencial para a credibilidade do laudo pericial. Cada constatação deve ser objetivamente registrada, com método, instrumento utilizado e resultado obtido.</p>
+  </div>
+
+  <!-- 7. LAUDO -->
+  <h2 id="laudo">7. Passo 6 — Elaboração e entrega do laudo (arts. 473, 477)</h2>
+
+  <p>O <strong>laudo pericial</strong> é o documento técnico-científico em que o perito apresenta suas constatações, análises e conclusões. O CPC estabelece requisitos formais rigorosos para o conteúdo do laudo.</p>
+
+  <h3>7.1. Conteúdo obrigatório (art. 473)</h3>
+
+  <p>O <strong>art. 473</strong> determina que o laudo pericial deve conter:</p>
+
+  <ul>
+    <li><strong>I — Exposição do objeto da perícia:</strong> Descrição clara e detalhada do que foi examinado, vistoriado ou avaliado.</li>
+    <li><strong>II — Análise técnica ou científica realizada pelo perito:</strong> O desenvolvimento do raciocínio técnico, com fundamentação em normas, literatura especializada e dados coletados.</li>
+    <li><strong>III — Indicação do método utilizado:</strong> Descrição dos procedimentos, equipamentos e técnicas empregados na perícia.</li>
+    <li><strong>IV — Resposta conclusiva a todos os quesitos apresentados pelo juiz, pelas partes e pelo órgão do Ministério Público:</strong> Cada quesito deve receber resposta fundamentada e objetiva.</li>
+  </ul>
+
+  <h3>7.2. Disposições complementares</h3>
+
+  <p>O <strong>art. 473 §1º</strong> esclarece que o perito <strong>não é obrigado a seguir normas técnicas específicas</strong>, mas deve fundamentar eventual divergência em relação a elas. Na prática pericial em engenharia, o laudo normalmente se apoia nas normas da ABNT, nas Normas Regulamentadoras do MTE e nas resoluções do CONFEA.</p>
+
+  <p>O <strong>art. 473 §2º</strong> determina que o perito deve utilizar <strong>linguagem simples e didática</strong> sempre que possível, facilitando a compreensão do laudo pelo juiz e pelas partes. Termos técnicos devem ser explicados, e o raciocínio deve ser acessível a não especialistas.</p>
+
+  <h3>7.3. Prazo de entrega (art. 477)</h3>
+
+  <p>Conforme o <strong>art. 477</strong>, o perito deve entregar o laudo em cartório com pelo menos <strong>20 dias de antecedência</strong> da audiência de instrução e julgamento. Eventual necessidade de prorrogação deve ser solicitada ao juiz com justificativa fundamentada, nos termos do <strong>art. 476</strong>.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Requisito do Laudo (art. 473)</th>
+          <th>Descrição</th>
+          <th>Exemplo em Eng. Elétrica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>I — Objeto da perícia</strong></td>
+          <td>Descrição do que foi examinado, vistoriado ou avaliado</td>
+          <td>Instalação elétrica de baixa tensão de edifício comercial de 12 pavimentos, com ênfase no sistema de aterramento e proteção contra surtos</td>
+        </tr>
+        <tr>
+          <td><strong>II — Análise técnica</strong></td>
+          <td>Desenvolvimento do raciocínio técnico com fundamentação</td>
+          <td>Confronto das instalações com os requisitos da NBR 5410:2004, identificação de não conformidades e análise de nexo causal com o sinistro</td>
+        </tr>
+        <tr>
+          <td><strong>III — Método utilizado</strong></td>
+          <td>Procedimentos, equipamentos e técnicas empregados</td>
+          <td>Medição de resistência de aterramento com terrômetro digital (método de Wenner), termografia infravermelha com câmera FLIR, análise documental de projetos</td>
+        </tr>
+        <tr>
+          <td><strong>IV — Respostas aos quesitos</strong></td>
+          <td>Resposta fundamentada e conclusiva a cada quesito</td>
+          <td>Respostas objetivas a cada quesito, com indicação dos dados e normas que fundamentam a conclusão</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 8. PARECER -->
+  <h2 id="parecer">8. Passo 7 — Parecer dos assistentes técnicos (art. 477 §1º)</h2>
+
+  <p>Após a entrega do laudo pericial, os assistentes técnicos das partes são intimados e passam a ter prazo de <strong>15 dias</strong> para apresentar seus respectivos <strong>pareceres técnicos</strong>, conforme o <strong>art. 477 §1º</strong>.</p>
+
+  <h3>8.1. Conteúdo do parecer</h3>
+
+  <p>O parecer do assistente técnico pode ter diferentes naturezas:</p>
+
+  <ul>
+    <li><strong>Concordância:</strong> Quando o assistente técnico confirma as conclusões do perito do juízo, reforçando a robustez do laudo.</li>
+    <li><strong>Divergência fundamentada:</strong> Quando o assistente técnico discorda de conclusões do perito, apresentando argumentos técnicos, dados e referências normativas que sustentem sua posição contrária.</li>
+    <li><strong>Análise complementar:</strong> Quando o assistente técnico aborda aspectos não cobertos pelo laudo ou aprofunda questões específicas relevantes para a tese da parte.</li>
+  </ul>
+
+  <h3>8.2. Consequência do descumprimento do prazo (art. 477 §2º)</h3>
+
+  <p>O <strong>art. 477 §2º</strong> estabelece consequência severa para o descumprimento de prazos: se o perito ou o assistente técnico não apresentar o laudo ou parecer no prazo fixado, o juiz poderá decidir <strong>sem considerar</strong> o documento intempestivo. Essa regra reforça a importância do cumprimento rigoroso dos prazos processuais.</p>
+
+  <h3>8.3. Importância estratégica do parecer</h3>
+
+  <p>O parecer do assistente técnico é peça processual de grande relevância estratégica. Um parecer bem elaborado pode:</p>
+
+  <ul>
+    <li>Evidenciar falhas metodológicas no laudo do perito do juízo.</li>
+    <li>Apresentar cálculos alternativos com resultados divergentes.</li>
+    <li>Questionar a adequação dos equipamentos ou métodos utilizados.</li>
+    <li>Subsidiar os quesitos de esclarecimento para a audiência.</li>
+  </ul>
+
+  <!-- 9. ESCLARECIMENTOS -->
+  <h2 id="esclarecimentos">9. Passo 8 — Esclarecimentos e audiência (art. 477 §3º)</h2>
+
+  <p>O <strong>art. 477 §3º</strong> prevê que o perito pode ser convocado para <strong>prestar esclarecimentos sobre o laudo em audiência</strong>, quando o juiz entender necessário ou a requerimento das partes. Trata-se de etapa importante para a elucidação de pontos controvertidos do laudo.</p>
+
+  <h3>9.1. Dinâmica da audiência</h3>
+
+  <p>Na audiência de esclarecimentos, o perito comparece para responder a perguntas formuladas por:</p>
+
+  <ul>
+    <li><strong>Juiz:</strong> Esclarece dúvidas sobre metodologia, conclusões ou fundamentação do laudo.</li>
+    <li><strong>Advogados das partes:</strong> Formulam perguntas visando reforçar ou questionar aspectos do laudo relevantes para suas teses.</li>
+    <li><strong>Ministério Público:</strong> Quando atua no processo, pode formular perguntas sobre questões de interesse público.</li>
+  </ul>
+
+  <h3>9.2. Conduta do perito em audiência</h3>
+
+  <p>O perito deve comparecer à audiência e responder às perguntas <strong>sob compromisso</strong>. Suas respostas têm o mesmo valor probatório do laudo escrito. O perito deve:</p>
+
+  <ul>
+    <li>Manter postura imparcial e objetiva em todas as respostas.</li>
+    <li>Fundamentar tecnicamente cada esclarecimento prestado.</li>
+    <li>Reconhecer eventuais limitações do laudo, quando pertinente.</li>
+    <li>Abster-se de emitir opiniões jurídicas — sua competência é estritamente técnica.</li>
+  </ul>
+
+  <p>A audiência de esclarecimentos pode ser determinante para a valoração da prova pericial pelo juiz, especialmente quando há divergência entre o laudo do perito do juízo e os pareceres dos assistentes técnicos.</p>
+
+  <!-- 10. SEGUNDA PERÍCIA -->
+  <h2 id="segunda-pericia">10. Segunda perícia e apreciação final (arts. 479-480)</h2>
+
+  <h3>10.1. Livre apreciação da prova pericial (art. 479)</h3>
+
+  <p>O <strong>art. 479</strong> consagra o princípio da <strong>livre apreciação da prova pericial</strong>: o juiz não está vinculado ao laudo, devendo indicar os motivos que o levaram a considerar ou desconsiderar as conclusões do perito. O juiz pode, inclusive, considerar o <strong>método utilizado</strong> pelo perito na formação de seu convencimento (art. 479, parágrafo único).</p>
+
+  <p>Isso significa que o laudo pericial, embora seja prova de alto valor técnico, não é prova absoluta. O juiz pode acolhê-lo integralmente, parcialmente, ou afastá-lo com base em outros elementos dos autos — desde que fundamente sua decisão.</p>
+
+  <h3>10.2. Segunda perícia (art. 480)</h3>
+
+  <p>O <strong>art. 480</strong> prevê a possibilidade de <strong>segunda perícia</strong> quando a matéria não estiver suficientemente esclarecida. A segunda perícia:</p>
+
+  <ul>
+    <li><strong>Tem o mesmo objeto da primeira</strong> e destina-se a corrigir eventuais omissões ou inexatidões (art. 480 §1º).</li>
+    <li><strong>Deve ser realizada por perito diferente</strong> do que conduziu a primeira perícia (art. 480 §2º).</li>
+    <li><strong>Não substitui a primeira perícia:</strong> O juiz aprecia ambas livremente, podendo acolher as conclusões de uma, de outra, ou de nenhuma delas (art. 480 §3º).</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Art. 480 §3º:</strong> <em>"A segunda perícia não substitui a primeira, cabendo ao juiz apreciar livremente o valor de uma e de outra."</em> — Essa disposição é fundamental: mesmo havendo segunda perícia, o laudo original permanece nos autos e pode ser utilizado pelo juiz na fundamentação de sua decisão.</p>
+  </div>
+
+  <p>A segunda perícia é medida excepcional, adotada quando o juiz constata que o laudo original apresenta deficiências graves que comprometem a elucidação da matéria fática. Não se confunde com a mera discordância das partes em relação às conclusões do perito.</p>
+
+  <!-- FINAL CTA -->
+  <div class="inline-cta" style="margin-bottom: 0;">
+    <h3>Solicite uma perícia ou assistência técnica</h3>
+    <p>A Lumen Verum oferece serviços de perícia judicial e assistência técnica em engenharia elétrica, com laudos conforme os arts. 464 a 480 do CPC e as normas técnicas da ABNT.</p>
+    <a href="pericia-judicial.html" class="btn-gold">Solicitar perícia judicial &rarr;</a>
+  </div>
+
+  <!-- REFERENCES -->
+  <h2>Referências</h2>
+
+  <ul>
+    <li>BRASIL. <strong>Lei nº 13.105/2015</strong> — Código de Processo Civil (arts. 156-158, 464-480).</li>
+    <li>CNJ. <strong>Resolução nº 232/2016</strong> — Dispõe sobre honorários de peritos e procedimentos para fixação no âmbito do Poder Judiciário.</li>
+    <li>CNJ. <strong>Resolução nº 233/2016</strong> — Dispõe sobre a criação do Cadastro Eletrônico de Peritos e Órgãos Técnicos ou Científicos (CPTEC).</li>
+    <li>CONFEA. <strong>Resolução nº 218/1973</strong> — Discrimina atividades das diferentes modalidades profissionais da engenharia, arquitetura e agronomia.</li>
+    <li>CONFEA. <strong>Resolução nº 345/1990</strong> — Dispõe quanto ao exercício por profissional de nível superior das atividades de engenharia de avaliações e perícias de engenharia.</li>
+    <li>TJRJ. <strong>Ensaio sobre a prova pericial no CPC 2015</strong> — Análise doutrinária sobre os aspectos processuais da prova pericial.</li>
+  </ul>
+
+  <p style="font-size:0.82rem; color:var(--gray-mid); margin-top:32px; font-style:italic;">
+    Este artigo constitui guia técnico-jurídico com finalidade informativa e educacional. Não substitui a consulta à legislação vigente na íntegra (Lei nº 13.105/2015), nem dispensa o aconselhamento de advogado ou profissional técnico habilitado para o caso concreto.
+  </p>
+
+</article>
+
+<!-- RELATED ARTICLES -->
+<section class="related-articles">
+  <h2>Artigos Relacionados</h2>
+  <div class="related-grid">
+    <a href="o-que-faz-perito-judicial-engenharia.html" class="related-card">
+      <h3>O que Faz um Perito Judicial de Engenharia?</h3>
+      <p>Entenda as atribuições, qualificações e a atuação do perito judicial em processos que envolvem engenharia.</p>
+    </a>
+    <a href="pericia-judicial.html" class="related-card">
+      <h3>Perícia Judicial em Engenharia Elétrica</h3>
+      <p>Conheça os serviços de perícia judicial e assistência técnica da Lumen Verum em engenharia elétrica.</p>
+    </a>
+    <a href="quando-e-obrigatorio-spda.html" class="related-card">
+      <h3>Quando é Obrigatório Instalar SPDA?</h3>
+      <p>Entenda a legislação, as responsabilidades e as consequências da ausência de proteção contra descargas atmosféricas.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Lumen Verum Engenharia. Todos os direitos reservados.
+  &nbsp;|&nbsp; <a href="index.html">Página Inicial</a>
+  &nbsp;|&nbsp; <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a>
+  &nbsp;|&nbsp; <a href="pericia-judicial.html">Perícia Judicial</a>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20per%C3%ADcia%20judicial%20no%20CPC%20e%20gostaria%20de%20saber%20mais." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
