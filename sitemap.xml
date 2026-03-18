@@ -55,8 +55,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lumenverum.com.br/pericia-engenharia-seguranca-trabalho.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumenverum.com.br/insalubridade-periculosidade-pericia-trabalhista.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lumenverum.com.br/artigos.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
