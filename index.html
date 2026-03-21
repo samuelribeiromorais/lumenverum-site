@@ -1047,16 +1047,55 @@
     position: fixed;
     bottom: 24px; right: 24px;
     z-index: 99;
-    width: 56px; height: 56px;
+    width: 60px; height: 60px;
     background: #25D366;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     box-shadow: 0 4px 20px rgba(37,211,102,0.4);
     transition: all 0.3s;
     text-decoration: none;
+    animation: glow-ring 2s infinite;
   }
-  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
-  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+  .whatsapp-float:hover { transform: scale(1.15); box-shadow: 0 8px 32px rgba(37,211,102,0.6); animation: none; }
+  .whatsapp-float:active { transform: scale(0.95); }
+  .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+  /* ── UI/UX PRO MAX ENHANCEMENTS ── */
+
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E8B110, #0d9488, #E8B110);
+    z-index: 101;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* Focus States (Accessibility) */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #E8B110;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* WhatsApp Float Enhancement */
+  @keyframes glow-ring {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
 </style>
 
 <!-- Schema.org JSON-LD -->
@@ -1102,6 +1141,7 @@
 </script>
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -1519,6 +1559,10 @@
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     nav.classList.toggle('scrolled', window.scrollY > 50);
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('scrollProgress').style.width = scrollPercent + '%';
   });
 
   // Mobile menu
