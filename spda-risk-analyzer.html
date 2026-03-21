@@ -408,6 +408,15 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     transition: all 0.3s;
     cursor: zoom-in;
+    max-height: 420px;
+  }
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    min-height: 420px;
   }
 
   /* ── LIGHTBOX ── */
@@ -445,11 +454,6 @@
   }
   .lightbox-close:hover { transform: scale(1.2); }
   .screenshot-item:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
-  .screenshot-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
   .screenshot-label {
     position: absolute; bottom: 0; left: 0; right: 0;
     background: linear-gradient(transparent, rgba(0,12,82,0.9));
