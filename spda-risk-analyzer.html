@@ -1029,6 +1029,31 @@
   .whatsapp-float:hover { transform: scale(1.15); box-shadow: 0 8px 32px rgba(37,211,102,0.6); animation: none; }
   .whatsapp-float:active { transform: scale(0.95); }
   .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+  /* ── MENU EXTRA (hamburger) ── */
+  .extra-menu-wrap { position: relative; margin-left: 1.5rem; }
+  .extra-menu-btn {
+    display: flex; flex-direction: column; gap: 4px; cursor: pointer;
+    background: var(--navy); border: none; padding: 8px 10px; border-radius: 4px;
+  }
+  .extra-menu-btn span { width: 20px; height: 2.5px; background: var(--gold); display: block; border-radius: 1px; }
+  .extra-menu-btn:hover { background: var(--navy-mid); }
+  .extra-menu-dropdown {
+    display: none; position: absolute; top: 100%; right: 0; margin-top: 8px;
+    background: var(--navy); border: 1px solid rgba(232,177,16,0.2); border-radius: 6px;
+    min-width: 260px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); z-index: 200;
+    padding: 0.5rem 0;
+  }
+  .extra-menu-dropdown.open { display: block; }
+  .extra-menu-dropdown a {
+    display: block; padding: 0.75rem 1.2rem; color: var(--white);
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .extra-menu-dropdown a:hover { background: rgba(232,177,16,0.15); }
+  .extra-menu-dropdown a small {
+    display: block; font-size: 0.7rem; color: var(--gray-mid); font-weight: 400; margin-top: 2px;
+  }
 </style>
 
 <!-- Schema.org JSON-LD -->
@@ -1314,6 +1339,16 @@
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
+  <div class="extra-menu-wrap">
+    <button class="extra-menu-btn" onclick="toggleExtraMenu(event)" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="extra-menu-dropdown" id="extraMenuDropdown">
+      <a href="index.html">Home<small>Página inicial</small></a>
+      <a href="artigos.html">Artigos<small>Conteúdo técnico e normas</small></a>
+      <a href="spda-risk-analyzer.html">SPDA Risk Analyzer<small>Análise de Risco NBR 5419 online</small></a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1800,6 +1835,15 @@
   function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('open');
   }
+
+  // Extra menu (hamburger)
+  function toggleExtraMenu(ev) {
+    ev.stopPropagation();
+    document.getElementById('extraMenuDropdown').classList.toggle('open');
+  }
+  document.addEventListener('click', function() {
+    document.getElementById('extraMenuDropdown').classList.remove('open');
+  });
 
   // FAQ accordion
   function toggleFaq(btn) {
