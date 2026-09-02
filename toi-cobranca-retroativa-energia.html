@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFWCBB8LHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XFWCBB8LHL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOI e Cobrança Retroativa de Energia: Como Contestar</title>
+<meta name="description" content="Recebeu um TOI da distribuidora? Veja como a perícia metrológica e a memória de massa desmontam cobranças retroativas — REN 1.000/2021 e Tema 699 do STJ.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lumenverum.com.br/toi-cobranca-retroativa-energia.html">
+<meta property="og:title" content="TOI e Cobrança Retroativa de Energia: Como Contestar">
+<meta property="og:description" content="Recebeu um TOI da distribuidora? Veja como a perícia metrológica e a memória de massa desmontam cobranças retroativas — REN 1.000/2021 e Tema 699 do STJ.">
+<meta property="og:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta property="og:image:width" content="2500">
+<meta property="og:image:height" content="2500">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOI e Cobrança Retroativa de Energia: Como Contestar">
+<meta name="twitter:description" content="Recebeu um TOI da distribuidora? Veja como a perícia metrológica e a memória de massa desmontam cobranças retroativas — REN 1.000/2021 e Tema 699 do STJ.">
+<meta name="twitter:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta name="keywords" content="TOI energia elétrica, termo de ocorrência e inspeção, cobrança retroativa energia, recuperação de consumo, recuperação de receita, contestar TOI, perícia medidor de energia, memória de massa SMF, REN 1000 2021, Tema 699 STJ, defesa contra distribuidora, perícia metrológica, fraude medidor energia, grupo A, usina fotovoltaica TOI">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://lumenverum.com.br/toi-cobranca-retroativa-energia.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-back {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    padding: 120px 5% 64px;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,177,16,0.08) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(232,177,16,0.12);
+    border: 1px solid rgba(232,177,16,0.25);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .hero-meta-item svg {
+    width: 16px; height: 16px; flex-shrink: 0;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--gray-light);
+    border-bottom: 1px solid #e8e8e4;
+    padding: 40px 5%;
+  }
+  .toc-inner {
+    max-width: 800px; margin: 0 auto;
+  }
+  .toc h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .toc li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0dc;
+  }
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc a:hover { color: var(--gold); }
+  .toc-num {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE ── */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 5% 64px;
+  }
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 56px 0 20px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .article h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  .article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 36px 0 12px;
+  }
+  .article p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .article strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .article ul, .article ol {
+    margin: 12px 0 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .article li {
+    margin-bottom: 6px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: rgba(232,177,16,0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+  .highlight-box strong {
+    color: var(--navy);
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0dc;
+  }
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .article thead {
+    background: var(--navy);
+    color: #fff;
+  }
+  .article th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e4;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .article tbody tr:nth-child(even) {
+    background: var(--gray-light);
+  }
+  .article tbody tr:hover {
+    background: rgba(232,177,16,0.06);
+  }
+
+  /* ── INLINE CTA ── */
+  .inline-cta {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    margin: 48px 0;
+    text-align: center;
+  }
+  .inline-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+  .inline-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.3);
+  }
+  .btn-gold:active {
+    transform: translateY(0) scale(0.98);
+    transition-duration: 0.1s;
+  }
+
+  /* ── RELATED ARTICLES ── */
+  .related-articles {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5% 64px;
+  }
+  .related-articles h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gold);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .related-card {
+    background: var(--gray-light);
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .related-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,12,82,0.12);
+  }
+  .related-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .related-card p {
+    font-size: 0.8rem;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 32px 5%;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+  }
+  footer a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: glow-ring 2s infinite;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 32px rgba(37,211,102,0.6);
+    animation: none;
+  }
+  .whatsapp-float:active {
+    transform: scale(0.95);
+  }
+  .whatsapp-float svg {
+    width: 30px; height: 30px;
+    fill: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 5% 48px; }
+    .hero h1 { font-size: 2rem; }
+    .toc ol { columns: 1; }
+    .article h2 { font-size: 1.5rem; }
+    .article { padding: 40px 5% 48px; }
+    .inline-cta { padding: 32px 24px; }
+    .btn-gold { min-height: 44px; }
+    .nav-back { min-height: 44px; display: inline-flex; align-items: center; }
+    .whatsapp-float { min-height: 44px; min-width: 44px; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero .subtitle { font-size: 0.9rem; }
+    .article table { font-size: 0.75rem; }
+    .article th, .article td { padding: 8px 10px; }
+  }
+
+  /* ── UI/UX PRO MAX ENHANCEMENTS ── */
+
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E8B110, #0d9488, #E8B110);
+    z-index: 101;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* Focus States (Accessibility) */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #E8B110;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* WhatsApp Float Glow Animation */
+  @keyframes glow-ring {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  /* ── MENU EXTRA (hamburger) ── */
+  .extra-menu-wrap { position: relative; margin-left: auto; }
+  .extra-menu-btn {
+    display: flex; flex-direction: column; gap: 4px; cursor: pointer;
+    background: var(--navy); border: none; padding: 8px 10px; border-radius: 4px;
+  }
+  .extra-menu-btn span { width: 20px; height: 2.5px; background: var(--gold); display: block; border-radius: 1px; }
+  .extra-menu-btn:hover { background: var(--navy-mid); }
+  .extra-menu-dropdown {
+    display: none; position: absolute; top: 100%; right: 0; margin-top: 8px;
+    background: var(--navy); border: 1px solid rgba(232,177,16,0.2); border-radius: 6px;
+    min-width: 260px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); z-index: 200;
+    padding: 0.5rem 0;
+  }
+  .extra-menu-dropdown.open { display: block; }
+  .extra-menu-dropdown a {
+    display: block; padding: 0.75rem 1.2rem; color: #FAFAF8;
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .extra-menu-dropdown a:hover { background: rgba(232,177,16,0.15); }
+  .extra-menu-dropdown a small {
+    display: block; font-size: 0.7rem; color: #9a9a96; font-weight: 400; margin-top: 2px;
+  }
+</style>
+
+<!-- Schema.org JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TOI e Cobrança Retroativa de Energia: Como Contestar com Perícia Técnica",
+  "description": "Recebeu um TOI da distribuidora? Veja como a perícia metrológica e a memória de massa desmontam cobranças retroativas — REN 1.000/2021 e Tema 699 do STJ.",
+  "url": "https://lumenverum.com.br/toi-cobranca-retroativa-energia.html",
+  "image": "https://lumenverum.com.br/og-thumb.png",
+  "author": {
+    "@type": "Person",
+    "name": "Samuel Ribeiro Morais",
+    "jobTitle": "Engenheiro Eletricista e Perito Judicial"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lumen Verum",
+    "url": "https://lumenverum.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lumenverum.com.br/logo-lumen-verum.png"
+    }
+  },
+  "datePublished": "2026-09-02",
+  "dateModified": "2026-09-02",
+  "mainEntityOfPage": "https://lumenverum.com.br/toi-cobranca-retroativa-energia.html",
+  "keywords": ["TOI energia elétrica", "termo de ocorrência e inspeção", "cobrança retroativa energia", "recuperação de consumo", "contestar TOI", "perícia medidor", "memória de massa SMF", "REN 1000/2021", "Tema 699 STJ"]
+}
+</script>
+
+<!-- Schema.org JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumenverum.com.br/"},
+    {"@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://lumenverum.com.br/artigos.html"},
+    {"@type": "ListItem", "position": 3, "name": "TOI e Cobrança Retroativa de Energia"}
+  ]
+}
+</script>
+
+<!-- Schema.org JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Assinar o TOI significa confessar a irregularidade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A assinatura no Termo de Ocorrência e Inspeção registra apenas a ciência do documento, não a concordância com seu conteúdo. A caracterização do procedimento irregular depende de um conjunto de evidências produzido pela distribuidora (art. 589 da REN ANEEL nº 1.000/2021) e pode ser contestada administrativa e judicialmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tenho direito a uma perícia independente no medidor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Quando há retirada do medidor, o consumidor tem direito de solicitar a verificação ou perícia metrológica junto ao INMETRO ou órgão metrológico delegado, e a distribuidora é obrigada a informar essa possibilidade, os prazos e os custos (art. 592 da REN ANEEL nº 1.000/2021). Além disso, nada impede a contratação de engenheiro perito para análise técnica independente de todo o conjunto probatório."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A distribuidora pode cortar a energia por causa do débito do TOI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Só em condições estritas. Pelo Tema Repetitivo 699 do STJ (REsp 1.412.433/RS), o corte por débito de recuperação de consumo exige apuração com contraditório e ampla defesa, limita-se ao débito dos 90 dias anteriores à constatação e deve ser executado em até 90 dias após o vencimento — sem prejuízo da cobrança judicial do restante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é a memória de massa e por que ela é decisiva?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É o registro detalhado das grandezas elétricas (energia, demanda) armazenado pelo sistema de medição para faturamento, tipicamente em intervalos de 15 minutos. A auditoria da memória de massa permite confrontar ponto a ponto o consumo real com o faturado e com a estimativa da distribuidora — frequentemente revelando que o cálculo da recuperação de receita não se sustenta tecnicamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Usinas fotovoltaicas e consumidores do Grupo A também recebem TOI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim — e são os casos de maior valor. Em unidades do Grupo A e centrais geradoras, a discussão envolve, além da medição, o enquadramento regulatório e contratual (Parecer de Acesso, CUSD/CCER, Lei nº 14.300/2022 para geração distribuída). Um enquadramento incorreto na autuação pode invalidar o cálculo da cobrança."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>Engenharia</span></a>
+  <div class="extra-menu-wrap">
+    <button class="extra-menu-btn" onclick="toggleExtraMenu(event)" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="extra-menu-dropdown" id="extraMenuDropdown">
+      <a href="index.html">Home<small>Página inicial</small></a>
+      <a href="artigos.html">Artigos<small>Conteúdo técnico e normas</small></a>
+      <a href="pericia-judicial.html">Perícia Judicial<small>Serviços de perícia e assistência técnica</small></a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">Guia Jurídico-Técnico — Setembro 2026</div>
+    <h1>TOI e <em>Cobrança Retroativa</em>:<br>a defesa técnica contra autuações da distribuidora</h1>
+    <p class="subtitle">
+      O Termo de Ocorrência e Inspeção chega com valores que podem alcançar milhões — calculados unilateralmente pela distribuidora. Como a perícia metrológica, a memória de massa e a análise regulatória desmontam autuações frágeis, conforme a REN ANEEL nº 1.000/2021 e a jurisprudência do STJ.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+        Por Samuel Ribeiro Morais
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Setembro 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(232,177,16,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        REN 1.000/2021 e STJ
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc">
+  <div class="toc-inner">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#o-que-e-toi"><span class="toc-num">1.</span> O que é o TOI e por que os valores são tão altos</a></li>
+      <li><a href="#requisitos-formais"><span class="toc-num">2.</span> Requisitos formais da autuação (REN 1.000/2021)</a></li>
+      <li><a href="#direitos-autuado"><span class="toc-num">3.</span> Os direitos de quem é autuado</a></li>
+      <li><a href="#tema-699"><span class="toc-num">4.</span> O que o STJ decidiu (Tema 699)</a></li>
+      <li><a href="#prova-tecnica"><span class="toc-num">5.</span> A prova técnica que desmonta a autuação</a></li>
+      <li><a href="#grupo-a-gd"><span class="toc-num">6.</span> Grupo A e geração distribuída: o enquadramento importa</a></li>
+      <li><a href="#defesa"><span class="toc-num">7.</span> A defesa administrativa e judicial</a></li>
+      <li><a href="#erros"><span class="toc-num">8.</span> Erros que custam caro</a></li>
+      <li><a href="#perguntas"><span class="toc-num">9.</span> Perguntas frequentes</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- 1 -->
+  <h2 id="o-que-e-toi">1. O que é o TOI e por que os valores são tão altos</h2>
+
+  <p>O <strong>Termo de Ocorrência e Inspeção (TOI)</strong> é o documento que a distribuidora de energia lavra quando encontra, em inspeção, indícios do que a regulação chama de <strong>procedimento irregular</strong> — suspeita de fraude no medidor, desvio de energia, violação de lacres ou qualquer anomalia que, na avaliação da distribuidora, tenha causado faturamento a menor. A partir dele, a empresa calcula uma <strong>recuperação de receita</strong>: a diferença entre o que faturou e o que entende que deveria ter faturado, retroativamente.</p>
+
+  <p>O problema está no método. O valor é apurado <strong>unilateralmente</strong>, com critérios de estimativa que a própria distribuidora escolhe e aplica sobre períodos que podem alcançar anos. Em unidades consumidoras do Grupo A — indústrias, centros de dados, grandes comércios — e em centrais geradoras, o resultado facilmente atinge <strong>milhões de reais</strong>, acompanhado da ameaça implícita de suspensão do fornecimento e de negativação.</p>
+
+  <div class="highlight-box">
+    <p><strong>O ponto central:</strong> o TOI não é sentença. É o ato inicial de um procedimento que a regulação disciplina em detalhe — e que a jurisprudência cerca de garantias. Autuações tecnicamente frágeis são frequentes, e a defesa eficaz é, antes de tudo, <strong>técnica</strong>: metrologia, dados de medição e engenharia regulatória.</p>
+  </div>
+
+  <!-- 2 -->
+  <h2 id="requisitos-formais">2. Requisitos formais da autuação (REN 1.000/2021)</h2>
+
+  <p>A Resolução Normativa ANEEL nº 1.000/2021 — que consolidou as regras de fornecimento antes dispersas — disciplina a caracterização do procedimento irregular e a recuperação de receita. Os dispositivos centrais:</p>
+
+  <ul>
+    <li><strong>Art. 589 —</strong> havendo indícios de procedimento irregular, a distribuidora deve adotar <strong>as providências necessárias para sua fiel caracterização</strong>. Indício não basta: é preciso conjunto probatório.</li>
+    <li><strong>Art. 590 —</strong> a distribuidora deve lavrar o <strong>TOI</strong> em formulário próprio, conforme as instruções da ANEEL.</li>
+    <li><strong>Art. 591 —</strong> deveres na lavratura: entrega de cópia legível ao consumidor ou acompanhante <strong>mediante recibo assinado</strong>; em caso de recusa ou ausência, envio em até <strong>15 dias</strong> por meio que permita comprovar o recebimento.</li>
+    <li><strong>Art. 592 —</strong> na retirada do medidor ou de equipamentos, o consumidor tem direito à <strong>verificação ou perícia metrológica</strong> junto ao INMETRO ou órgão metrológico delegado — e a distribuidora é obrigada a <strong>informar essa possibilidade</strong>, com prazos e custos.</li>
+    <li><strong>Art. 595 —</strong> a receita a recuperar corresponde à diferença entre o faturado e o apurado, com o <strong>período da irregularidade determinado tecnicamente</strong> ou pela análise do histórico de consumo e demanda.</li>
+  </ul>
+
+  <p>Cada um desses dispositivos é uma <strong>frente de auditoria da defesa</strong>: a caracterização foi efetivamente comprovada ou apenas presumida? O TOI foi entregue na forma devida? O direito à perícia metrológica foi informado? O período e o critério de cálculo têm base técnica ou são a hipótese mais onerosa disponível?</p>
+
+  <!-- 3 -->
+  <h2 id="direitos-autuado">3. Os direitos de quem é autuado</h2>
+
+  <ul>
+    <li><strong>Acompanhar a inspeção</strong> e receber cópia do TOI no ato (art. 591).</li>
+    <li><strong>Assinar sem confessar:</strong> a assinatura registra ciência, não concordância. A recusa em assinar também não impede a defesa — apenas obriga a distribuidora a comprovar a entrega posterior.</li>
+    <li><strong>Perícia metrológica oficial</strong> no medidor retirado (art. 592), realizada pelo INMETRO ou órgão delegado — não pelo laboratório da própria distribuidora.</li>
+    <li><strong>Contestar administrativamente</strong> perante a distribuidora e, mantida a cobrança, recorrer à ouvidoria e à ANEEL.</li>
+    <li><strong>Produzir prova técnica própria:</strong> laudo de engenheiro perito independente sobre todo o conjunto — medição, instalação, histórico e cálculo.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Atenção à prova perecível:</strong> o medidor retirado, os lacres e os registros de medição são a prova material do caso. Documente fotograficamente a inspeção, exija a identificação dos equipamentos retirados e <strong>não aceite descarte ou substituição sem registro</strong>. Sem a materialidade, a discussão vira palavra contra presunção.</p>
+  </div>
+
+  <!-- MID CTA -->
+  <div class="inline-cta">
+    <h3>Recebeu um TOI de valor expressivo?</h3>
+    <p>A Lumen Verum realiza perícia metrológica e de medição, auditoria de memória de massa e análise regulatória para defesa contra cobranças retroativas — na esfera administrativa e judicial.</p>
+    <a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20TOI%20e%20cobran%C3%A7a%20retroativa%20e%20preciso%20de%20an%C3%A1lise%20t%C3%A9cnica%20de%20uma%20autua%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-gold">Falar com o perito &rarr;</a>
+  </div>
+
+  <!-- 4 -->
+  <h2 id="tema-699">4. O que o STJ decidiu (Tema 699)</h2>
+
+  <p>No <strong>REsp 1.412.433/RS</strong>, julgado sob o rito dos recursos repetitivos (<strong>Tema 699</strong>), o Superior Tribunal de Justiça fixou os limites do corte de energia por débito de recuperação de consumo atribuído a fraude do medidor:</p>
+
+  <ul>
+    <li>A apuração deve observar o <strong>contraditório e a ampla defesa</strong> — a presunção unilateral da distribuidora não basta;</li>
+    <li>O corte administrativo só é possível quanto ao débito dos <strong>90 dias anteriores à constatação</strong> da irregularidade;</li>
+    <li>O corte deve ser executado em até <strong>90 dias após o vencimento</strong> do débito, mediante prévio aviso;</li>
+    <li>O restante da cobrança segue a via <strong>judicial ordinária</strong> — onde a qualidade da prova técnica de cada parte decide o caso.</li>
+  </ul>
+
+  <p>A consequência prática: em cobranças retroativas de longo período, a parcela que autoriza corte é pequena — e o grosso da discussão se resolve em juízo, no terreno da <strong>prova pericial</strong>.</p>
+
+  <!-- 5 -->
+  <h2 id="prova-tecnica">5. A prova técnica que desmonta a autuação</h2>
+
+  <p>A defesa robusta não se limita a apontar vícios formais — ela reconstrói tecnicamente os fatos com os dados disponíveis:</p>
+
+  <h3>5.1. Memória de massa do SMF</h3>
+  <p>O Sistema de Medição para Faturamento registra as grandezas elétricas em <strong>intervalos típicos de 15 minutos</strong>. A auditoria desses registros permite a <strong>conciliação ponto a ponto</strong> entre o consumo real, o faturado e a estimativa da distribuidora. Curvas de carga compatíveis com a operação declarada da unidade são evidência direta contra a tese de medição adulterada.</p>
+
+  <h3>5.2. Registros de supervisão e proteção</h3>
+  <p>Em plantas industriais e centrais geradoras, os sistemas supervisórios (SCADA) e os <strong>relés de proteção</strong> guardam registros independentes da medição de faturamento: energia gerada e injetada, limites operacionais parametrizados, eventos de atuação. Um histórico supervisório íntegro e coerente com as faturas é contraprova poderosa — produzida por equipamento que não pertence à distribuidora.</p>
+
+  <h3>5.3. Perícia metrológica e física do medidor</h3>
+  <p>A verificação oficial (art. 592) atesta se o medidor registra dentro das classes de exatidão. A perícia de engenharia complementa: estado de lacres, indícios reais de violação, compatibilidade entre a suposta intervenção e o efeito alegado no registro.</p>
+
+  <h3>5.4. Análise do histórico de faturamento</h3>
+  <p>O art. 595 manda determinar o período <strong>tecnicamente ou pelo histórico</strong>. A análise estatística do consumo — sazonalidade, degraus de carga, correlação com a operação — frequentemente demonstra que não existe a "queda anômala" que sustentaria a retroação, ou que o marco temporal adotado pela distribuidora é arbitrário.</p>
+
+  <!-- 6 -->
+  <h2 id="grupo-a-gd">6. Grupo A e geração distribuída: o enquadramento importa</h2>
+
+  <p>Nos casos de maior valor — unidades do <strong>Grupo A</strong> e <strong>centrais geradoras fotovoltaicas</strong> — a controvérsia raramente é só metrológica. Ela envolve o enquadramento regulatório e contratual da unidade:</p>
+
+  <ul>
+    <li><strong>Parecer de Acesso e projeto as-built:</strong> a capacidade homologada, a configuração efetivamente energizada e a apurada na inspeção precisam ser confrontadas — divergências de enquadramento não se confundem com fraude.</li>
+    <li><strong>CUSD e CCER:</strong> os contratos de uso do sistema de distribuição e de energia definem montantes e condições; o cálculo de recuperação que ignora o arranjo contratual parte de premissa errada.</li>
+    <li><strong>Geração distribuída:</strong> a <strong>Lei nº 14.300/2022</strong> (marco legal da micro e minigeração) e sua regulamentação pela ANEEL definem regras próprias de compensação e faturamento — o sancionamento aplicável a um consumidor comum não se transpõe automaticamente a um ativo de geração.</li>
+  </ul>
+
+  <p>É a combinação entre <strong>perícia metrológica de campo</strong> e <strong>engenharia regulatória</strong> que permite demonstrar, por exemplo, que uma suposta "irregularidade" é, na verdade, uma divergência de enquadramento tarifário — com consequências jurídicas e financeiras completamente diferentes.</p>
+
+  <!-- 7 -->
+  <h2 id="defesa">7. A defesa administrativa e judicial</h2>
+
+  <p>A estratégia típica se desenvolve em camadas:</p>
+
+  <ul>
+    <li><strong>Imediata (dias):</strong> preservação da prova — registro da inspeção, identificação do medidor, solicitação da perícia metrológica oficial e dos arquivos da memória de massa.</li>
+    <li><strong>Administrativa:</strong> contestação fundamentada perante a distribuidora, com laudo técnico anexo; na sequência, ouvidoria e reclamação na ANEEL.</li>
+    <li><strong>Judicial:</strong> ação anulatória ou declaratória com pedido de tutela de urgência (art. 300 do CPC) para impedir corte e negativação — instruída, desde a petição inicial, com o <strong>laudo pericial de engenharia</strong> (arts. 434 e 472 do CPC).</li>
+  </ul>
+
+  <p>Em todas as camadas, o elemento decisivo é o mesmo: <strong>quem tem os melhores dados e a melhor análise técnica controla a narrativa do caso</strong>. A distribuidora chega com presunções; a defesa deve chegar com registros, medições e método.</p>
+
+  <!-- 8 -->
+  <h2 id="erros">8. Erros que custam caro</h2>
+
+  <ul>
+    <li><strong>Pagar para "resolver logo":</strong> o pagamento de cobrança milionária sem análise técnica raramente é reversível na prática.</li>
+    <li><strong>Deixar o medidor sair sem registro:</strong> sem identificação e lacração documentada, a cadeia de custódia da principal prova material se perde.</li>
+    <li><strong>Não pedir a memória de massa:</strong> os arquivos brutos do SMF são o contraditório técnico mais direto ao cálculo da distribuidora.</li>
+    <li><strong>Perder os prazos administrativos:</strong> a contestação tempestiva preserva direitos e trava medidas coercitivas.</li>
+    <li><strong>Tratar como problema só jurídico:</strong> sem laudo, a defesa discute teses; com laudo, discute fatos. Juízes decidem fatos.</li>
+  </ul>
+
+  <!-- 9. FAQ -->
+  <h2 id="perguntas">9. Perguntas frequentes</h2>
+
+  <h3>9.1. Assinar o TOI significa confessar a irregularidade?</h3>
+  <p>Não. A assinatura registra apenas a <strong>ciência</strong> do documento (art. 591). A caracterização do procedimento irregular depende de conjunto probatório (art. 589) e pode ser contestada administrativa e judicialmente.</p>
+
+  <h3>9.2. Tenho direito a uma perícia independente no medidor?</h3>
+  <p>Sim. Na retirada do medidor, o consumidor pode solicitar a <strong>verificação ou perícia metrológica</strong> junto ao INMETRO ou órgão delegado, e a distribuidora deve informar prazos e custos (art. 592). Adicionalmente, um engenheiro perito pode auditar todo o conjunto probatório de forma independente.</p>
+
+  <h3>9.3. A distribuidora pode cortar a energia por causa do débito do TOI?</h3>
+  <p>Somente nos limites do <strong>Tema 699 do STJ</strong>: apuração com contraditório, débito restrito aos 90 dias anteriores à constatação e corte executado em até 90 dias do vencimento, com aviso prévio. O restante se discute judicialmente.</p>
+
+  <h3>9.4. O que é a memória de massa e por que ela é decisiva?</h3>
+  <p>É o registro das grandezas elétricas em intervalos típicos de <strong>15 minutos</strong>, armazenado pelo sistema de medição. Sua auditoria permite confrontar ponto a ponto o consumo real com o faturado e com a estimativa da autuação — e frequentemente revela que o cálculo não se sustenta.</p>
+
+  <h3>9.5. Usinas fotovoltaicas e consumidores do Grupo A também recebem TOI?</h3>
+  <p>Sim — e são os casos de maior impacto financeiro. Nesses casos, além da metrologia, a defesa passa pelo enquadramento regulatório e contratual (Parecer de Acesso, CUSD/CCER, Lei nº 14.300/2022), em que erros de premissa da autuação podem invalidar o cálculo.</p>
+
+  <!-- FINAL CTA -->
+  <div class="inline-cta" style="margin-bottom: 0;">
+    <h3>Defesa técnica contra autuações de distribuidoras</h3>
+    <p>A Lumen Verum atua em perícia metrológica e de medição, auditoria de memória de massa e SCADA, e engenharia regulatória (CUSD, CCER, geração distribuída) — com laudos e pareceres para as esferas administrativa e judicial. Atendimento em todo o Brasil.</p>
+    <a href="pericia-judicial.html" class="btn-gold">Conhecer os serviços de perícia &rarr;</a>
+  </div>
+
+  <!-- REFERENCES -->
+  <h2>Referências</h2>
+
+  <ul>
+    <li>ANEEL. <strong>Resolução Normativa nº 1.000/2021</strong> — Regras de prestação do serviço público de distribuição de energia elétrica (arts. 589 a 595 — procedimento irregular, TOI e recuperação de receita).</li>
+    <li>BRASIL. <strong>Lei nº 14.300/2022</strong> — Marco legal da microgeração e minigeração distribuída.</li>
+    <li>STJ. <strong>REsp 1.412.433/RS (Tema Repetitivo 699)</strong> — Limites do corte de fornecimento por débito de recuperação de consumo.</li>
+    <li>BRASIL. <strong>Lei nº 13.105/2015</strong> — Código de Processo Civil (arts. 300, 434, 472).</li>
+    <li>BRASIL. <strong>Lei nº 6.496/1977</strong> — Anotação de Responsabilidade Técnica (ART).</li>
+  </ul>
+
+  <!-- SOBRE O AUTOR -->
+  <div style="border-top: 1px solid rgba(0,12,82,0.12); margin-top: 40px; padding-top: 24px;">
+    <p style="font-weight: 600; color: var(--navy); margin-bottom: 6px;">Sobre o autor — Samuel Ribeiro Morais</p>
+    <p style="font-size: 0.88rem; color: var(--gray-mid); margin-bottom: 10px;">Engenheiro Eletricista e Engenheiro de Segurança do Trabalho, registrado no CREA, perito judicial credenciado no TRT-18, TJGO e TJDFT. Atua em perícias de sistemas de medição, qualidade de energia, sistemas fotovoltaicos e defesa técnica contra autuações de distribuidoras.</p>
+    <p style="font-size: 0.88rem;"><a href="pericia-judicial.html" style="color: var(--navy); font-weight: 600;">Conheça o trabalho de perícia judicial &rarr;</a></p>
+  </div>
+
+  <p style="font-size:0.82rem; color:var(--gray-mid); margin-top:32px; font-style:italic;">
+    Este artigo constitui guia técnico-jurídico com finalidade informativa e educacional. Não substitui a consulta à regulação vigente na íntegra (REN ANEEL nº 1.000/2021 e alterações), nem dispensa o aconselhamento de advogado e de profissional técnico habilitado para o caso concreto.
+  </p>
+
+</article>
+
+<!-- CTA PERÍCIA -->
+<section style="padding: 40px 0;">
+  <div class="inline-cta" style="background: linear-gradient(135deg, #000C52 0%, #001080 100%); border: 1px solid rgba(232,177,16,0.3);">
+    <h3 style="color: #FAFAF8;">A autuação chegou. A resposta precisa ser técnica.</h3>
+    <p style="color: rgba(255,255,255,0.7);">A <strong style="color: #E8B110;">Lumen Verum</strong> audita medição, memória de massa, SCADA e enquadramento regulatório para construir a defesa contra cobranças retroativas — do protocolo administrativo à perícia judicial.</p>
+    <a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20TOI%20e%20cobran%C3%A7a%20retroativa%20e%20gostaria%20de%20falar%20sobre%20um%20caso." target="_blank" rel="noopener" class="btn-gold">Falar com o perito &rarr;</a>
+  </div>
+</section>
+
+<!-- RELATED ARTICLES -->
+<section class="related-articles">
+  <h2>Artigos Relacionados</h2>
+  <div class="related-grid">
+    <a href="laudo-tecnico-peticao-inicial.html" class="related-card">
+      <h3>Laudo Técnico na Petição Inicial: a Prova que Não Pode Esperar</h3>
+      <p>Vestígios somem e cenas são alteradas enquanto o processo corre. Quando produzir o laudo antes da ação — arts. 434, 381 e 472 do CPC.</p>
+    </a>
+    <a href="pericia-judicial-passo-a-passo-cpc.html" class="related-card">
+      <h3>Perícia Judicial: Passo a Passo Completo Conforme o CPC</h3>
+      <p>O procedimento da prova pericial detalhado artigo por artigo — do deferimento da prova até a apreciação do laudo pelo juiz.</p>
+    </a>
+    <a href="o-que-faz-perito-judicial-engenharia.html" class="related-card">
+      <h3>O que Faz um Perito Judicial de Engenharia?</h3>
+      <p>Entenda as atribuições, qualificações e a atuação do perito judicial em processos que envolvem engenharia.</p>
+    </a>
+    <a href="pericia-judicial.html" class="related-card">
+      <h3>Perícia Judicial em Engenharia Elétrica</h3>
+      <p>Conheça os serviços de perícia judicial e assistência técnica da Lumen Verum em engenharia elétrica.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Lumen Verum Engenharia. Todos os direitos reservados.
+  &nbsp;|&nbsp; <a href="index.html">Página Inicial</a>
+  &nbsp;|&nbsp; <a href="spda-risk-analyzer.html">SPDA Risk Analyzer</a>
+  &nbsp;|&nbsp; <a href="pericia-judicial.html">Perícia Judicial</a>
+  <div style="margin-top:10px;">
+    <a href="https://www.linkedin.com/company/lumen-verum/" target="_blank" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);margin-right:6px;vertical-align:middle;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#E8B110"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/lumenverumeng/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);vertical-align:middle;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#E8B110"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20sobre%20TOI%20e%20cobran%C3%A7a%20retroativa%20e%20gostaria%20de%20saber%20mais." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+window.addEventListener('scroll', function() {
+  var scrollTop = window.scrollY;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+});
+</script>
+
+<script>
+function toggleExtraMenu(ev) {
+  ev.stopPropagation();
+  document.getElementById('extraMenuDropdown').classList.toggle('open');
+}
+document.addEventListener('click', function() {
+  document.getElementById('extraMenuDropdown').classList.remove('open');
+});
+</script>
+
+</body>
+</html>
