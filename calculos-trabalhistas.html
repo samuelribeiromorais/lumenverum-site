@@ -1091,6 +1091,13 @@
   .cards-5 .pricing-price .cents { font-size: 1.3rem; line-height: 1; }
   .cards-5 .pricing-price .price-prefix { flex-basis: 100%; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-mid); margin-bottom: 4px; }
   .cards-5 .pricing-period { margin-bottom: 1.4rem; }
+  /* alinhamento das linhas entre os cards (subgrid) */
+  .cards-5 { align-items: stretch; }
+  .cards-5 .pricing-card { display: grid; grid-template-rows: subgrid; grid-row: span 9; align-content: start; }
+  .cards-5 .pricing-card > * { margin-top: 0; }
+  .cards-5 .pricing-card .btn-price { align-self: start; justify-self: start; }
+  .cards-5 .card-why { align-self: start; }
+  @media (max-width: 640px) { .cards-5 .pricing-card { display: flex; flex-direction: column; } }
   .feat-hl { color: var(--navy); font-weight: 700; background: rgba(232,177,16,0.18); padding: 1px 6px; border-radius: 3px; }
   .cards-5 .pricing-features li { font-size: 0.86rem; }
   .card-polo { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; background: rgba(0,12,82,0.08); color: var(--navy); margin-bottom: 12px; }
