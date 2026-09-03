@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFWCBB8LHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XFWCBB8LHL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculos Trabalhistas em PJe-Calc para Advogados, com Prazo</title>
+<meta name="description" content="Liquidação de sentença e de pedidos da inicial, entregue em PJe-Calc (.pjc) e PDF, com data de entrega confirmada por e-mail na compra. Para advogados trabalhistas.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lumenverum.com.br/calculos-trabalhistas.html">
+<meta property="og:title" content="Cálculos Trabalhistas em PJe-Calc para Advogados, com Prazo">
+<meta property="og:description" content="Liquidação de sentença e de pedidos da inicial, entregue em PJe-Calc (.pjc) e PDF, com data de entrega confirmada por e-mail na compra. Para advogados trabalhistas.">
+<meta property="og:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta property="og:image:width" content="2500">
+<meta property="og:image:height" content="2500">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cálculos Trabalhistas em PJe-Calc para Advogados, com Prazo">
+<meta name="twitter:description" content="Liquidação de sentença e de pedidos da inicial, entregue em PJe-Calc (.pjc) e PDF, com data de entrega confirmada por e-mail na compra. Para advogados trabalhistas.">
+<meta name="twitter:image" content="https://lumenverum.com.br/og-thumb.png">
+<meta name="keywords" content="cálculos trabalhistas, liquidação de sentença trabalhista, cálculo de liquidação, liquidação de pedidos petição inicial, calculista trabalhista, impugnação de cálculos, memória de cálculo trabalhista, art 840 CLT, cálculo trabalhista para advogados, PJe-Calc">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://lumenverum.com.br/calculos-trabalhistas.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #000C52;
+    --navy-mid: #000e66;
+    --gold: #E8B110;
+    --gold-light: #f0c940;
+    --gold-pale: #DFC06A;
+    --white: #FAFAF8;
+    --gray-light: #f4f4f0;
+    --gray-mid: #9a9a96;
+    --text: #1a1a2e;
+    --teal: #0d9488;
+    --teal-dark: #0a7a70;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: #e6ac0c;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,12,82,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: all 0.3s ease;
+  }
+  nav.scrolled {
+    height: 60px;
+    background: #e6ac0c;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  .nav-brand span { color: rgba(0,12,82,0.7); font-weight: 300; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: rgba(0,12,82,0.85);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: var(--navy);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta-btn {
+    background: var(--navy);
+    color: white !important;
+    padding: 8px 20px;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    transition: background 0.2s, transform 0.2s !important;
+    border-radius: 2px;
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .nav-cta-btn::after { display: none !important; }
+  .nav-cta-btn:hover { background: #000C52 !important; transform: translateY(-1px); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
+  .hamburger span { width: 24px; height: 2px; background: white; display: block; transition: all 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,177,16,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,177,16,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(232,177,16,0.06) 0%, transparent 70%);
+    top: -200px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-glow-2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(13,148,136,0.08) 0%, transparent 70%);
+    bottom: -100px; left: 5%;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 140px 10% 80px;
+    max-width: 750px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(232,177,16,0.15);
+    border: 1px solid rgba(232,177,16,0.4);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-badge::before, .hero-badge::after {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.12;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-headline strong {
+    font-weight: 600;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+    opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 36px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    display: inline-flex; align-items: center; gap: 10px;
+    border: none; cursor: pointer;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 30px rgba(232,177,16,0.35); }
+  .btn-gold:active { transform: translateY(0) scale(0.98); box-shadow: 0 2px 10px rgba(232,177,16,0.3); transition-duration: 0.1s; }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.75);
+    padding: 16px 36px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    background: transparent;
+    cursor: pointer;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .btn-outline:active { transform: translateY(0); transition-duration: 0.1s; }
+
+  .hero-stats {
+    display: flex; gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(232,177,16,0.12);
+    opacity: 0; animation: fadeUp 0.8s 1s forwards;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+
+  /* ── PROBLEMA ── */
+  #problema {
+    padding: 100px 10%;
+    background: var(--white);
+  }
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 30px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+    color: #5a5a6a;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .pain-card {
+    padding: 2rem;
+    background: var(--gray-light);
+    border-left: 3px solid #dc2626;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  }
+  .pain-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+  .pain-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .pain-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .pain-card p {
+    font-size: 0.85rem;
+    color: #5a5a6a;
+    line-height: 1.7;
+  }
+
+  /* ── SOLUCAO ── */
+  #solucao {
+    padding: 100px 10%;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  #solucao .section-label { color: var(--gold); }
+  #solucao .section-label::before { background: var(--gold); }
+  #solucao .section-title { color: var(--white); }
+  #solucao .section-subtitle { color: rgba(255,255,255,0.55); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .feature-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(232,177,16,0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .feature-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(232,177,16,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  }
+  .feature-card:hover::before { opacity: 1; }
+  .feature-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+  }
+  .feature-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .feature-card p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  /* ── SCREENSHOTS ── */
+  #screenshots {
+    padding: 100px 10%;
+    background: var(--gray-light);
+  }
+  .screenshots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .screenshot-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    cursor: zoom-in;
+    max-height: 420px;
+  }
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    min-height: 420px;
+  }
+
+  /* ── LIGHTBOX ── */
+  .lightbox-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.88);
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightbox-overlay img {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  .lightbox-overlay.active img {
+    transform: scale(1);
+  }
+  .lightbox-close {
+    position: absolute; top: 16px; right: 24px;
+    color: white; font-size: 2.5rem; font-weight: 300;
+    cursor: pointer; line-height: 1;
+    transition: transform 0.2s;
+  }
+  .lightbox-close:hover { transform: scale(1.2); }
+  .screenshot-item:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+  .screenshot-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,12,82,0.9));
+    padding: 2rem 1.2rem 1rem;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── COMO FUNCIONA ── */
+  #como-funciona {
+    padding: 100px 10%;
+    background: var(--white);
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .step {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+  .step-number {
+    width: 56px; height: 56px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.2rem;
+    box-shadow: 0 4px 16px rgba(0,12,82,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(232,177,16,0.3);
+  }
+  .step h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .step p {
+    font-size: 0.82rem;
+    color: #5a5a6a;
+    line-height: 1.7;
+  }
+
+  /* ── NORMA ── */
+  #norma {
+    padding: 80px 10%;
+    background: var(--navy);
+  }
+  .norma-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .norma-content .section-title { color: var(--white); margin-bottom: 1.5rem; }
+  .norma-content p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+  .norma-highlight {
+    background: rgba(232,177,16,0.08);
+    border: 1px solid rgba(232,177,16,0.2);
+    border-radius: 6px;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  .norma-item { text-align: center; }
+  .norma-item .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--gold);
+  }
+  .norma-item .label {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* ── LEAD MAGNET ── */
+  #lead-magnet, #artigo {
+    padding: 80px 10%;
+    background: var(--white);
+  }
+  .lead-magnet-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--navy) 0%, #001080 100%);
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .lead-magnet-box::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(232,177,16,0.1) 0%, transparent 70%);
+    top: -100px; right: -50px;
+    pointer-events: none;
+  }
+  .lead-magnet-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  .lead-magnet-box .sub {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .lead-form {
+    display: flex; gap: 0.8rem;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .lead-form input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .lead-form input::placeholder { color: rgba(255,255,255,0.35); }
+  .lead-form input:focus { border-color: var(--gold); }
+  .lead-form button {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .lead-form button:hover { background: var(--gold-light); }
+
+  /* ── PRICING ── */
+  #preco {
+    padding: 100px 10%;
+    background: var(--white);
+    text-align: center;
+  }
+  .pricing-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  .pricing-card {
+    background: white;
+    border: 1px solid rgba(0,12,82,0.08);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    width: 320px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+  }
+  .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+  .pricing-card.featured {
+    border: 2px solid var(--gold);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.15);
+    transform: scale(1.03);
+  }
+  .pricing-card.featured:hover { transform: scale(1.03) translateY(-8px); box-shadow: 0 20px 50px rgba(232,177,16,0.25); }
+  .pricing-badge {
+    position: absolute;
+    top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 12px;
+  }
+  .pricing-card h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+  .pricing-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .pricing-price .currency {
+    font-size: 1.2rem;
+    vertical-align: super;
+    font-weight: 600;
+  }
+  .pricing-period {
+    font-size: 0.78rem;
+    color: var(--gray-mid);
+    margin-bottom: 2rem;
+  }
+  .pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .pricing-features li {
+    font-size: 0.82rem;
+    color: #4a4a5a;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .pricing-features li::before {
+    content: '\2713';
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .btn-price {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+  }
+  .btn-price-primary {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .btn-price-primary:hover { background: var(--gold-light); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 24px rgba(232,177,16,0.4); }
+  .btn-price-primary:active { transform: translateY(0) scale(0.98); transition-duration: 0.1s; }
+  .btn-price-secondary {
+    background: var(--navy);
+    color: white;
+  }
+  .btn-price-secondary:hover { background: var(--navy-mid); transform: translateY(-2px); }
+  .pricing-guarantee {
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    color: var(--gray-mid);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+
+  /* ── FAQ ── */
+  #faq {
+    padding: 100px 10%;
+    background: var(--gray-light);
+  }
+  .faq-list {
+    max-width: 700px;
+    margin: 2rem auto 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(0,12,82,0.08);
+  }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s ease;
+    min-height: 48px;
+  }
+  .faq-question:hover { color: var(--teal-dark); }
+  .faq-question::after {
+    content: '+';
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--gold);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+  .faq-item.active .faq-question::after {
+    content: '\2212';
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+  }
+  .faq-answer p {
+    font-size: 0.85rem;
+    color: #5a5a6a;
+    line-height: 1.8;
+  }
+
+  /* ── CTA FINAL ── */
+  #cta-final {
+    padding: 100px 10%;
+    background: var(--navy);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta-final::before {
+    content: '';
+    position: absolute;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(232,177,16,0.06) 0%, transparent 60%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  #cta-final .section-title {
+    color: var(--white);
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    position: relative;
+  }
+  #cta-final .cta-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+  }
+  #cta-final .hero-actions { justify-content: center; position: relative; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #000a40;
+    padding: 2.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid rgba(232,177,16,0.08);
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+  .footer-brand span { color: rgba(255,255,255,0.4); font-weight: 300; }
+  footer p {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+  }
+  footer a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.72rem;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  @keyframes pulse-btn {
+    0%, 100% { box-shadow: 0 6px 25px rgba(232,177,16,0.4); transform: scale(1); }
+    50% { box-shadow: 0 8px 35px rgba(232,177,16,0.7); transform: scale(1.03); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes glow-ring {
+    0% { box-shadow: 0 0 0 0 rgba(232,177,16,0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(232,177,16,0); }
+    100% { box-shadow: 0 0 0 0 rgba(232,177,16,0); }
+  }
+  .btn-access-system {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold) 0%, #f0c940 50%, var(--gold) 100%);
+    background-size: 200% auto;
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 1.25rem;
+    padding: 1.2rem 3.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 30px rgba(232,177,16,0.5), 0 0 60px rgba(232,177,16,0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: pulse-btn 2.5s infinite, shimmer 3s linear infinite;
+    position: relative;
+  }
+  .btn-access-system:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 40px rgba(232,177,16,0.7), 0 0 80px rgba(232,177,16,0.25);
+    background: linear-gradient(135deg, #f0c940 0%, var(--gold) 100%);
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── SCROLL PROGRESS BAR ── */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--teal), var(--gold));
+    z-index: 101;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* ── FOCUS STATES (Accessibility) ── */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .btn-gold:focus-visible, .btn-outline:focus-visible, .btn-price:focus-visible, .btn-access-system:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+  }
+
+  /* ── REDUCED MOTION ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .scroll-progress { transition: none; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #e6ac0c;
+      padding: 1.5rem 5%;
+      border-top: 1px solid rgba(0,12,82,0.15);
+      gap: 0.5rem;
+    }
+    .nav-links.open a {
+      padding: 12px 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .hamburger { display: flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+    .hero-content { padding: 120px 6% 60px; }
+    .hero-headline { font-size: clamp(2rem, 7vw, 2.8rem); }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .pricing-cards { flex-direction: column; align-items: center; }
+    .pricing-card.featured { transform: none; }
+    .pricing-card.featured:hover { transform: translateY(-8px); }
+    .lead-form { flex-direction: column; }
+    .screenshots-container { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .btn-gold, .btn-outline {
+      min-height: 48px;
+      padding: 14px 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-price {
+      min-height: 48px;
+      padding: 16px;
+    }
+    .faq-question {
+      min-height: 52px;
+      padding: 1.2rem 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .hero-stats { flex-direction: column; gap: 1rem; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .norma-highlight { grid-template-columns: 1fr 1fr; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions .btn-gold, .hero-actions .btn-outline { width: 100%; text-align: center; justify-content: center; }
+    .btn-access-system { font-size: 1rem; padding: 1rem 2rem; letter-spacing: 1.5px; }
+  }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 99;
+    width: 60px; height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    animation: glow-ring 2s infinite;
+  }
+  .whatsapp-float:hover { transform: scale(1.15); box-shadow: 0 8px 32px rgba(37,211,102,0.6); animation: none; }
+  .whatsapp-float:active { transform: scale(0.95); }
+  .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+  /* ── MENU EXTRA (hamburger) ── */
+  .extra-menu-wrap { position: relative; margin-left: 1.5rem; }
+  .extra-menu-btn {
+    display: flex; flex-direction: column; gap: 4px; cursor: pointer;
+    background: var(--navy); border: none; padding: 8px 10px; border-radius: 4px;
+  }
+  .extra-menu-btn span { width: 20px; height: 2.5px; background: var(--gold); display: block; border-radius: 1px; }
+  .extra-menu-btn:hover { background: var(--navy-mid); }
+  .extra-menu-dropdown {
+    display: none; position: absolute; top: 100%; right: 0; margin-top: 8px;
+    background: var(--navy); border: 1px solid rgba(232,177,16,0.2); border-radius: 6px;
+    min-width: 260px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); z-index: 200;
+    padding: 0.5rem 0;
+  }
+  .extra-menu-dropdown.open { display: block; }
+  .extra-menu-dropdown a {
+    display: block; padding: 0.75rem 1.2rem; color: var(--white);
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .extra-menu-dropdown a:hover { background: rgba(232,177,16,0.15); }
+  .extra-menu-dropdown a small {
+    display: block; font-size: 0.7rem; color: var(--gray-mid); font-weight: 400; margin-top: 2px;
+  }
+</style>
+
+<style>
+  /* Pagina de calculos trabalhistas: complementos */
+  #prazo, #servicos, #inicial-envio, #publico { padding: 100px 10%; }
+  #servicos { background: var(--gray-light); }
+  #publico { background: var(--gray-light); }
+  @media (max-width: 768px) { #prazo, #servicos, #inicial-envio, #publico { padding: 64px 5%; } }
+  .draft-banner {
+    position: fixed; top: 72px; left: 0; width: 100%; z-index: 99;
+    background: #7a1f1f; color: #fff; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; text-align: center; padding: 8px 5%;
+  }
+  .draft-banner span { color: #f0c940; }
+  .prazo-wrap { max-width: 900px; margin: 0 auto; }
+  .prazo-text { background: var(--gray-light); border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0; padding: 24px 28px; margin: 0 0 32px; }
+  .prazo-text p { font-size: 0.95rem; line-height: 1.75; margin: 0 0 12px; }
+  .prazo-text p:last-child { margin-bottom: 0; }
+  .prazo-table-wrap { overflow-x: auto; border: 1px solid #e0e0dc; border-radius: 10px; }
+  .prazo-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .prazo-table thead { background: var(--navy); color: #fff; }
+  .prazo-table th { padding: 14px 18px; text-align: left; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  .prazo-table td { padding: 14px 18px; border-bottom: 1px solid #e8e8e4; vertical-align: middle; }
+  .prazo-table tbody tr:nth-child(even) { background: var(--gray-light); }
+  .prazo-table .num { text-align: right; white-space: nowrap; font-weight: 600; color: var(--navy); }
+  .prazo-table .urg { color: #b8860b; }
+  .cards-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+  .cards-5 .pricing-card { margin: 0; max-width: none; text-align: left; }
+  .cards-5 .pricing-card h3 { font-size: 1.35rem; }
+  .cards-5 .pricing-price, .cards-5 .pricing-period { text-align: left; }
+  .cards-5 .pricing-features li { font-size: 0.86rem; }
+  .card-polo { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; background: rgba(0,12,82,0.08); color: var(--navy); margin-bottom: 12px; }
+  .card-polo.urg { background: rgba(232,177,16,0.18); color: #7a5a06; }
+  .card-whom { font-size: 0.86rem; line-height: 1.6; color: var(--gray-mid); margin: 0 0 16px; min-height: 66px; }
+  .card-lead { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); line-height: 1.4; margin: 0 0 14px; }
+  .card-why { font-size: 0.8rem; color: var(--gray-mid); border-top: 1px dashed #e0e0dc; padding-top: 12px; margin-top: 14px; line-height: 1.55; }
+  #hero .hero-content { min-width: 0; width: 100%; max-width: 900px; }
+  .provas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px; max-width: 900px; margin: 36px auto 0; text-align: left; }
+  .prova { background: rgba(255,255,255,0.05); border: 1px solid rgba(232,177,16,0.25); border-radius: 8px; padding: 18px 20px; }
+  .prova b { display: block; color: var(--gold); font-size: 0.9rem; margin-bottom: 6px; }
+  .prova p { color: rgba(255,255,255,0.75); font-size: 0.82rem; line-height: 1.6; margin: 0; }
+  .aviso-honesto { max-width: 900px; margin: 28px auto 0; padding: 16px 22px; background: rgba(232,177,16,0.08); border: 1px solid rgba(232,177,16,0.35); border-radius: 8px; font-size: 0.88rem; line-height: 1.65; }
+  .publico { max-width: 900px; margin: 0 auto; text-align: center; font-size: 0.95rem; line-height: 1.75; }
+  @media (max-width: 768px) { .draft-banner { font-size: 0.7rem; } .card-whom { min-height: 0; } }
+</style>
+
+<!-- Schema.org JSON-LD: Service + OfferCatalog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cálculos Trabalhistas — Liquidação de Sentença e de Petição Inicial",
+  "serviceType": "Cálculo trabalhista / liquidação de sentença",
+  "url": "https://lumenverum.com.br/calculos-trabalhistas.html",
+  "provider": {"@type": "Organization", "name": "Lumen Verum", "url": "https://lumenverum.com.br"},
+  "areaServed": "BR",
+  "audience": {"@type": "Audience", "audienceType": "Advogados trabalhistas"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de cálculo trabalhista",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamante", "price": "225.00", "priceCurrency": "BRL", "description": "Entrega em 5 dias úteis"},
+      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamada", "price": "275.00", "priceCurrency": "BRL", "description": "Entrega em 5 dias úteis"},
+      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamante · Entrega urgente", "price": "375.00", "priceCurrency": "BRL", "description": "Entrega em 1 dia útil, até 18h"},
+      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamada · Entrega urgente", "price": "475.00", "priceCurrency": "BRL", "description": "Entrega em 1 dia útil, até 18h"},
+      {"@type": "Offer", "name": "Liquidação de Petição Inicial", "price": "175.00", "priceCurrency": "BRL", "description": "A partir de R$ 175,00 — entrega em 5 dias úteis"}
+    ]
+  }
+}
+</script>
+
+<!-- Schema.org JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Quando começa a contar o prazo?", "acceptedAnswer": {"@type": "Answer", "text": "No primeiro dia útil seguinte à compra. Fim de semana, feriado nacional e feriado forense não contam, e o recesso de fim de ano também não."}},
+    {"@type": "Question", "name": "Digitei o número do processo errado. E agora?", "acceptedAnswer": {"@type": "Answer", "text": "O sistema confere o dígito verificador do padrão CNJ no momento da compra. Se houver erro, você recebe um e-mail com o que foi digitado, o motivo da recusa e um exemplo correto. O prazo passa a contar da sua confirmação — nenhum dia útil é perdido."}},
+    {"@type": "Question", "name": "Para onde envio os documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Para documentos@lumenverum.com.br, com o número do processo no assunto. O endereço e a instrução também vão no e-mail de confirmação da compra."}},
+    {"@type": "Question", "name": "Como sei que o pedido está andando?", "acceptedAnswer": {"@type": "Answer", "text": "Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, solicitações de documentos e o aviso de entrega. Se precisarmos de alguma peça, você recebe um e-mail específico dizendo exatamente o que falta."}},
+    {"@type": "Question", "name": "Em que formato o cálculo é entregue?", "acceptedAnswer": {"@type": "Answer", "text": "Em PJe-Calc (arquivo .pjc, o padrão de cálculo da Justiça do Trabalho, pronto para conferência pela contadoria do juízo) e em PDF com a memória de cálculo completa."}},
+    {"@type": "Question", "name": "Vocês assinam o cálculo?", "acceptedAnswer": {"@type": "Answer", "text": "O material é entregue como subsídio técnico ao advogado contratante, que o junta aos autos sob sua responsabilidade profissional. Não se trata de laudo pericial assinado."}},
+    {"@type": "Question", "name": "E se eu encontrar um erro no cálculo?", "acceptedAnswer": {"@type": "Answer", "text": "Erro é corrigido sem custo: você aponta o item e a divergência, e devolvemos a conta corrigida. Não há rodadas de ajuste por preferência ou mudança de premissas — alteração de escopo é um novo pedido."}},
+    {"@type": "Question", "name": "Emitem nota fiscal?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Quando solicitada, a Lumen Verum emite a nota fiscal de serviços no nome que o cliente indicar. A cobrança é processada pela Kiwify."}}
+  ]
+}
+</script>
+
+<!-- Schema.org JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumenverum.com.br/"},
+    {"@type": "ListItem", "position": 2, "name": "Cálculos Trabalhistas"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- RASCUNHO: remover antes de publicar -->
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" class="nav-brand"><img src="logo-lumen-verum.png" alt="Lumen Verum" style="height:24px;vertical-align:middle;margin-right:8px;"><span>| Cálculos Trabalhistas</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#prazo">Prazos</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#servicos" class="nav-cta-btn">Contratar</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="extra-menu-wrap">
+    <button class="extra-menu-btn" onclick="toggleExtraMenu(event)" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="extra-menu-dropdown" id="extraMenuDropdown">
+      <a href="index.html">Home<small>Página inicial</small></a>
+      <a href="artigos.html">Artigos<small>Conteúdo técnico e jurídico</small></a>
+      <a href="pericia-judicial.html">Perícia Judicial<small>Perícia e assistência técnica</small></a>
+      <a href="spda-risk-analyzer.html">SPDA Risk Analyzer<small>Análise de Risco NBR 5419 online</small></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Serviço para advogados trabalhistas</div>
+    <h1 class="hero-headline">
+      Cálculo trabalhista pronto para <em>peticionar</em>, com <strong>data de entrega</strong> desde o primeiro minuto
+    </h1>
+    <p class="hero-sub">
+      Liquidação de sentença e liquidação de pedidos da inicial para advogados trabalhistas. Você contrata pelo checkout, informa o número do processo e recebe na mesma hora a confirmação com a data exata da entrega — contada em dias úteis, já descontados feriados forenses e recesso. O cálculo chega em <strong>PJe-Calc (.pjc)</strong> e PDF.
+    </p>
+    <div class="hero-actions">
+      <a href="#servicos" class="btn-gold">Contratar o cálculo &rarr;</a>
+      <a href="#como-funciona" class="btn-outline">Como funciona</a>
+    </div>
+    <div class="provas">
+      <div class="prova"><b>Prazo com data, não com estimativa.</b><p>A confirmação por e-mail traz o dia da entrega. Urgente traz também o horário.</p></div>
+      <div class="prova"><b>Número do processo conferido na hora.</b><p>O sistema valida o dígito verificador do padrão CNJ e avisa antes de o trabalho começar, não depois.</p></div>
+      <div class="prova"><b>Acompanhamento nominal.</b><p>Cada pedido tem responsável, histórico de e-mails e registro de entrega.</p></div>
+      <div class="prova"><b>No formato do juízo: PJe-Calc.</b><p>Você recebe o arquivo .pjc, pronto para conferência pela contadoria, e o PDF da memória de cálculo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona" class="fade-in">
+  <div class="section-label">Como funciona</div>
+  <h2 class="section-title">Quatro passos — e é exatamente o que acontece</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Você escolhe o serviço e paga</h3>
+      <p>No checkout há dois campos obrigatórios: número do processo e observações sobre o caso.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Recebe a confirmação com a data</h3>
+      <p>Automática, com o número do processo, o tribunal identificado e o prazo já calculado em dias úteis.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Envia os documentos</h3>
+      <p>Sentença ou acórdão, cálculos da parte contrária quando houver e as peças que considerar relevantes, para <strong>documentos@lumenverum.com.br</strong>, com o número do processo no assunto.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <h3>Recebe o cálculo em PJe-Calc e PDF</h3>
+      <p>O arquivo .pjc do PJe-Calc e o PDF da memória, dentro do prazo — e antes dele sempre que possível, com aviso no mesmo e-mail.</p>
+    </div>
+  </div>
+  <div class="aviso-honesto">
+    <strong>Errou um dígito do processo?</strong> Você recebe um e-mail apontando o problema e um exemplo de preenchimento correto. O prazo só começa a correr da confirmação — ninguém perde dia útil por causa de um dígito.
+  </div>
+</section>
+
+<!-- PRAZO -->
+<section id="prazo" class="fade-in" style="background: #fff;">
+  <div class="section-label" style="justify-content: center;">Prazos</div>
+  <h2 class="section-title" style="text-align: center;">Como o prazo é contado</h2>
+  <div class="prazo-wrap">
+    <div class="prazo-text">
+      <p>O prazo é contado em <strong>dias úteis</strong>, a partir do primeiro dia útil seguinte à compra. Um pedido de cinco dias úteis comprado numa sexta-feira começa a contar na segunda e vence na sexta seguinte.</p>
+      <p>A <strong>entrega urgente</strong> é de um dia útil e vence às 18h: comprou numa terça, em qualquer horário, recebe até as 18h de quarta; comprou sexta à noite ou no fim de semana, recebe até as 18h de segunda.</p>
+      <p>Sábados, domingos, feriados nacionais e feriados forenses não entram na conta — inclusive o recesso de fim de ano.</p>
+    </div>
+    <div class="prazo-table-wrap">
+      <table class="prazo-table">
+        <thead><tr><th>Serviço</th><th>Polo</th><th class="num">Preço</th><th class="num">Prazo</th></tr></thead>
+        <tbody>
+          <tr><td>Liquidação de Sentença</td><td>Reclamante</td><td class="num">R$ 225,00</td><td class="num">5 dias úteis</td></tr>
+          <tr><td>Liquidação de Sentença</td><td>Reclamada</td><td class="num">R$ 275,00</td><td class="num">5 dias úteis</td></tr>
+          <tr><td>Liquidação de Sentença · urgente</td><td>Reclamante</td><td class="num">R$ 375,00</td><td class="num urg">1 dia útil, até 18h</td></tr>
+          <tr><td>Liquidação de Sentença · urgente</td><td>Reclamada</td><td class="num">R$ 475,00</td><td class="num urg">1 dia útil, até 18h</td></tr>
+          <tr><td>Liquidação de Petição Inicial</td><td>Reclamante</td><td class="num">a partir de R$ 175,00</td><td class="num">5 dias úteis</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section id="servicos" class="fade-in">
+  <div class="section-label" style="justify-content: center;">Serviços</div>
+  <h2 class="section-title" style="text-align: center;">Escolha pelo polo e pelo prazo</h2>
+  <p class="section-subtitle" style="margin: 0 auto 2.5rem; text-align: center;">Os quatro primeiros compartilham o mesmo miolo técnico: o que muda é o polo — a leitura do cálculo — e o prazo. O quinto é para antes do ajuizamento.</p>
+
+  <div class="cards-5">
+    <div class="pricing-card">
+      <span class="card-polo ">Polo ativo</span>
+      <h3>Liquidação de Sentença — Reclamante</h3>
+      <p class="card-lead">A memória de cálculo do que a sentença deferiu, pronta para juntar aos autos em cinco dias úteis.</p>
+      <div class="pricing-price"><span class="currency">R$</span>225<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-period">5 dias úteis</div>
+      <p class="card-whom"><strong>Para quem:</strong> advogado do reclamante que precisa apresentar a memória de cálculo na fase de liquidação, instruir execução ou fundamentar uma proposta de acordo com número na mão.</p>
+      <ul class="pricing-features">
+        <li>Memória de cálculo aberta por verba e por competência, com a base de cálculo de cada uma</li>
+        <li>Atualização monetária e juros conforme o comando da sentença</li>
+        <li>Reflexos deferidos no título</li>
+        <li>Honorários advocatícios, periciais e custas quando fixados na sentença</li>
+        <li>Apuração de INSS (cotas do empregado e do empregador) e de IRRF — incluída</li>
+        <li>Resumo executivo com o valor total atualizado</li>
+        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li>Data de entrega confirmada por e-mail na hora da compra</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/0T2P8Lr" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku01">Contratar o cálculo</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Impugnação incluída</div>
+      <span class="card-polo ">Polo passivo</span>
+      <h3>Liquidação de Sentença — Reclamada</h3>
+      <p class="card-lead">O cálculo refeito pela ótica da defesa — e o confronto, linha a linha, com o que o reclamante apresentou.</p>
+      <div class="pricing-price"><span class="currency">R$</span>275<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-period">5 dias úteis</div>
+      <p class="card-whom"><strong>Para quem:</strong> advogado da empresa que precisa impugnar os cálculos do reclamante, quantificar o valor que a reclamada entende devido, garantir o juízo ou levar um número defensável para a mesa de acordo.</p>
+      <ul class="pricing-features">
+        <li>Liquidação integral refeita nos limites da coisa julgada, aberta por verba e competência</li>
+        <li>Quadro comparativo com o cálculo do reclamante, divergência a divergência, com o impacto em reais</li>
+        <li>Apontamento técnico de excessos: base de cálculo, reflexos não deferidos, período prescrito, índice e marco de juros e correção</li>
+        <li>Valor incontroverso destacado, para depósito ou garantia do juízo</li>
+        <li>Apuração de INSS e IRRF — incluída</li>
+        <li>Resumo executivo com o total da reclamada, o total do reclamante e a diferença</li>
+        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li>Data de entrega confirmada por e-mail na hora da compra</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/J3HxHKY" target="_blank" rel="noopener" class="btn-price btn-price-primary" data-sku="sku02">Contratar o cálculo</a>
+      <p class="card-why"><strong>Por que custa mais que o do reclamante?</strong> Porque são duas contas: além de liquidar a sentença, é preciso auditar a planilha da parte contrária e demonstrar cada divergência com valor próprio.</p>
+    </div>
+    <div class="pricing-card">
+      <span class="card-polo urg">Urgente · polo ativo</span>
+      <h3>Reclamante · Entrega urgente</h3>
+      <p class="card-lead">A mesma liquidação do polo ativo, na sua mão até as 18h do próximo dia útil.</p>
+      <div class="pricing-price"><span class="currency">R$</span>375<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-period">1 dia útil · até 18h</div>
+      <p class="card-whom"><strong>Para quem:</strong> mesmo escopo da liquidação padrão para o reclamante, para quem tem prazo vencendo. O que você compra é a posição na fila.</p>
+      <ul class="pricing-features">
+        <li>Escopo idêntico à liquidação padrão para o reclamante — nada é encurtado</li>
+        <li>Prioridade na fila e compromisso de horário: até as 18h do próximo dia útil</li>
+        <li>Horário-limite escrito na confirmação de compra</li>
+        <li>Memória por verba e competência, atualização, reflexos, INSS/IRRF e resumo executivo</li>
+        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/fJplQXV" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku03">Contratar com entrega urgente</a>
+    </div>
+    <div class="pricing-card">
+      <span class="card-polo urg">Urgente · polo passivo</span>
+      <h3>Reclamada · Entrega urgente</h3>
+      <p class="card-lead">Liquidação e impugnação dos cálculos do reclamante, prontas até as 18h do próximo dia útil.</p>
+      <div class="pricing-price"><span class="currency">R$</span>475<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-period">1 dia útil · até 18h</div>
+      <p class="card-whom"><strong>Para quem:</strong> defesa com prazo de impugnação aos cálculos correndo. Mesmo escopo da liquidação para a reclamada, incluindo o confronto com a planilha do reclamante.</p>
+      <ul class="pricing-features">
+        <li>Escopo idêntico à liquidação padrão para a reclamada, incluindo o confronto com a planilha do reclamante</li>
+        <li>Cada divergência quantificada em reais e valor incontroverso destacado</li>
+        <li>Prioridade na fila: até as 18h do próximo dia útil</li>
+        <li>Horário-limite escrito na confirmação de compra</li>
+        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/03IqQ8U" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku04">Contratar com entrega urgente</a>
+    </div>
+    <div class="pricing-card">
+      <span class="card-polo ">Antes do ajuizamento</span>
+      <h3>Liquidação de Petição Inicial</h3>
+      <p class="card-lead">Cada pedido da inicial com valor certo e memória de cálculo anexa — do jeito que a CLT passou a exigir.</p>
+      <div class="pricing-price"><span style="font-size:0.9rem;font-weight:500;color:var(--gray-mid);margin-right:6px;">a partir de</span><span class="currency">R$</span>175<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-period">5 dias úteis · antes do ajuizamento</div>
+      <p class="card-whom"><strong>Para quem:</strong> advogado que vai ajuizar a reclamatória e precisa liquidar os pedidos para atender ao art. 840, §1º, da CLT — com valor por pedido, não com estimativa de ocasião.</p>
+      <ul class="pricing-features">
+        <li>Cada pedido liquidado, com abertura por competência que sustenta o número</li>
+        <li>Memória de cálculo no formato de anexo da inicial</li>
+        <li>Valor da causa fechado</li>
+        <li>Atende ao art. 840, §1º, da CLT — pedido certo, determinado e com valor</li>
+        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li>Preço varia conforme número de pedidos, duração do contrato e complexidade da jornada</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/suuIAhc" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku05">Contratar o cálculo</a>
+    </div>
+  </div>
+
+  <div class="aviso-honesto" style="margin-top: 32px;">
+    <strong>Sobre a entrega urgente:</strong> ela depende de recebermos os documentos do processo. Se faltar peça essencial, entramos em contato pelo e-mail da compra e o prazo passa a correr do recebimento do material. Envie a sentença — e, na impugnação, a planilha impugnada — assim que finalizar o pedido.
+  </div>
+
+  <div class="pricing-guarantee">
+    &#128274; Pagamento seguro via Kiwify &bull; Confirmação automática por e-mail com a data da entrega
+  </div>
+</section>
+
+<!-- O QUE ENVIAR (inicial) -->
+<section id="inicial-envio" class="fade-in" style="background: #fff;">
+  <div class="section-label" style="justify-content: center;">Liquidação de Petição Inicial</div>
+  <h2 class="section-title" style="text-align: center;">O que enviar para liquidar os pedidos da inicial</h2>
+  <div class="publico">
+    <p style="margin-bottom: 20px;">Desde a Lei nº 13.467/2017, pedido em reclamatória precisa ser certo, determinado e com indicação de valor. Isso transformou a redação da inicial em trabalho de cálculo: cada verba pretendida tem de sair da planilha antes de entrar na petição. Para esse serviço, o pedido de documentos é diferente dos demais:</p>
+  </div>
+  <div class="prazo-wrap">
+    <div class="prazo-text">
+      <p>&bull; Datas de admissão e de saída, e a modalidade de rescisão</p>
+      <p>&bull; Remuneração e sua composição (fixo, comissões, adicionais, médias)</p>
+      <p>&bull; Jornada praticada e a contratual, com os intervalos</p>
+      <p>&bull; Relação dos pedidos que pretende formular</p>
+      <p>&bull; CTPS, contracheques, cartões de ponto e TRCT, quando houver</p>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICO -->
+<section id="publico" class="fade-in">
+  <div class="section-label" style="justify-content: center;">Para quem é</div>
+  <h2 class="section-title" style="text-align: center;">Apoio técnico a advogados, não captação de clientes</h2>
+  <div class="publico">
+    <p>Este serviço é prestado a <strong>advogados e escritórios</strong> que atuam na Justiça do Trabalho, como apoio técnico à elaboração e à conferência de cálculos. Não atendemos diretamente reclamantes ou empresas sem advogado constituído. A promessa é <strong>prazo, escopo e conferência</strong> — nunca resultado processual.</p>
+    <p style="margin-top: 16px; font-size: 0.88rem; color: var(--gray-mid);">Fundamentos que orientam o serviço: art. 840, §1º, da CLT (pedido líquido na inicial), art. 879 da CLT (liquidação de sentença) e o PJe-Calc, padrão de cálculo da Justiça do Trabalho — formato em que o trabalho é entregue. <a href="calculos-trabalhistas-peticao-inicial-sentenca.html" style="color: var(--navy); font-weight: 600;">Leia o artigo completo sobre cálculos na inicial e na sentença &rarr;</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="fade-in" style="background: #fff;">
+  <div class="section-label" style="justify-content: center;">Perguntas frequentes</div>
+  <h2 class="section-title" style="text-align: center;">Tire suas dúvidas</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Quando começa a contar o prazo?</button>
+      <div class="faq-answer"><p>No primeiro dia útil seguinte à compra. Fim de semana, feriado nacional e feriado forense não contam, e o recesso de fim de ano também não.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Digitei o número do processo errado. E agora?</button>
+      <div class="faq-answer"><p>O sistema confere o dígito verificador do padrão CNJ no momento da compra. Se houver erro, você recebe um e-mail com o que foi digitado, o motivo da recusa e um exemplo correto. O prazo passa a contar da sua confirmação — nenhum dia útil é perdido.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Para onde envio os documentos?</button>
+      <div class="faq-answer"><p>Para <strong>documentos@lumenverum.com.br</strong>, com o número do processo no assunto. O endereço e a instrução também vão no e-mail de confirmação da compra.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Como sei que o pedido está andando?</button>
+      <div class="faq-answer"><p>Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, solicitações de documentos e o aviso de entrega. Se precisarmos de alguma peça, você recebe um e-mail específico dizendo exatamente o que falta.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Em que formato o cálculo é entregue?</button>
+      <div class="faq-answer"><p>Em <strong>PJe-Calc</strong> (arquivo .pjc, o padrão de cálculo da Justiça do Trabalho, pronto para conferência pela contadoria do juízo) e em <strong>PDF</strong> com a memória de cálculo completa.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Vocês assinam o cálculo?</button>
+      <div class="faq-answer"><p>O material é entregue como <strong>subsídio técnico ao advogado contratante</strong>, que o junta aos autos sob sua responsabilidade profissional. Não se trata de laudo pericial assinado.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">E se eu encontrar um erro no cálculo?</button>
+      <div class="faq-answer"><p>Erro é corrigido sem custo: você aponta o item e a divergência, e devolvemos a conta corrigida. Não há rodadas de ajuste por preferência ou mudança de premissas — alteração de escopo é um novo pedido.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Emitem nota fiscal?</button>
+      <div class="faq-answer"><p>Sim. Quando solicitada, a Lumen Verum emite a nota fiscal de serviços no nome que o cliente indicar. A cobrança é processada pela Kiwify.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Qual a diferença entre a liquidação para o reclamante e para a reclamada?</button>
+      <div class="faq-answer"><p>Para o reclamante, liquidamos os títulos deferidos na sentença, verba por verba e competência por competência. Para a reclamada, são duas contas: refazemos a liquidação nos limites da coisa julgada e confrontamos com a planilha do reclamante, apontando cada divergência e o impacto em reais — o material da impugnação.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">A entrega urgente encurta o escopo?</button>
+      <div class="faq-answer"><p>Não. O trabalho entregue é exatamente o mesmo da modalidade padrão. O que muda é a prioridade na fila e o compromisso de horário: até as 18h do próximo dia útil, com o horário-limite escrito na confirmação de compra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="section-label" style="justify-content: center; color: var(--gold);">Prazo processual não negocia</div>
+  <h2 class="section-title">A conta certa, com data marcada.</h2>
+  <p class="cta-sub">Liquidação de sentença para o reclamante ou para a reclamada, entrega padrão ou urgente, e liquidação dos pedidos da inicial — com a data de entrega confirmada no minuto da compra.</p>
+  <div class="hero-actions">
+    <a href="#servicos" class="btn-gold">Contratar o cálculo &rarr;</a>
+    <a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20c%C3%A1lculos%20trabalhistas%20da%20Lumen%20Verum" target="_blank" rel="noopener" class="btn-outline">Tirar uma dúvida no WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Lumen Verum <span>| Cálculos Trabalhistas</span></div>
+  <p>&copy; 2026 Lumen Verum. Todos os direitos reservados.</p>
+  <a href="/">Voltar ao site principal</a>
+  <div style="margin-top:10px;">
+    <a href="https://www.linkedin.com/company/lumen-verum/" target="_blank" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);margin-right:6px;vertical-align:middle;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#E8B110"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/lumenverumeng/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);vertical-align:middle;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#E8B110"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5562999631091?text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20c%C3%A1lculos%20trabalhistas%20da%20Lumen%20Verum" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.742 3.052 9.376L1.054 31.27l6.148-1.968A15.88 15.88 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.31 22.606c-.39 1.1-1.932 2.014-3.166 2.28-.846.18-1.95.324-5.666-1.218-4.758-1.97-7.818-6.79-8.054-7.104-.228-.314-1.866-2.486-1.866-4.744 0-2.258 1.182-3.368 1.6-3.828.39-.428 1.026-.642 1.636-.642.198 0 .376.01.536.018.46.02.69.046 .992.766.378.9 1.298 3.168 1.412 3.398.116.23.232.538.084.852-.14.322-.264.464-.494.73-.23.266-.448.47-.678.756-.212.262-.45.542-.188.998.262.45 1.166 1.922 2.504 3.114 1.72 1.53 3.168 2.006 3.618 2.228.346.17.756.134 1.026-.152.346-.366.77-.974 1.204-1.572.308-.426.696-.48 1.078-.32.386.152 2.446 1.154 2.866 1.364.42.21.7.314.802.49.1.176.1 1.026-.29 2.126z"/></svg>
+</a>
+
+<script>
+  // Nav scroll effect + progress bar
+  window.addEventListener('scroll', function() {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Extra menu (hamburger)
+  function toggleExtraMenu(ev) {
+    ev.stopPropagation();
+    document.getElementById('extraMenuDropdown').classList.toggle('open');
+  }
+  document.addEventListener('click', function() {
+    document.getElementById('extraMenuDropdown').classList.remove('open');
+  });
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+  }
+
+
+  // Scroll fade-in animation
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Lightbox for screenshots
+  (function() {
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
+    document.body.appendChild(overlay);
+    var lbImg = overlay.querySelector('img');
+
+    document.querySelectorAll('.screenshot-item img, img.zoomable-img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lbImg.src = this.src;
+        lbImg.alt = this.alt || '';
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', function() {
+      overlay.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.classList.remove('active');
+    });
+  })();
+</script>
+
+</body>
+</html>
