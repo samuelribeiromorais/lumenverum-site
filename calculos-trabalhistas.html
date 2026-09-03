@@ -1085,6 +1085,13 @@
   .cards-5 .pricing-card { margin: 0; max-width: none; text-align: left; }
   .cards-5 .pricing-card h3 { font-size: 1.35rem; }
   .cards-5 .pricing-price, .cards-5 .pricing-period { text-align: left; }
+  .cards-5 .pricing-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; font-size: 2.7rem; line-height: 1.1; margin: 10px 0 2px; }
+  .cards-5 .pricing-price .currency { vertical-align: baseline; font-size: 1.05rem; font-weight: 600; line-height: 1; }
+  .cards-5 .pricing-price .amount { font-size: 2.7rem; line-height: 1; }
+  .cards-5 .pricing-price .cents { font-size: 1.3rem; line-height: 1; }
+  .cards-5 .pricing-price .price-prefix { flex-basis: 100%; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-mid); margin-bottom: 4px; }
+  .cards-5 .pricing-period { margin-bottom: 1.4rem; }
+  .feat-hl { color: var(--navy); font-weight: 700; background: rgba(232,177,16,0.18); padding: 1px 6px; border-radius: 3px; }
   .cards-5 .pricing-features li { font-size: 0.86rem; }
   .card-polo { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; background: rgba(0,12,82,0.08); color: var(--navy); margin-bottom: 12px; }
   .card-polo.urg { background: rgba(232,177,16,0.18); color: #7a5a06; }
@@ -1185,7 +1192,6 @@
       <a href="artigos.html">Artigos<small>Conteúdo técnico e jurídico</small></a>
       <a href="pericia-judicial.html">Perícia Judicial<small>Perícia e assistência técnica</small></a>
       <a href="spda-risk-analyzer.html">SPDA Risk Analyzer<small>Análise de Risco NBR 5419 online</small></a>
-      <a href="calculos-trabalhistas.html">Cálculos Trabalhistas<small>Liquidação em PJe-Calc para advogados</small></a>
     </div>
   </div>
 </nav>
@@ -1283,7 +1289,7 @@
       <span class="card-polo ">Polo ativo</span>
       <h3>Liquidação de Sentença — Reclamante</h3>
       <p class="card-lead">A memória de cálculo do que a sentença deferiu, pronta para juntar aos autos em cinco dias úteis.</p>
-      <div class="pricing-price"><span class="currency">R$</span>225<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-price"><span class="currency">R$</span><span class="amount">225</span><span class="cents">,00</span></div>
       <div class="pricing-period">5 dias úteis</div>
       <p class="card-whom"><strong>Para quem:</strong> advogado do reclamante que precisa apresentar a memória de cálculo na fase de liquidação, instruir execução ou fundamentar uma proposta de acordo com número na mão.</p>
       <ul class="pricing-features">
@@ -1293,17 +1299,16 @@
         <li>Honorários advocatícios, periciais e custas quando fixados na sentença</li>
         <li>Apuração de INSS (cotas do empregado e do empregador) e de IRRF — incluída</li>
         <li>Resumo executivo com o valor total atualizado</li>
-        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
         <li>Data de entrega confirmada por e-mail na hora da compra</li>
       </ul>
       <a href="https://pay.kiwify.com.br/0T2P8Lr" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku01">Contratar o cálculo</a>
     </div>
     <div class="pricing-card featured">
-      <div class="pricing-badge">Impugnação incluída</div>
       <span class="card-polo ">Polo passivo</span>
       <h3>Liquidação de Sentença — Reclamada</h3>
       <p class="card-lead">O cálculo refeito pela ótica da defesa — e o confronto, linha a linha, com o que o reclamante apresentou.</p>
-      <div class="pricing-price"><span class="currency">R$</span>275<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-price"><span class="currency">R$</span><span class="amount">275</span><span class="cents">,00</span></div>
       <div class="pricing-period">5 dias úteis</div>
       <p class="card-whom"><strong>Para quem:</strong> advogado da empresa que precisa impugnar os cálculos do reclamante, quantificar o valor que a reclamada entende devido, garantir o juízo ou levar um número defensável para a mesa de acordo.</p>
       <ul class="pricing-features">
@@ -1313,7 +1318,7 @@
         <li>Valor incontroverso destacado, para depósito ou garantia do juízo</li>
         <li>Apuração de INSS e IRRF — incluída</li>
         <li>Resumo executivo com o total da reclamada, o total do reclamante e a diferença</li>
-        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
         <li>Data de entrega confirmada por e-mail na hora da compra</li>
       </ul>
       <a href="https://pay.kiwify.com.br/J3HxHKY" target="_blank" rel="noopener" class="btn-price btn-price-primary" data-sku="sku02">Contratar o cálculo</a>
@@ -1323,7 +1328,7 @@
       <span class="card-polo urg">Urgente · polo ativo</span>
       <h3>Reclamante · Entrega urgente</h3>
       <p class="card-lead">A mesma liquidação do polo ativo, na sua mão até as 18h do próximo dia útil.</p>
-      <div class="pricing-price"><span class="currency">R$</span>375<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-price"><span class="currency">R$</span><span class="amount">375</span><span class="cents">,00</span></div>
       <div class="pricing-period">1 dia útil · até 18h</div>
       <p class="card-whom"><strong>Para quem:</strong> mesmo escopo da liquidação padrão para o reclamante, para quem tem prazo vencendo. O que você compra é a posição na fila.</p>
       <ul class="pricing-features">
@@ -1331,15 +1336,15 @@
         <li>Prioridade na fila e compromisso de horário: até as 18h do próximo dia útil</li>
         <li>Horário-limite escrito na confirmação de compra</li>
         <li>Memória por verba e competência, atualização, reflexos, INSS/IRRF e resumo executivo</li>
-        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
       </ul>
       <a href="https://pay.kiwify.com.br/fJplQXV" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku03">Contratar com entrega urgente</a>
     </div>
     <div class="pricing-card">
       <span class="card-polo urg">Urgente · polo passivo</span>
       <h3>Reclamada · Entrega urgente</h3>
-      <p class="card-lead">Liquidação e impugnação dos cálculos do reclamante, prontas até as 18h do próximo dia útil.</p>
-      <div class="pricing-price"><span class="currency">R$</span>475<span style="font-size:1.5rem;">,00</span></div>
+      <p class="card-lead">Liquidação pela ótica da defesa e confronto com os cálculos do reclamante, prontos até as 18h do próximo dia útil.</p>
+      <div class="pricing-price"><span class="currency">R$</span><span class="amount">475</span><span class="cents">,00</span></div>
       <div class="pricing-period">1 dia útil · até 18h</div>
       <p class="card-whom"><strong>Para quem:</strong> defesa com prazo de impugnação aos cálculos correndo. Mesmo escopo da liquidação para a reclamada, incluindo o confronto com a planilha do reclamante.</p>
       <ul class="pricing-features">
@@ -1347,7 +1352,7 @@
         <li>Cada divergência quantificada em reais e valor incontroverso destacado</li>
         <li>Prioridade na fila: até as 18h do próximo dia útil</li>
         <li>Horário-limite escrito na confirmação de compra</li>
-        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
       </ul>
       <a href="https://pay.kiwify.com.br/03IqQ8U" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku04">Contratar com entrega urgente</a>
     </div>
@@ -1355,7 +1360,7 @@
       <span class="card-polo ">Antes do ajuizamento</span>
       <h3>Liquidação de Petição Inicial</h3>
       <p class="card-lead">Cada pedido da inicial com valor certo e memória de cálculo anexa — do jeito que a CLT passou a exigir.</p>
-      <div class="pricing-price"><span style="font-size:0.9rem;font-weight:500;color:var(--gray-mid);margin-right:6px;">a partir de</span><span class="currency">R$</span>175<span style="font-size:1.5rem;">,00</span></div>
+      <div class="pricing-price"><span style="font-size:0.9rem;font-weight:500;color:var(--gray-mid);margin-right:6px;">a partir de</span><span class="currency">R$</span><span class="amount">175</span><span class="cents">,00</span></div>
       <div class="pricing-period">5 dias úteis · antes do ajuizamento</div>
       <p class="card-whom"><strong>Para quem:</strong> advogado que vai ajuizar a reclamatória e precisa liquidar os pedidos para atender ao art. 840, §1º, da CLT — com valor por pedido, não com estimativa de ocasião.</p>
       <ul class="pricing-features">
@@ -1363,7 +1368,7 @@
         <li>Memória de cálculo no formato de anexo da inicial</li>
         <li>Valor da causa fechado</li>
         <li>Atende ao art. 840, §1º, da CLT — pedido certo, determinado e com valor</li>
-        <li>Entrega em PJe-Calc (.pjc) e PDF</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
         <li>Preço varia conforme número de pedidos, duração do contrato e complexidade da jornada</li>
       </ul>
       <a href="https://pay.kiwify.com.br/suuIAhc" target="_blank" rel="noopener" class="btn-price btn-price-secondary" data-sku="sku05">Contratar o cálculo</a>
@@ -1371,7 +1376,7 @@
   </div>
 
   <div class="aviso-honesto" style="margin-top: 32px;">
-    <strong>Sobre a entrega urgente:</strong> ela depende de recebermos os documentos do processo. Se faltar peça essencial, entramos em contato pelo e-mail da compra e o prazo passa a correr do recebimento do material. Envie a sentença — e, na impugnação, a planilha impugnada — assim que finalizar o pedido.
+    <strong>Sobre a entrega urgente:</strong> ela depende de recebermos os documentos do processo. Se faltar peça essencial, entramos em contato pelo e-mail da compra e o prazo passa a correr do recebimento do material. Envie a sentença — e, no caso da reclamada, a planilha do reclamante — assim que finalizar o pedido.
   </div>
 
   <div class="pricing-guarantee">
@@ -1446,7 +1451,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Qual a diferença entre a liquidação para o reclamante e para a reclamada?</button>
-      <div class="faq-answer"><p>Para o reclamante, liquidamos os títulos deferidos na sentença, verba por verba e competência por competência. Para a reclamada, são duas contas: refazemos a liquidação nos limites da coisa julgada e confrontamos com a planilha do reclamante, apontando cada divergência e o impacto em reais — o material da impugnação.</p></div>
+      <div class="faq-answer"><p>Para o reclamante, liquidamos os títulos deferidos na sentença, verba por verba e competência por competência. Para a reclamada, são duas contas: refazemos a liquidação nos limites da coisa julgada e confrontamos com a planilha do reclamante, apontando cada divergência e o impacto em reais — o subsídio técnico para a impugnação, que fica a cargo do advogado.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">A entrega urgente encurta o escopo?</button>
