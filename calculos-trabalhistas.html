@@ -1160,8 +1160,8 @@
   "mainEntity": [
     {"@type": "Question", "name": "Quando começa a contar o prazo?", "acceptedAnswer": {"@type": "Answer", "text": "No primeiro dia útil seguinte à confirmação da compra — exatamente como um prazo processual: só dias úteis contam, o dia da compra fica de fora, feriados forenses e o recesso de 20/12 a 20/01 são descontados, e vencimento em dia sem expediente passa para o dia útil seguinte (arts. 219, 220 e 224 do CPC; art. 775 da CLT). A data exata vai no e-mail de confirmação."}},
     {"@type": "Question", "name": "Digitei o número do processo errado. E agora?", "acceptedAnswer": {"@type": "Answer", "text": "O sistema confere o dígito verificador do padrão CNJ no momento da compra. Se houver erro, você recebe um e-mail com o que foi digitado, o motivo da recusa e um exemplo correto. O prazo passa a contar da sua confirmação — nenhum dia útil é perdido."}},
-    {"@type": "Question", "name": "Para onde envio os documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Para documentos@lumenverum.com.br, com o número do processo no assunto. O endereço e a instrução também vão no e-mail de confirmação da compra."}},
-    {"@type": "Question", "name": "Como sei que o pedido está andando?", "acceptedAnswer": {"@type": "Answer", "text": "Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, solicitações de documentos e o aviso de entrega. Se precisarmos de alguma peça, você recebe um e-mail específico dizendo exatamente o que falta."}},
+    {"@type": "Question", "name": "Preciso enviar documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O checkout pede apenas o número do processo e um campo de observações. Trabalhamos a partir dos autos e do que você informar; se faltar algum dado, avisamos pelo e-mail da compra. Na liquidação de petição inicial, em que ainda não há processo, os dados do contrato vão no campo de observações."}},
+    {"@type": "Question", "name": "Como sei que o pedido está andando?", "acceptedAnswer": {"@type": "Answer", "text": "Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, eventuais pedidos de informação e o aviso de entrega. Se faltar algum dado, você recebe um e-mail específico dizendo exatamente o que falta."}},
     {"@type": "Question", "name": "Em que formato o cálculo é entregue?", "acceptedAnswer": {"@type": "Answer", "text": "Em PJe-Calc (arquivo .pjc, o padrão de cálculo da Justiça do Trabalho, pronto para conferência pela contadoria do juízo) e em PDF com a memória de cálculo completa."}},
     {"@type": "Question", "name": "Vocês assinam o cálculo?", "acceptedAnswer": {"@type": "Answer", "text": "O material é entregue como subsídio técnico ao advogado contratante, que o junta aos autos sob sua responsabilidade profissional. Não se trata de laudo pericial assinado."}},
     {"@type": "Question", "name": "E se eu encontrar um erro no cálculo?", "acceptedAnswer": {"@type": "Answer", "text": "Erro é corrigido sem custo: você aponta o item e a divergência, e devolvemos a conta corrigida. Não há rodadas de ajuste por preferência ou mudança de premissas — alteração de escopo é um novo pedido."}},
@@ -1249,7 +1249,7 @@
     <div class="step">
       <div class="step-number">1</div>
       <h3>Você escolhe o serviço e paga</h3>
-      <p>No checkout há dois campos obrigatórios: número do processo e observações sobre o caso.</p>
+      <p>No checkout você informa o número do processo e, se quiser, observações sobre o caso. É tudo o que pedimos.</p>
     </div>
     <div class="step">
       <div class="step-number">2</div>
@@ -1258,8 +1258,8 @@
     </div>
     <div class="step">
       <div class="step-number">3</div>
-      <h3>Envia os documentos</h3>
-      <p>Sentença ou acórdão, cálculos da parte contrária quando houver e as peças que considerar relevantes, para <strong>documentos@lumenverum.com.br</strong>, com o número do processo no assunto.</p>
+      <h3>Não precisa enviar documentos</h3>
+      <p>Trabalhamos a partir do <strong>número do processo</strong> e das suas observações. Se faltar alguma informação, avisamos pelo e-mail da compra.</p>
     </div>
     <div class="step">
       <div class="step-number">4</div>
@@ -1403,7 +1403,7 @@
   </div>
 
   <div class="aviso-honesto" style="margin-top: 32px;">
-    <strong>Sobre a entrega urgente:</strong> ela depende de recebermos os documentos do processo. Se faltar peça essencial, entramos em contato pelo e-mail da compra e o prazo passa a correr do recebimento do material. Envie a sentença — e, no caso da reclamada, a planilha do reclamante — assim que finalizar o pedido.
+    <strong>Sobre a entrega urgente:</strong> ela depende de o processo estar acessível e de as observações trazerem o que for essencial ao caso. Se faltar alguma informação, entramos em contato pelo e-mail da compra e o prazo passa a correr da sua resposta.
   </div>
 
   <div class="pricing-guarantee">
@@ -1414,9 +1414,9 @@
 <!-- O QUE ENVIAR (inicial) -->
 <section id="inicial-envio" class="fade-in" style="background: #fff;">
   <div class="section-label" style="justify-content: center;">Liquidação de Petição Inicial</div>
-  <h2 class="section-title" style="text-align: center;">O que enviar para liquidar os pedidos da inicial</h2>
+  <h2 class="section-title" style="text-align: center;">O que informar para liquidar os pedidos da inicial</h2>
   <div class="publico">
-    <p style="margin-bottom: 20px;">Desde a Lei nº 13.467/2017, pedido em reclamatória precisa ser certo, determinado e com indicação de valor. Isso transformou a redação da inicial em trabalho de cálculo: cada verba pretendida tem de sair da planilha antes de entrar na petição. Para esse serviço, o pedido de documentos é diferente dos demais:</p>
+    <p style="margin-bottom: 20px;">Desde a Lei nº 13.467/2017, pedido em reclamatória precisa ser certo, determinado e com indicação de valor. Isso transformou a redação da inicial em trabalho de cálculo: cada verba pretendida tem de sair da planilha antes de entrar na petição. Como ainda não há processo, as informações vão no <strong>campo de observações do checkout</strong> — sem anexos:</p>
   </div>
   <div class="prazo-wrap">
     <div class="prazo-text">
@@ -1424,7 +1424,7 @@
       <p>&bull; Remuneração e sua composição (fixo, comissões, adicionais, médias)</p>
       <p>&bull; Jornada praticada e a contratual, com os intervalos</p>
       <p>&bull; Relação dos pedidos que pretende formular</p>
-      <p>&bull; CTPS, contracheques, cartões de ponto e TRCT, quando houver</p>
+      <p>&bull; Valores e datas que constem de CTPS, contracheques, cartões de ponto e TRCT, se tiver em mãos</p>
     </div>
   </div>
 </section>
@@ -1453,12 +1453,12 @@
       <div class="faq-answer"><p>O sistema confere o dígito verificador do padrão CNJ no momento da compra. Se houver erro, você recebe um e-mail com o que foi digitado, o motivo da recusa e um exemplo correto. O prazo passa a contar da sua confirmação — nenhum dia útil é perdido.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">Para onde envio os documentos?</button>
-      <div class="faq-answer"><p>Para <strong>documentos@lumenverum.com.br</strong>, com o número do processo no assunto. O endereço e a instrução também vão no e-mail de confirmação da compra.</p></div>
+      <button class="faq-question" onclick="toggleFaq(this)">Preciso enviar documentos?</button>
+      <div class="faq-answer"><p>Não. O checkout pede apenas o <strong>número do processo</strong> e um campo de observações. Trabalhamos a partir dos autos e do que você informar; se faltar algum dado, avisamos pelo e-mail da compra. Na liquidação de petição inicial, em que ainda não há processo, os dados do contrato vão no campo de observações.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Como sei que o pedido está andando?</button>
-      <div class="faq-answer"><p>Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, solicitações de documentos e o aviso de entrega. Se precisarmos de alguma peça, você recebe um e-mail específico dizendo exatamente o que falta.</p></div>
+      <div class="faq-answer"><p>Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, eventuais pedidos de informação e o aviso de entrega. Se faltar algum dado, você recebe um e-mail específico dizendo exatamente o que falta.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Em que formato o cálculo é entregue?</button>
