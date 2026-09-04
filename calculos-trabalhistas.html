@@ -1107,6 +1107,9 @@
   .cards-5 .pricing-card.featured, .cards-5 .pricing-card.featured:hover { transform: none; }
   .cards-5 .pricing-card:hover { transform: none; box-shadow: 0 12px 36px rgba(0,12,82,0.10); }
   @media (max-width: 900px) { .cards-5 .pricing-card { display: flex; flex-direction: column; } .cards-5 .pricing-card > .btn-price { width: auto; } }
+  .prazo-regras { list-style: none; margin: 14px 0 18px; padding: 0; }
+  .prazo-regras li { position: relative; padding: 8px 0 8px 26px; font-size: 0.92rem; line-height: 1.55; border-bottom: 1px solid rgba(0,12,82,0.06); }
+  .prazo-regras li::before { content: '¹3'; position: absolute; left: 0; top: 8px; color: var(--gold); font-weight: 700; }
   .feat-hl { color: var(--navy); font-weight: 700; background: rgba(232,177,16,0.18); padding: 1px 6px; border-radius: 3px; }
   .cards-5 .pricing-features li { font-size: 0.86rem; }
   .card-polo { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; background: rgba(0,12,82,0.08); color: var(--navy); margin-bottom: 12px; }
@@ -1155,7 +1158,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Quando começa a contar o prazo?", "acceptedAnswer": {"@type": "Answer", "text": "No primeiro dia útil seguinte à compra. Fim de semana, feriado nacional e feriado forense não contam, e o recesso de fim de ano também não."}},
+    {"@type": "Question", "name": "Quando começa a contar o prazo?", "acceptedAnswer": {"@type": "Answer", "text": "No primeiro dia útil seguinte à confirmação da compra — exatamente como um prazo processual: só dias úteis contam, o dia da compra fica de fora, feriados forenses e o recesso de 20/12 a 20/01 são descontados, e vencimento em dia sem expediente passa para o dia útil seguinte (arts. 219, 220 e 224 do CPC; art. 775 da CLT). A data exata vai no e-mail de confirmação."}},
     {"@type": "Question", "name": "Digitei o número do processo errado. E agora?", "acceptedAnswer": {"@type": "Answer", "text": "O sistema confere o dígito verificador do padrão CNJ no momento da compra. Se houver erro, você recebe um e-mail com o que foi digitado, o motivo da recusa e um exemplo correto. O prazo passa a contar da sua confirmação — nenhum dia útil é perdido."}},
     {"@type": "Question", "name": "Para onde envio os documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Para documentos@lumenverum.com.br, com o número do processo no assunto. O endereço e a instrução também vão no e-mail de confirmação da compra."}},
     {"@type": "Question", "name": "Como sei que o pedido está andando?", "acceptedAnswer": {"@type": "Answer", "text": "Toda comunicação sai por e-mail e fica registrada no pedido: confirmação, solicitações de documentos e o aviso de entrega. Se precisarmos de alguma peça, você recebe um e-mail específico dizendo exatamente o que falta."}},
@@ -1275,9 +1278,16 @@
   <h2 class="section-title" style="text-align: center;">Como o prazo é contado</h2>
   <div class="prazo-wrap">
     <div class="prazo-text">
-      <p>O prazo é contado em <strong>dias úteis</strong>, a partir do primeiro dia útil seguinte à compra. Um pedido de cinco dias úteis comprado numa sexta-feira começa a contar na segunda e vence na sexta seguinte.</p>
-      <p>A <strong>entrega urgente</strong> é de um dia útil e vence às 18h: comprou numa terça, em qualquer horário, recebe até as 18h de quarta; comprou sexta à noite ou no fim de semana, recebe até as 18h de segunda.</p>
-      <p>Sábados, domingos, feriados nacionais e feriados forenses não entram na conta — inclusive o recesso de fim de ano.</p>
+      <p><strong>O prazo é contado exatamente como um prazo processual</strong> — a mesma regra que você aplica no PJe (art. 219 do CPC e art. 775 da CLT):</p>
+      <ul class="prazo-regras">
+        <li><strong>Só dias úteis contam.</strong> Sábados, domingos e feriados ficam fora da conta.</li>
+        <li><strong>O dia da compra não conta.</strong> A contagem começa no primeiro dia útil seguinte à confirmação (art. 224 do CPC).</li>
+        <li><strong>Feriados forenses são descontados.</strong> Usamos o calendário da Justiça do Trabalho: feriados nacionais, forenses e pontos facultativos dos tribunais.</li>
+        <li><strong>O recesso forense suspende a contagem.</strong> De 20 de dezembro a 20 de janeiro o prazo não corre (art. 220 do CPC).</li>
+        <li><strong>Vencimento em dia sem expediente prorroga.</strong> A entrega passa para o primeiro dia útil seguinte.</li>
+      </ul>
+      <p><strong>Na prática:</strong> cinco dias úteis comprados numa sexta-feira começam a contar na segunda e vencem na sexta seguinte — com um feriado no meio, vencem na segunda. A <strong>entrega urgente</strong> vence às 18h do dia útil seguinte: comprou na terça, em qualquer horário, recebe até as 18h de quarta; comprou sexta à noite ou no fim de semana, recebe até as 18h de segunda.</p>
+      <p>Você não precisa contar nada: <strong>a data exata vai no e-mail de confirmação</strong>, já com feriados e recesso descontados.</p>
     </div>
     <div class="prazo-table-wrap">
       <table class="prazo-table">
@@ -1435,7 +1445,7 @@
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Quando começa a contar o prazo?</button>
-      <div class="faq-answer"><p>No primeiro dia útil seguinte à compra. Fim de semana, feriado nacional e feriado forense não contam, e o recesso de fim de ano também não.</p></div>
+      <div class="faq-answer"><p>No primeiro dia útil seguinte à confirmação da compra — <strong>exatamente como um prazo processual</strong>: só dias úteis contam, o dia da compra fica de fora, feriados forenses e o recesso de 20/12 a 20/01 são descontados, e vencimento em dia sem expediente passa para o dia útil seguinte (arts. 219, 220 e 224 do CPC; art. 775 da CLT). A data exata vai no e-mail de confirmação.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Digitei o número do processo errado. E agora?</button>
