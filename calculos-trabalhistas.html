@@ -1139,11 +1139,11 @@
     "@type": "OfferCatalog",
     "name": "Serviços de cálculo trabalhista",
     "itemListElement": [
+      {"@type": "Offer", "name": "Liquidação de Petição Inicial", "price": "175.00", "priceCurrency": "BRL", "description": "R$ 175,00 — entrega em 5 dias úteis"},
       {"@type": "Offer", "name": "Liquidação de Sentença — Reclamante", "price": "225.00", "priceCurrency": "BRL", "description": "Entrega em 5 dias úteis"},
       {"@type": "Offer", "name": "Liquidação de Sentença — Reclamada", "price": "275.00", "priceCurrency": "BRL", "description": "Entrega em 5 dias úteis"},
       {"@type": "Offer", "name": "Liquidação de Sentença — Reclamante · Entrega urgente", "price": "375.00", "priceCurrency": "BRL", "description": "Entrega em 1 dia útil, até 18h"},
-      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamada · Entrega urgente", "price": "475.00", "priceCurrency": "BRL", "description": "Entrega em 1 dia útil, até 18h"},
-      {"@type": "Offer", "name": "Liquidação de Petição Inicial", "price": "175.00", "priceCurrency": "BRL", "description": "R$ 175,00 — entrega em 5 dias úteis"}
+      {"@type": "Offer", "name": "Liquidação de Sentença — Reclamada · Entrega urgente", "price": "475.00", "priceCurrency": "BRL", "description": "Entrega em 1 dia útil, até 18h"}
     ]
   }
 }
@@ -1283,11 +1283,11 @@
       <table class="prazo-table">
         <thead><tr><th>Serviço</th><th>Polo</th><th class="num">Preço</th><th class="num">Prazo</th></tr></thead>
         <tbody>
+          <tr><td>Liquidação de Petição Inicial</td><td>Reclamante</td><td class="num">R$ 175,00</td><td class="num">5 dias úteis</td></tr>
           <tr><td>Liquidação de Sentença</td><td>Reclamante</td><td class="num">R$ 225,00</td><td class="num">5 dias úteis</td></tr>
           <tr><td>Liquidação de Sentença</td><td>Reclamada</td><td class="num">R$ 275,00</td><td class="num">5 dias úteis</td></tr>
           <tr><td>Liquidação de Sentença · urgente</td><td>Reclamante</td><td class="num">R$ 375,00</td><td class="num urg">1 dia útil, até 18h</td></tr>
           <tr><td>Liquidação de Sentença · urgente</td><td>Reclamada</td><td class="num">R$ 475,00</td><td class="num urg">1 dia útil, até 18h</td></tr>
-          <tr><td>Liquidação de Petição Inicial</td><td>Reclamante</td><td class="num">R$ 175,00</td><td class="num">5 dias úteis</td></tr>
         </tbody>
       </table>
     </div>
@@ -1298,9 +1298,26 @@
 <section id="servicos" class="fade-in">
   <div class="section-label" style="justify-content: center;">Serviços</div>
   <h2 class="section-title" style="text-align: center;">Escolha pelo polo e pelo prazo</h2>
-  <p class="section-subtitle" style="margin: 0 auto 2.5rem; text-align: center;">Os quatro primeiros compartilham o mesmo miolo técnico: o que muda é o polo — a leitura do cálculo — e o prazo. O quinto é para antes do ajuizamento.</p>
+  <p class="section-subtitle" style="margin: 0 auto 2.5rem; text-align: center;">O primeiro é para antes do ajuizamento. Os quatro seguintes compartilham o mesmo miolo técnico: o que muda é o polo — a leitura do cálculo — e o prazo.</p>
 
   <div class="cards-5">
+    <div class="pricing-card featured">
+      <span class="card-polo ">Antes do ajuizamento</span>
+      <h3>Liquidação de Petição Inicial</h3>
+      <p class="card-lead">Cada pedido da inicial com valor certo e memória de cálculo anexa — do jeito que a CLT passou a exigir.</p>
+      <div class="pricing-price"><span class="currency">R$</span><span class="amount">175</span><span class="cents">,00</span></div>
+      <div class="pricing-period">5 dias úteis · antes do ajuizamento</div>
+      <p class="card-whom"><strong>Para quem:</strong> advogado que vai ajuizar a reclamatória e precisa liquidar os pedidos para atender ao art. 840, §1º, da CLT — com valor por pedido, não com estimativa de ocasião.</p>
+      <ul class="pricing-features">
+        <li>Cada pedido liquidado, com abertura por competência que sustenta o número</li>
+        <li>Memória de cálculo no formato de anexo da inicial</li>
+        <li>Valor da causa fechado</li>
+        <li>Atende ao art. 840, §1º, da CLT — pedido certo, determinado e com valor</li>
+        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
+        <li>Preço varia conforme número de pedidos, duração do contrato e complexidade da jornada</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/suuIAhc" target="_blank" rel="noopener" class="btn-price btn-price-primary" data-sku="sku05">Contratar o cálculo</a>
+    </div>
     <div class="pricing-card featured">
       <span class="card-polo ">Polo ativo</span>
       <h3>Liquidação de Sentença — Reclamante</h3>
@@ -1371,23 +1388,6 @@
         <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
       </ul>
       <a href="https://pay.kiwify.com.br/03IqQ8U" target="_blank" rel="noopener" class="btn-price btn-price-primary" data-sku="sku04">Contratar com entrega urgente</a>
-    </div>
-    <div class="pricing-card featured">
-      <span class="card-polo ">Antes do ajuizamento</span>
-      <h3>Liquidação de Petição Inicial</h3>
-      <p class="card-lead">Cada pedido da inicial com valor certo e memória de cálculo anexa — do jeito que a CLT passou a exigir.</p>
-      <div class="pricing-price"><span class="currency">R$</span><span class="amount">175</span><span class="cents">,00</span></div>
-      <div class="pricing-period">5 dias úteis · antes do ajuizamento</div>
-      <p class="card-whom"><strong>Para quem:</strong> advogado que vai ajuizar a reclamatória e precisa liquidar os pedidos para atender ao art. 840, §1º, da CLT — com valor por pedido, não com estimativa de ocasião.</p>
-      <ul class="pricing-features">
-        <li>Cada pedido liquidado, com abertura por competência que sustenta o número</li>
-        <li>Memória de cálculo no formato de anexo da inicial</li>
-        <li>Valor da causa fechado</li>
-        <li>Atende ao art. 840, §1º, da CLT — pedido certo, determinado e com valor</li>
-        <li><strong class="feat-hl">Entrega em PJe-Calc (.pjc) e PDF</strong></li>
-        <li>Preço varia conforme número de pedidos, duração do contrato e complexidade da jornada</li>
-      </ul>
-      <a href="https://pay.kiwify.com.br/suuIAhc" target="_blank" rel="noopener" class="btn-price btn-price-primary" data-sku="sku05">Contratar o cálculo</a>
     </div>
   </div>
 
