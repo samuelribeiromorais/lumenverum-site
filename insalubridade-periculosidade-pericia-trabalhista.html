@@ -528,6 +528,16 @@
   .extra-menu-dropdown a small {
     display: block; font-size: 0.7rem; color: #9a9a96; font-weight: 400; margin-top: 2px;
   }
+
+  /* ── PROMO CÁLCULOS ── */
+  .promo-calc { display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff; border: 2px solid var(--gold); border-radius: 10px; padding: 22px 26px; margin: 32px 0; box-shadow: 0 8px 24px rgba(0,12,82,0.08); }
+  .promo-calc .promo-body { flex: 1 1 340px; }
+  .promo-calc .promo-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .promo-calc h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin: 0 0 6px; line-height: 1.25; }
+  .promo-calc p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+  .promo-calc .promo-price { font-weight: 700; color: var(--navy); }
+  .promo-calc .btn-gold { white-space: nowrap; flex-shrink: 0; }
+  @media (max-width: 600px) { .promo-calc { flex-direction: column; align-items: flex-start; } .promo-calc .btn-gold { white-space: normal; } }
 </style>
 
 <!-- Schema.org JSON-LD -->
@@ -915,6 +925,15 @@
   <p>A <strong>per&iacute;cia trabalhista</strong> &eacute; o momento t&eacute;cnico decisivo dessas a&ccedil;&otilde;es. A qualidade do laudo pericial, a fundamenta&ccedil;&atilde;o t&eacute;cnica e a atua&ccedil;&atilde;o competente dos assistentes t&eacute;cnicos s&atilde;o fatores determinantes para o resultado do processo. Tanto o trabalhador que busca seus direitos quanto a empresa que defende sua posi&ccedil;&atilde;o devem contar com profissionais qualificados e experientes.</p>
 
   <p>A Lumen Verum atua com excel&ecirc;ncia em <strong>per&iacute;cia judicial</strong> e <strong>assist&ecirc;ncia t&eacute;cnica</strong> nas &aacute;reas de insalubridade e periculosidade, oferecendo laudos t&eacute;cnicos fundamentados, medi&ccedil;&otilde;es ambientais com equipamentos calibrados e pareceres t&eacute;cnicos estrat&eacute;gicos. Se voc&ecirc; precisa de suporte t&eacute;cnico especializado, entre em contato conosco.</p>
+
+  <div class="promo-calc">
+    <div class="promo-body">
+      <div class="promo-tag">Serviço Lumen Verum</div>
+      <h4>Adicional deferido? Liquide a sentença em PJe-Calc</h4>
+      <p>Insalubridade e periculosidade com reflexos, INSS/IRRF e resumo executivo, em 5 dias úteis, com data confirmada por e-mail. <span class="promo-price">Reclamante R$ 225,00 &middot; Reclamada R$ 275,00</span>.</p>
+    </div>
+    <a href="calculos-trabalhistas.html#servicos" class="btn-gold">Contratar a liquidação &rarr;</a>
+  </div>
 
   <!-- FINAL CTA -->
   <div class="inline-cta" style="margin-bottom: 0;">

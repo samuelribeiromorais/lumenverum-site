@@ -582,6 +582,16 @@
   .extra-menu-dropdown a small {
     display: block; font-size: 0.7rem; color: #9a9a96; font-weight: 400; margin-top: 2px;
   }
+
+  /* ── PROMO CÁLCULOS ── */
+  .promo-calc { display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff; border: 2px solid var(--gold); border-radius: 10px; padding: 22px 26px; margin: 32px 0; box-shadow: 0 8px 24px rgba(0,12,82,0.08); }
+  .promo-calc .promo-body { flex: 1 1 340px; }
+  .promo-calc .promo-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .promo-calc h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin: 0 0 6px; line-height: 1.25; }
+  .promo-calc p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+  .promo-calc .promo-price { font-weight: 700; color: var(--navy); }
+  .promo-calc .btn-gold { white-space: nowrap; flex-shrink: 0; }
+  @media (max-width: 600px) { .promo-calc { flex-direction: column; align-items: flex-start; } .promo-calc .btn-gold { white-space: normal; } }
 </style>
 
 <!-- Schema.org JSON-LD: ProfessionalService -->
@@ -1068,6 +1078,15 @@
     <div class="faq-answer">
       <p>O perito da Lumen Verum, Eng. Samuel Ribeiro Morais, é credenciado em três tribunais: TRT-18 (Tribunal Regional do Trabalho da 18ª Região — Goiás), TJGO (Tribunal de Justiça do Estado de Goiás) e TJDFT (Tribunal de Justiça do Distrito Federal e Territórios). Cadastro ativo no CPTEC conforme CNJ Resolução 233/2016.</p>
     </div>
+  </div>
+
+  <div class="promo-calc">
+    <div class="promo-body">
+      <div class="promo-tag">Serviço Lumen Verum</div>
+      <h4>Cálculos trabalhistas para o seu processo</h4>
+      <p>Liquidação de sentença e de pedidos da inicial, entregue em <strong>PJe-Calc (.pjc) e PDF</strong>, com data de entrega confirmada por e-mail na compra. <span class="promo-price">De R$ 175,00 a R$ 475,00</span>.</p>
+    </div>
+    <a href="calculos-trabalhistas.html#servicos" class="btn-gold">Ver serviços e prazos &rarr;</a>
   </div>
 
   <!-- FINAL CTA -->

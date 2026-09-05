@@ -528,6 +528,16 @@
   .extra-menu-dropdown a small {
     display: block; font-size: 0.7rem; color: #9a9a96; font-weight: 400; margin-top: 2px;
   }
+
+  /* ── PROMO CÁLCULOS ── */
+  .promo-calc { display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff; border: 2px solid var(--gold); border-radius: 10px; padding: 22px 26px; margin: 32px 0; box-shadow: 0 8px 24px rgba(0,12,82,0.08); }
+  .promo-calc .promo-body { flex: 1 1 340px; }
+  .promo-calc .promo-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .promo-calc h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin: 0 0 6px; line-height: 1.25; }
+  .promo-calc p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+  .promo-calc .promo-price { font-weight: 700; color: var(--navy); }
+  .promo-calc .btn-gold { white-space: nowrap; flex-shrink: 0; }
+  @media (max-width: 600px) { .promo-calc { flex-direction: column; align-items: flex-start; } .promo-calc .btn-gold { white-space: normal; } }
 </style>
 
 <!-- Schema.org JSON-LD: Article -->
@@ -858,6 +868,15 @@
 
   <h3>8.5. Posso levar meu próprio profissional para a perícia?</h3>
   <p>Sim: o <strong>assistente técnico</strong> (art. 465, §1º, CPC c/c art. 769 da CLT) acompanha a diligência, formula quesitos e emite parecer. Em matéria técnica de agentes nocivos, é frequentemente o diferencial do resultado.</p>
+
+  <div class="promo-calc">
+    <div class="promo-body">
+      <div class="promo-tag">Serviço Lumen Verum</div>
+      <h4>Provou a exposição? Agora, a conta</h4>
+      <p>Liquidação de sentença com adicionais, reflexos e INSS/IRRF, entregue em <strong>PJe-Calc (.pjc) e PDF</strong> com data confirmada por e-mail. <span class="promo-price">Reclamante R$ 225,00 &middot; Reclamada R$ 275,00</span>.</p>
+    </div>
+    <a href="calculos-trabalhistas.html#servicos" class="btn-gold">Contratar a liquidação &rarr;</a>
+  </div>
 
   <!-- FINAL CTA -->
   <div class="inline-cta" style="margin-bottom: 0;">

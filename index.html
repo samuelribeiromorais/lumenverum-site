@@ -1104,6 +1104,19 @@
     70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
     100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
   }
+
+  /* ── PRODUTOS ── */
+  .produtos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .produto-card { display: block; text-decoration: none; background: var(--white); padding: 2.5rem; position: relative; overflow: hidden; border-top: 3px solid var(--gold); transition: all 0.4s ease; }
+  .produto-card:hover { background: var(--navy); transform: translateY(-4px); z-index: 2; box-shadow: 0 20px 60px rgba(7,21,83,0.2); }
+  .produto-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .produto-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--navy); margin-bottom: 0.7rem; line-height: 1.2; transition: color 0.4s; }
+  .produto-desc { font-size: 0.9rem; line-height: 1.7; color: #4a4a5a; margin-bottom: 1.2rem; transition: color 0.4s; }
+  .produto-price { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 1.4rem; transition: color 0.4s; }
+  .produto-btn { display: inline-block; background: var(--gold); color: var(--navy); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 24px; border-radius: 4px; }
+  .produto-card:hover .produto-title, .produto-card:hover .produto-price { color: var(--white); }
+  .produto-card:hover .produto-desc { color: rgba(255,255,255,0.7); }
+  @media (max-width: 768px) { .produtos-grid { grid-template-columns: 1fr; } .produto-card { padding: 2rem 1.5rem; } }
 </style>
 
 <!-- Schema.org JSON-LD -->
@@ -1190,6 +1203,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#areas">Áreas de Atuação</a></li>
+    <li><a href="#produtos">Produtos</a></li>
     <li><a href="#tribunais">Tribunais</a></li>
     <li><a href="#artigos">Artigos</a></li>
     <li><a href="#contato" class="nav-cta">Fale com o Perito</a></li>
@@ -1387,6 +1401,30 @@
       <div class="area-title">Perícia Extrajudicial</div>
       <div class="area-desc">Laudos técnicos para seguros, compliance e resolução extrajudicial de conflitos em engenharia elétrica e segurança do trabalho.</div>
     </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <div class="section-header reveal">
+    <span class="section-label">Produtos e Serviços</span>
+    <h2>Ferramentas para engenheiros e advogados</h2>
+  </div>
+  <div class="produtos-grid">
+    <a href="spda-risk-analyzer.html" class="produto-card reveal">
+      <span class="produto-tag">Software online &middot; Engenheiros</span>
+      <div class="produto-title">SPDA Risk Analyzer</div>
+      <div class="produto-desc">Análise de risco conforme a NBR 5419-2:2026 completa em minutos: R1, R3, R4 e F, Ng automático por município, relatório técnico e memorial descritivo em PDF, DOCX e Excel.</div>
+      <div class="produto-price">Plano anual R$ 349,90 &middot; mensal R$ 39,90</div>
+      <span class="produto-btn">Conhecer o SPDA Risk Analyzer &rarr;</span>
+    </a>
+    <a href="calculos-trabalhistas.html" class="produto-card reveal">
+      <span class="produto-tag">Serviço &middot; Advogados trabalhistas</span>
+      <div class="produto-title">Cálculos Trabalhistas</div>
+      <div class="produto-desc">Liquidação de sentença e de pedidos da petição inicial, entregue em PJe-Calc (.pjc) e PDF, com a data de entrega confirmada por e-mail na hora da compra.</div>
+      <div class="produto-price">De R$ 175,00 a R$ 475,00 &middot; prazos de 1 a 5 dias úteis</div>
+      <span class="produto-btn">Ver serviços e prazos &rarr;</span>
+    </a>
   </div>
 </section>
 
